@@ -20,8 +20,8 @@ partes del mundo:
 
 Equipo principal:
 
-![Hugo Ruscitti](/imagenes/equipo/hugoruscitti.png) ![](/imagenes/equipo/wally.png) ![](/imagenes/equipo/quiqueporta.png) ![](/imagenes/equipo/fsalamero.png) ![](/imagenes/equipo/irvingprog.png)
+![Hugo Ruscitti](../imagenes/equipo/hugoruscitti.png) ![](../imagenes/equipo/wally.png) ![](../imagenes/equipo/quiqueporta.png) ![](../imagenes/equipo/fsalamero.png) ![](../imagenes/equipo/irvingprog.png)
 
 Colaboradores:
 
-![](/imagenes/equipo/malev.png) ![](/imagenes/equipo/lucianobaraglia.png) ![](/imagenes/equipo/hernantz.png) ![](/imagenes/equipo/pablomouzo.png) ![](/imagenes/equipo/DiegoAccorinti.png) ![](/imagenes/equipo/leliel12.png) ![](/imagenes/equipo/binary-sequence.png) ![](/imagenes/equipo/josx.png) ![](/imagenes/equipo/felipe.png) ![](/imagenes/equipo/ipedrazas.png) ![](/imagenes/equipo/jairot.png) ![](/imagenes/equipo/tutuca.png)
+![](../imagenes/equipo/malev.png) ![](../imagenes/equipo/lucianobaraglia.png) ![](../imagenes/equipo/hernantz.png) ![](../imagenes/equipo/pablomouzo.png) ![](../imagenes/equipo/DiegoAccorinti.png) ![](../imagenes/equipo/leliel12.png) ![](../imagenes/equipo/binary-sequence.png) ![](../imagenes/equipo/josx.png) ![](../imagenes/equipo/felipe.png) ![](../imagenes/equipo/ipedrazas.png) ![](../imagenes/equipo/jairot.png) ![](../imagenes/equipo/tutuca.png)
