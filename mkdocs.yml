@@ -2,4 +2,5 @@ site_name: pilas-engine
 pages:
 - [index.md, Principal]
 - [about.md, Acerca de ...]
-theme: readthedocs
+- [colisiones.md, Colisiones]
+theme_dir: 'themes/custom'
