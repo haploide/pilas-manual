@@ -14,4 +14,5 @@ preview:
 	mkdocs serve
 
 deploy: generar
-	git subtree push --prefix site/ origin gh-pages
+	git subtree split --prefix=site --onto origin --branch gh-pages
+	git push --all origin
