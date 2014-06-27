@@ -70,6 +70,8 @@
                 
                     <li><a class="toctree-l3" href="#clase-boton">Clase: Boton</a></li>
                 
+                    <li><a class="toctree-l3" href="#clase-deslizador">Clase: Deslizador</a></li>
+                
             
             </ul>
         
@@ -157,6 +159,45 @@ b.conectar(moverse)
 
 <p>El resultado en pantalla será así:</p>
 <p><img alt="" src="../imagenes/interfaz/boton.gif" /></p>
+<h2 id="clase-deslizador">Clase: Deslizador</h2>
+<p>El deslizador es útil para que el usuario pueda seleccionar
+un valor intermedio entre dos números, por ejemplo entre 0 y 1, 0 y
+100 etc.</p>
+<p>Un ejemplo típico de este componente puedes encontrarlo
+en las preferencias de audio de algún programa de sonido, los
+deslizadores te permiten regular el grado de volumen.</p>
+<p>Esta es una imagen del ejemplo <code>deslizador.py</code> que está
+en el directorio <code>ejemplos</code>. Tiene tres deslizadores, y
+el usuario puede regular cualquiera de los tres para ver
+los cambios en el actor:</p>
+<p><img alt="" src="../imagenes/interfaz/deslizador.jpg" /></p>
+<p>Para construir un deslizador y asociarlo a una función
+puedes escribir algo como esto:</p>
+<pre class="prettyprint well"><code>def cuando_cambia(valor):
+    print &quot;El deslizador tiene grado:&quot;, valor
+
+deslizador = pilas.interfaz.Deslizador()
+deslizador.conectar(cuando_cambia)
+</code></pre>
+
+<p>Entonces, a medida que muevas el deslizador se imprimirán
+en pantalla valores del 0 al 1, por ejemplo 0.25, 0.52777 etc...</p>
+<p>Si quieres cambiar los valores iniciales y finales de la
+escala de valores, lo mas sencillo es multiplicar el argumento
+<code>valor</code> de la función. Por ejemplo, si quieres valores entre
+0 y 100:</p>
+<pre class="prettyprint well"><code>def cuando_cambia(valor):
+    valor_entre_cero_y_cien = valor * 100
+</code></pre>
+
+<h4 id="propiedades_1">Propiedades</h4>
+<ul>
+<li><code>progreso</code> - Almacen un valor entre 0 y 100</li>
+</ul>
+<h4 id="metodos_1">Métodos</h4>
+<ul>
+<li><code>conectar(funcion)</code> - Conecta una función que se llamará cada vez que muevas el deslizador.</li>
+</ul>
 
           </div>
 
