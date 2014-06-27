@@ -10,6 +10,12 @@
   list-style-type: disc;
 }
 
+ul.wy-breadcrumbs {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+
 
 img {
   border: 1px solid #ccc;
