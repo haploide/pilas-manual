@@ -3,4 +3,5 @@ pages:
 - [index.md, Principal]
 - [about.md, Acerca de ...]
 - [colisiones.md, Colisiones]
+- [interfaz.md, Intefaz de usuario]
 theme_dir: 'themes/custom'
