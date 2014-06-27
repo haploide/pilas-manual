@@ -114,3 +114,12 @@ escala de valores, lo mas sencillo es multiplicar el argumento
 def cuando_cambia(valor):
     valor_entre_cero_y_cien = valor * 100
 ```
+
+
+#### Propiedades
+
+* `progreso` - Almacen un valor entre 0 y 100
+
+#### Métodos
+
+* `conectar(funcion)` - Conecta una función que se llamará cada vez que muevas el deslizador.
