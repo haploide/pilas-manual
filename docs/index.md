@@ -1,6 +1,6 @@
 # pilas-engine
 
-![](imagenes/pilas-logo.png)
+<img src='imagenes/pilas-logo.png' style='border:0'>
 
 [pilas-engine](http://pilas-engine.com.ar) es una herramienta que te permite
 crear tus propios videojuegos y aprender a programar. Está diseñada por
