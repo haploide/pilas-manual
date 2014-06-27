@@ -123,3 +123,74 @@ def cuando_cambia(valor):
 #### Métodos
 
 * `conectar(funcion)` - Conecta una función que se llamará cada vez que muevas el deslizador.
+
+
+## Clase: Selector
+
+El selector te permite seleccionar una opción con
+dos valores: habilitado, deshabilitado.
+
+Se puede usar para opciones cómo habilitar o deshabilitar
+el modo pantalla completa o algo así.
+
+Para usarlo, se tiene que crear un objeto de la
+clase ``Selector`` y un texto a mostrar:
+
+```
+selector = pilas.interfaz.Selector("Habilitar pantalla completa.")
+```
+
+Y luego, se puede consultar el valor del selector mediante el
+atributo ``seleccionado``:
+
+```
+if selector.seleccionado:
+    print "El selector esta seleccionado."
+else:
+    print "El selector no esta seleccionado."
+```
+
+aunque en lugar de consultar la variable, es mucho mejor asociarle
+una función para que el selector la llame solamente cuando el
+selector cambia de estado (seleccionado/deseleccionado):
+
+```
+def cuando_el_selector_cambia(estado):
+    print "El selector ahora esta en estado:", estado
+
+selector.definir_accion(cuando_el_selector_cambia)
+```
+
+#### Ejemplo de integración
+
+Para mostrar el componente en funcionamiento tenemos un pequeño ejemplo: un
+selector que nos permite alternar el fondo de la escena:
+
+```
+selector = pilas.interfaz.Selector("Definir fondo naranja")
+
+def cambiar_el_fondo(ha_seleccionado):
+    if ha_seleccionado:
+        pilas.fondos.Tarde()
+    else:
+        pilas.fondos.Blanco()
+
+selector.conectar(cambiar_el_fondo)
+```
+
+El resultado en pantalla será así:
+
+
+![](../imagenes/interfaz/selector.gif)
+
+#### Propiedades
+
+* `texto` - Etiqueta que mostrará el deslizador
+* `seleccionado` - Almacena True o False, indicando el estado de selección.
+
+#### Métodos
+
+* `conectar(funcion)` - Conecta una función que se llamará cada vez que muevas el deslizador.
+* `alternar_seleccion()`
+* `seleccionar()`
+* `deseleccionar()`
