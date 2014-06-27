@@ -12,6 +12,9 @@ actualizar:
 	git add ./site/ Makefile
 	git commit -m "actualización y deploy."
 	make _deploy
+	@echo ""
+	@echo "Listo, la url es: http://hugoruscitti.github.io/pilas-tutoriales/"
+	@echo ""
 
 
 generar:
