@@ -72,6 +72,8 @@
                 
                     <li><a class="toctree-l3" href="#clase-deslizador">Clase: Deslizador</a></li>
                 
+                    <li><a class="toctree-l3" href="#clase-selector">Clase: Selector</a></li>
+                
             
             </ul>
         
@@ -197,6 +199,61 @@ escala de valores, lo mas sencillo es multiplicar el argumento
 <h4 id="metodos_1">Métodos</h4>
 <ul>
 <li><code>conectar(funcion)</code> - Conecta una función que se llamará cada vez que muevas el deslizador.</li>
+</ul>
+<h2 id="clase-selector">Clase: Selector</h2>
+<p>El selector te permite seleccionar una opción con
+dos valores: habilitado, deshabilitado.</p>
+<p>Se puede usar para opciones cómo habilitar o deshabilitar
+el modo pantalla completa o algo así.</p>
+<p>Para usarlo, se tiene que crear un objeto de la
+clase <code>Selector</code> y un texto a mostrar:</p>
+<pre class="prettyprint well"><code>selector = pilas.interfaz.Selector(&quot;Habilitar pantalla completa.&quot;)
+</code></pre>
+
+<p>Y luego, se puede consultar el valor del selector mediante el
+atributo <code>seleccionado</code>:</p>
+<pre class="prettyprint well"><code>if selector.seleccionado:
+    print &quot;El selector esta seleccionado.&quot;
+else:
+    print &quot;El selector no esta seleccionado.&quot;
+</code></pre>
+
+<p>aunque en lugar de consultar la variable, es mucho mejor asociarle
+una función para que el selector la llame solamente cuando el
+selector cambia de estado (seleccionado/deseleccionado):</p>
+<pre class="prettyprint well"><code>def cuando_el_selector_cambia(estado):
+    print &quot;El selector ahora esta en estado:&quot;, estado
+
+selector.definir_accion(cuando_el_selector_cambia)
+</code></pre>
+
+<h4 id="ejemplo-de-integracion_1">Ejemplo de integración</h4>
+<p>Para mostrar el componente en funcionamiento tenemos un pequeño ejemplo: un
+selector que nos permite alternar el fondo de la escena:</p>
+<pre class="prettyprint well"><code>selector = pilas.interfaz.Selector(&quot;Definir fondo naranja&quot;)
+
+def cambiar_el_fondo(ha_seleccionado):
+    if ha_seleccionado:
+        pilas.fondos.Tarde()
+    else:
+        pilas.fondos.Blanco()
+
+selector.conectar(cambiar_el_fondo)
+</code></pre>
+
+<p>El resultado en pantalla será así:</p>
+<p><img alt="" src="../imagenes/interfaz/selector.gif" /></p>
+<h4 id="propiedades_2">Propiedades</h4>
+<ul>
+<li><code>texto</code> - Etiqueta que mostrará el deslizador</li>
+<li><code>seleccionado</code> - Almacena True o False, indicando el estado de selección.</li>
+</ul>
+<h4 id="metodos_2">Métodos</h4>
+<ul>
+<li><code>conectar(funcion)</code> - Conecta una función que se llamará cada vez que muevas el deslizador.</li>
+<li><code>alternar_seleccion()</code></li>
+<li><code>seleccionar()</code></li>
+<li><code>deseleccionar()</code></li>
 </ul>
 
           </div>
