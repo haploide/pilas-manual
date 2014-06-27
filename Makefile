@@ -2,7 +2,6 @@ all:
 	@echo ""
 	@echo "  generar        Genera la versión estática."
 	@echo "  preview        Abre una versión preliminar."
-	@echo "  deploy         Sube la documentación al servidor."
 	@echo "  actualizar     Atajo para ajustes rápidos (commit + deploy)."
 	@echo ""
 
@@ -21,6 +20,6 @@ generar:
 preview:
 	mkdocs serve
 
-deploy: generar
+_deploy: generar
 	git subtree split --prefix=site --onto origin --branch gh-pages
 	git push --all origin
