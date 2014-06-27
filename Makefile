@@ -11,7 +11,7 @@ actualizar:
 	make generar
 	git add ./site/ Makefile
 	git commit -m "actualización y deploy."
-	make deploy
+	make _deploy
 
 
 generar:
