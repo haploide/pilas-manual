@@ -67,6 +67,10 @@
                 
                     <li><a class="toctree-l3" href="#clase-selector">Clase: Selector</a></li>
                 
+                    <li><a class="toctree-l3" href="#clase-ingresodetexto">Clase: IngresoDeTexto</a></li>
+                
+                    <li><a class="toctree-l3" href="#clase-listaseleccion">Clase: ListaSeleccion</a></li>
+                
             
             </ul>
         
@@ -248,6 +252,64 @@ selector.conectar(cambiar_el_fondo)
 <li><code>seleccionar()</code></li>
 <li><code>deseleccionar()</code></li>
 </ul>
+<h2 id="clase-ingresodetexto">Clase: IngresoDeTexto</h2>
+<p>Si quieres solicitar datos, como el nombre del
+usuario, puedes usar el objeto <code>IngresoDeTexto</code>. Ya que
+muestra una caja y un pequeño cursor para
+ingresar texto:</p>
+<p><img alt="" src="../imagenes/interfaz/ingreso_de_texto.png" /></p>
+<p>Para usar este componente tienes que crearlo y luego leer o escribir el
+atributo <code>texto</code>, que contiene la cadena de texto de la caja:</p>
+<pre class="prettyprint well"><code>entrada = pilas.interfaz.IngresoDeTexto()
+entrada.texto = &quot;Texto inicial&quot;
+</code></pre>
+
+<p>Inicialmente, el objeto IngresoDeTexto toma un tamaño y apariencia predeterminado. Pero esto se puede cambiar fácilmente usando argumentos al momento de crear el componente.</p>
+<p>Por ejemplo, podríamos enviarle cómo argumento un tamaño mas pequeño y un ícono de búsqueda:</p>
+<p>entrada = pilas.interfaz.IngresoDeTexto(ancho=100, icono='iconos/lupa.png')
+u otro ícono:</p>
+<p>entrada = pilas.interfaz.IngresoDeTexto(ancho=100, icono='iconos/ok.png')
+La caja también tiene otros métodos para permitir o prohibir el ingreso de datos.</p>
+<p>Por ejemplo, podríamos decirle a la caja que solo permita el ingreso de números,
+letras, o poner un límite de cantidad de caracteres. Los métodos
+que te permite limitar el ingreso son <code>solo_numeros()</code> y <code>solo_letras()</code>, y el
+límite de caracteres está en el atributo <code>limite_de_caracteres</code>:</p>
+<h4 id="propiedades_3">Propiedades</h4>
+<ul>
+<li><code>texto</code></li>
+<li><code>icono</code></li>
+<li><code>limite_de_caracteres</code></li>
+</ul>
+<h4 id="metodos_3">Métodos</h4>
+<ul>
+<li><code>cualquier_caracter()</code></li>
+<li><code>solo_numeros()</code></li>
+<li><code>solo_letras()</code></li>
+</ul>
+<h2 id="clase-listaseleccion">Clase: ListaSeleccion</h2>
+<p>La lista de selección se utiliza para mostrar al usuario una lista de cadenas, y permitirle seleccionarlas con el mouse.</p>
+<p>Para crear un lista de selección, se tiene que crear una lista de cadenas y declarar una función para que sea llamada cuando se termina de seleccionar.</p>
+<p>Por ejemplo, el siguiente código muestra una lista e imprime por consola cuando el usuario selecciona con el click del mouse:</p>
+<pre class="prettyprint well"><code>def cuando_selecciona(opcion):
+    print &quot;Ha seleccionado la opcion:&quot;, opcion
+
+consulta = pilas.interfaz.ListaSeleccion(['Uno', 'Dos', 'Tres'], cuando_selecciona)
+</code></pre>
+
+<h4 id="ejemplo-de-integracion_2">Ejemplo de integración</h4>
+<p>Para mostrar el componente en funcionamiento, hacemos un lista de
+tres opciones, y le conectamos una función para avisar la opción
+que selecciona el usuario:</p>
+<pre class="prettyprint well"><code>pilas.fondos.Pasto()
+
+def cuando_selecciona(opcion_seleccionada):
+    pilas.avisar(&quot;Ha seleccionado la opcion: &quot; + opcion_seleccionada)
+
+opciones = pilas.interfaz.ListaSeleccion(['hola', 'opcion', 'tres'], cuando_selecciona)
+</code></pre>
+
+<p>Deberías ver en pantalla lo siguiente:</p>
+<p><img alt="" src="../imagenes/interfaz/lista_seleccion.gif" /></p>
 
           </div>
 
