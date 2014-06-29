@@ -194,3 +194,84 @@ El resultado en pantalla será así:
 * `alternar_seleccion()`
 * `seleccionar()`
 * `deseleccionar()`
+
+
+## Clase: IngresoDeTexto
+
+Si quieres solicitar datos, como el nombre del
+usuario, puedes usar el objeto `IngresoDeTexto`. Ya que
+muestra una caja y un pequeño cursor para
+ingresar texto:
+
+
+![](../imagenes/interfaz/ingreso_de_texto.png)
+
+Para usar este componente tienes que crearlo y luego leer o escribir el
+atributo `texto`, que contiene la cadena de texto de la caja:
+
+```
+entrada = pilas.interfaz.IngresoDeTexto()
+entrada.texto = "Texto inicial"
+```
+
+Inicialmente, el objeto IngresoDeTexto toma un tamaño y apariencia predeterminado. Pero esto se puede cambiar fácilmente usando argumentos al momento de crear el componente.
+
+Por ejemplo, podríamos enviarle cómo argumento un tamaño mas pequeño y un ícono de búsqueda:
+
+entrada = pilas.interfaz.IngresoDeTexto(ancho=100, icono='iconos/lupa.png')
+u otro ícono:
+
+entrada = pilas.interfaz.IngresoDeTexto(ancho=100, icono='iconos/ok.png')
+La caja también tiene otros métodos para permitir o prohibir el ingreso de datos.
+
+Por ejemplo, podríamos decirle a la caja que solo permita el ingreso de números,
+letras, o poner un límite de cantidad de caracteres. Los métodos
+que te permite limitar el ingreso son `solo_numeros()` y `solo_letras()`, y el
+límite de caracteres está en el atributo `limite_de_caracteres`:
+
+#### Propiedades
+
+* `texto`
+* `icono`
+* `limite_de_caracteres`
+
+#### Métodos
+
+* `cualquier_caracter()`
+* `solo_numeros()`
+* `solo_letras()`
+
+
+## Clase: ListaSeleccion
+
+La lista de selección se utiliza para mostrar al usuario una lista de cadenas, y permitirle seleccionarlas con el mouse.
+
+Para crear un lista de selección, se tiene que crear una lista de cadenas y declarar una función para que sea llamada cuando se termina de seleccionar.
+
+Por ejemplo, el siguiente código muestra una lista e imprime por consola cuando el usuario selecciona con el click del mouse:
+
+```
+def cuando_selecciona(opcion):
+    print "Ha seleccionado la opcion:", opcion
+
+consulta = pilas.interfaz.ListaSeleccion(['Uno', 'Dos', 'Tres'], cuando_selecciona)
+```
+
+#### Ejemplo de integración
+
+Para mostrar el componente en funcionamiento, hacemos un lista de
+tres opciones, y le conectamos una función para avisar la opción
+que selecciona el usuario:
+
+```
+pilas.fondos.Pasto()
+
+def cuando_selecciona(opcion_seleccionada):
+    pilas.avisar("Ha seleccionado la opcion: " + opcion_seleccionada)
+
+opciones = pilas.interfaz.ListaSeleccion(['hola', 'opcion', 'tres'], cuando_selecciona)
+```
+
+Deberías ver en pantalla lo siguiente:
+
+![](../imagenes/interfaz/lista_seleccion.gif)
