@@ -21,3 +21,8 @@ img {
   border: 1px solid #ccc;
   padding: 3px;
 }
+
+.wy-menu-vertical li.on a, .wy-menu-vertical li.current>a {
+  color: #FFFFFF;
+  background: #4D4D4D;
+}
