@@ -8,6 +8,10 @@ pages:
 - [colisiones.md, Colisiones]
 - [fisica.md, Fisica]
 
-- [interfaz.md, Intefaz de usuario]
+- [imagen.md, Imagen]
+- [sonidos.md, Sonidos]
+- [dibujado_simple_en_pantalla.md, Dibujado simple en pantalla]
+
+- [interfaz.md, Interfaz de usuario]
 - [desarrolladores.md, Guía para desarrolladores]
 theme_dir: 'themes/custom'
