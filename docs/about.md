@@ -20,11 +20,133 @@ partes del mundo:
 
 ### Equipo principal:
 
-![Hugo Ruscitti](../imagenes/equipo/hugoruscitti.png) ![](../imagenes/equipo/wally.png) ![](../imagenes/equipo/quiqueporta.png) ![](../imagenes/equipo/fsalamero.png) ![](../imagenes/equipo/irvingprog.png)
+<table class='about-core'>
+<tr>
+  <td>
+    <img alt="" src="../imagenes/equipo/hugoruscitti.png">
+    <br/>
+    Hugo Ruscitti
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/wally.png">
+    <br/>
+    Walter Velazquez
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/quiqueporta.png">
+    <br/>
+    Quique Porta
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/fsalamero.png">
+    <br/>
+    Fernando Salamero
+  </td>
+
+
+  <td>
+    <img alt="" src="../imagenes/equipo/irvingprog.png">
+    <br/>
+    Irving Rodríguez
+  </td>
+
+</tr>
+</table>
 
 ### Colaboradores:
 
-![](../imagenes/equipo/malev.png) ![](../imagenes/equipo/lucianobaraglia.png) ![](../imagenes/equipo/hernantz.png) ![](../imagenes/equipo/pablomouzo.png) ![](../imagenes/equipo/DiegoAccorinti.png) ![](../imagenes/equipo/leliel12.png) ![](../imagenes/equipo/binary-sequence.png) ![](../imagenes/equipo/josx.png) ![](../imagenes/equipo/felipe.png) ![](../imagenes/equipo/ipedrazas.png) ![](../imagenes/equipo/jairot.png) ![](../imagenes/equipo/tutuca.png)
+<table class='about-colaboradores'>
+<tr>
+  <td>
+    <img alt="" src="../imagenes/equipo/malev.png">
+    <br/>
+    Marcos Vanetta
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/lucianobaraglia.png">
+    <br/>
+    Luciano Baraglia
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/hernantz.png">
+    <br/>
+    hernantz
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/pablomouzo.png">
+    <br/>
+    Pablo Mouzo
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/DiegoAccorinti.png">
+    <br/>
+    Diego Accorinti
+  </td>
+
+</tr>
+
+<tr>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/leliel12.png">
+    <br/>
+    JuanBC
+
+  </td>
+
+
+  <td>
+    <img alt="" src="../imagenes/equipo/binary-sequence.png">
+    <br/>
+    binary-sequence
+
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/josx.png">
+    <br/>
+    José Luis Di Biase
+
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/felipe.png">
+    <br/>
+    Felipe González
+
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/ipedrazas.png">
+    <br/>
+    Ivan Pedrazas
+
+  </td>
+
+</tr>
+
+<tr>
+  <td>
+    <img alt="" src="../imagenes/equipo/jairot.png">
+    <br/>
+    Jairo Trad
+  </td>
+
+  <td>
+    <img alt="" src="../imagenes/equipo/tutuca.png">
+    <br/>
+    Matías Iturburu
+  </td>
+
+</tr>
+</table>
 
 Te invitamos a participar del equipo, visitá nuestro [foro](http://foro-pilasengine.com.ar) y nuestro proyecto en [github](http://github.com/hugoruscitti/pilas) para obtener más información
 
