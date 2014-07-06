@@ -16,8 +16,8 @@
     <link href="{{ base_url }}/{{ path }}" rel="stylesheet">
   {% endfor %}
 
-  <script type="text/javascript" src="{{ base_url }}/js/theme.js"></script>
   <script type="text/javascript" src="{{ base_url }}/js/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="{{ base_url }}/js/theme.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
   {% for path in extra_javascript %}
     <script src="{{ base_url }}/{{ path }}"></script>
@@ -37,7 +37,7 @@
     {# SIDE NAV, TOGGLES ON MOBILE #}
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="{{ homepage_url }}"> {{ site_name }}</a>
+        <a href="{{ homepage_url }}"><img src='{{ base_url }}/img/pilas-logo.png'></a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
