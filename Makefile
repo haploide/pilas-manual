@@ -1,8 +1,11 @@
+N=[0m
+V=[01;32m
+
 all:
 	@echo ""
-	@echo "  generar        Genera la versión estática."
-	@echo "  preview        Abre una versión preliminar."
-	@echo "  actualizar     Atajo para ajustes rápidos (commit + deploy)."
+	@echo "  $(V)generar$(N)        Genera la versión estática."
+	@echo "  $(V)preview$(N)        Abre una versión preliminar."
+	@echo "  $(V)actualizar$(N)     Atajo para ajustes rápidos (commit + deploy)."
 	@echo ""
 
 
