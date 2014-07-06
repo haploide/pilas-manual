@@ -4,7 +4,10 @@ pages:
 - [instalacion.md, Instalación]
 - [about.md, Acerca de ...]
 - [empezando.md, Empezando y los primeros pasos con pilas]
+- [grupos.md, Grupos]
 - [colisiones.md, Colisiones]
+- [fisica.md, Fisica]
+
 - [interfaz.md, Intefaz de usuario]
 - [desarrolladores.md, Guía para desarrolladores]
 theme_dir: 'themes/custom'
