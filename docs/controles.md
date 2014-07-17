@@ -1,13 +1,13 @@
 # Controles
 
 Si quieres conocer el estado de los controles en pilas,
-tienes que usar el objeto `pilas.mundo.control`.
+tienes que usar el objeto `pilas.control`.
 
 Por ejemplo, para hacer que un actor se mueva por la pantalla simplemente puedes crear al actor y escribir estas sentencias.
 
-    if pilas.escena_actual().control.izquierda:
+    if pilas.control.izquierda:
         mono.x -= 1
-    elif pilas.escena_actual().control.derecha:
+    elif pilas.control.derecha:
         mono.x += 1
 
 
@@ -19,7 +19,7 @@ Esta no es la única forma de mover a un personaje por la pantalla, pero suele s
 
 ## Investigando al objeto control
 
-En realidad, cuando usamos a `pilas.mundo.control`,
+En realidad, cuando usamos a `pilas.control`,
 accedemos a un objeto que tienen varios atributos.
 
 Estos atributos pueden valer `True` o `False`,
@@ -40,23 +40,22 @@ El mejor lugar para consultar el estado de los controles es en la actualización
 Esto se logra colocando un método llamado `actualizar` dentro del actor y haciendo la consulta ahí. Veamos un actor sencillo que se pueda mover de izquierda a derecha. El código sería así:
 
 
-    import pilas
+    import pilasengine
 
-    pilas.iniciar()
+    pilas = pilasengine.iniciar()
 
-    class MiActor(pilas.actores.Actor):
+    class MiActor(pilasengine.actores.Actor):
 
-        def __init__(self):
-            pilas.actores.Actor.__init__(self)
+        def iniciar(self):
             self.imagen = pilas.imagenes.cargar("aceituna.png")
 
         def actualizar(self):
-            if pilas.escena_actual().control.izquierda:
+            if pilas.control.izquierda:
                 self.x -= 10
 
-            if pilas.escena_actual().control.derecha:
+            if pilas.control.derecha:
                 self.x += 10
 
-    MiActor()
+    MiActor(pilas)
 
     pilas.ejecutar() # Necesario al ejecutar en scripts.
