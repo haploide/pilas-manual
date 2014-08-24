@@ -175,6 +175,16 @@ Estas son algunas de las características técnicas que podemos resumir de pilas
 
 A lo largo del documento se dará un repaso mas completo de cada una de estas características y mas.
 
+
+## ¿Cuando comenzó?
+
+El proyecto comenzó el 1 de Agosto del 2010, a cargo de Hugo Ruscitti, puedes
+ver el primer [commit](https://github.com/hugoruscitti/pilas/commit/e263c6a54f055bce23f1e0077d6b218c3179a6e9)
+del proyecto y cómo [avanzó en el tiempo](https://github.com/hugoruscitti/pilas/network) usando el historial de cambios que tenemos
+en github.
+
+
+
 ## Sitio web
 
 Para mas información sobre el motor puedes visitar el sitio web:
