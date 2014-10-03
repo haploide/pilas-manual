@@ -27,8 +27,18 @@ pages:
 - [gestor_de_escenas.md, Nuevo Gestor de Escenas]
 - [demos.md, Demos]
 
-
 - [interfaz.md, Interfaz de usuario]
+- [menu.md,Como crear menúes para tu juegos]
+- [mapas_y_plataformas.md, Mapas y plataformas]
+
+- [dialogos.md, Diálogos]
+- [camara.md, Manejo de Cámara]
+- [eventos.md, Eventos, conexiones y respuestas]
+- [texto.md, Textos]
+- [habilidades.md, Habilidades]
+- [depurando.md, Depurando]
+- [como_funciona_pilas_por_dentro.md, "¿Cómo funciona pilas por dentro?"]
+
 - [desarrolladores.md, Guía para desarrolladores]
 
 theme_dir: 'themes/custom'
