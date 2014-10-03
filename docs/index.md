@@ -1,4 +1,3 @@
-# pilas-engine
 
 <img src='imagenes/pilas-logo.png' style='border:0'>
 

@@ -12,8 +12,23 @@ pages:
 - [joystick.md, Joystick]
 - [imagen.md, Imagen]
 - [sonidos.md, Sonidos]
+
 - [dibujado_simple_en_pantalla.md, Dibujado simple en pantalla]
+- [dibujado_avanzado_con_superficies.md, Dibujado avanzado con Superficies]
+
+- [tareas.md, Manejo de tiempo con tareas]
+- [interpolacion.md, Interpolaciones]
+
+
+- [controlando_la_pantalla.md, Controlando la pantalla]
+- [comportamientos.md, Comportamientos]
+- [escenas.md, Escenas]
+- [migrar_al_gestor_de_escenas.md, Como migrar mi juego al nuevo Gestor de Escenas]
+- [gestor_de_escenas.md, Nuevo Gestor de Escenas]
+- [demos.md, Demos]
+
 
 - [interfaz.md, Interfaz de usuario]
 - [desarrolladores.md, Guía para desarrolladores]
+
 theme_dir: 'themes/custom'
