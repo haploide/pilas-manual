@@ -145,6 +145,12 @@ partes del mundo:
     Matías Iturburu
   </td>
 
+  <td>
+    <img alt="" src="../imagenes/equipo/diego_rr.png">
+    <br/>
+    Diego Riquelme
+  </td>
+
 </tr>
 </table>
 
