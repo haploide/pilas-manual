@@ -13,7 +13,7 @@ Para crear un botón podemos instalar la clase `Boton` especificando
 un texto.
 
 ```
-boton = pilas.interface.Botón("Saludar")
+boton = pilas.interfaz.Boton("Saludar")
 ```
 
 y casi siempre vas a querer asignarle alguna acción cuando se hace
