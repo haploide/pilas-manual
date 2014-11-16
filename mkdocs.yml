@@ -5,6 +5,7 @@ pages:
 - [about.md, Acerca de ...]
 - [empezando.md, Empezando y los primeros pasos con pilas]
 - [actores.md, Actores]
+- [actores_personalizados.md, Actores personalizados]
 - [grupos.md, Grupos]
 - [colisiones.md, Colisiones]
 - [fisica.md, Fisica]

@@ -4,6 +4,10 @@ Los actores son una pieza clave de pilas, nos sirven para representar
 a los personajes dentro de videojuego, con sus propios atributos, apariencia
 y comportamiento.
 
+Puedes utilizar los actores prediseñados de pilas, o crear tus propios
+actores. Existe una página separada del manual que explica [como crear tus
+propios actores](/actores_personalizados/index.html), en lugar de utilizar los incluidos en pilas.
+
 
 ## Galería de actores incluídos
 
