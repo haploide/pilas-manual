@@ -155,7 +155,9 @@ el estado del teclado y hacer algo.
 
 En este caso, si se pulsa hacia la izquierda movemos
 el actor un poquito a la izquierda (con ``self.x -= 5``)
-y además invertimos el gráfico del actor para que mire a la izquierda (con ``self.espejado = True``). Y claro, hacemos lo opuesto para el lado
+y además invertimos el gráfico del actor para que mire a la
+izquierda (con ``self.espejado = True``). Y claro, hacemos lo
+opuesto para el lado
 derecho.
 
 Así se ve mientras voy pulsando las teclas ``izquierda``
@@ -183,3 +185,52 @@ de la clase completa:
     pilas.ver(pilasengine.actores.Aceituna)
     pilas.ver(pilasengine.actores.Pacman)
     pilas.ver(mono)
+
+
+## Parametros iniciales para los actores
+
+Existen varios casos en donde queremos crear actores
+pero especificando algunos parametros iniciales, como
+la posición, energia o cualquier otro valor
+externo a la clase.
+
+Para estos parámetros podemos crear argumentos personalizados
+en la clase nueva, por ejemplo, si quieres crear al actor
+``Alien`` (que tomamos de ejemplo aquí) pero quieres especificarle
+energia, podrías escribir:
+
+```
+alien = Alien(pilas, energia=100, nombre="pepe alien", con_sombra=True)
+```
+
+Y atender esos argumentos desde el método iniciar:
+
+
+```python
+class Alien(pilasengine.actores.Actor):
+
+    def iniciar(self, energia, nombre, con_sombra):
+        self.imagen = "alien.png"
+
+        self.nombre = nombre
+        self.energia = energia
+
+        if con_sombra:
+            self.sombra = pilas.actores.Sombra()
+        else:
+            self.sombra = None
+
+        self.decir("Hola, me llamo " + nombre)
+
+    def actualizar(self):
+        # Si el actor tiene sombra, hacemos que siga al
+        # actor.
+        if self.sombra:
+            self.sombra.x = self.x
+            self.sombra.y = self.y
+```
+
+Y el resultado debería quedarte así:
+
+
+![](../imagenes/actores_personalizados/personalizado.png)

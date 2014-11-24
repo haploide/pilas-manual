@@ -81,6 +81,8 @@
                 
                     <li><a class="toctree-l3" href="#leyendo-el-codigo-de-otros-actores">Leyendo el código de otros actores</a></li>
                 
+                    <li><a class="toctree-l3" href="#parametros-iniciales-para-los-actores">Parametros iniciales para los actores</a></li>
+                
             
             </ul>
         
@@ -365,7 +367,9 @@ todo el tiempo, podemos usarlo para consultar
 el estado del teclado y hacer algo.</p>
 <p>En este caso, si se pulsa hacia la izquierda movemos
 el actor un poquito a la izquierda (con <code>self.x -= 5</code>)
-y además invertimos el gráfico del actor para que mire a la izquierda (con <code>self.espejado = True</code>). Y claro, hacemos lo opuesto para el lado
+y además invertimos el gráfico del actor para que mire a la
+izquierda (con <code>self.espejado = True</code>). Y claro, hacemos lo
+opuesto para el lado
 derecho.</p>
 <p>Así se ve mientras voy pulsando las teclas <code>izquierda</code>
 y <code>derecha</code>:</p>
@@ -385,6 +389,44 @@ pilas.ver(pilasengine.actores.Aceituna)
 pilas.ver(pilasengine.actores.Pacman)
 pilas.ver(mono)
 </code></pre>
+<h2 id="parametros-iniciales-para-los-actores">Parametros iniciales para los actores</h2>
+<p>Existen varios casos en donde queremos crear actores
+pero especificando algunos parametros iniciales, como
+la posición, energia o cualquier otro valor
+externo a la clase.</p>
+<p>Para estos parámetros podemos crear argumentos personalizados
+en la clase nueva, por ejemplo, si quieres crear al actor
+<code>Alien</code> (que tomamos de ejemplo aquí) pero quieres especificarle
+energia, podrías escribir:</p>
+<pre class="prettyprint well"><code>alien = Alien(pilas, energia=100, nombre=&quot;pepe alien&quot;, con_sombra=True)
+</code></pre>
+
+<p>Y atender esos argumentos desde el método iniciar:</p>
+<pre class="prettyprint well"><code class="python">class Alien(pilasengine.actores.Actor):
+
+    def iniciar(self, energia, nombre, con_sombra):
+        self.imagen = &quot;alien.png&quot;
+
+        self.nombre = nombre
+        self.energia = energia
+
+        if con_sombra:
+            self.sombra = pilas.actores.Sombra()
+        else:
+            self.sombra = None
+
+        self.decir(&quot;Hola, me llamo &quot; + nombre)
+
+    def actualizar(self):
+        # Si el actor tiene sombra, hacemos que siga al
+        # actor.
+        if self.sombra:
+            self.sombra.x = self.x
+            self.sombra.y = self.y
+</code></pre>
+
+<p>Y el resultado debería quedarte así:</p>
+<p><img alt="" src="../imagenes/actores_personalizados/personalizado.png" /></p>
 
           </div>
 
