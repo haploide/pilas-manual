@@ -232,5 +232,42 @@ class Alien(pilasengine.actores.Actor):
 
 Y el resultado debería quedarte así:
 
-
 ![](../imagenes/actores_personalizados/personalizado.png)
+
+
+## Detectando errores y problemas al inicializar
+
+Es muy importante que al momento de crear actores a partir
+de clases especifiques los argumentos a utilizar. Hemos incluído
+algo de código especial en **pilas** para detectar errores comunes, como
+argumentos faltantes o incorrectos.
+
+Pero aún así, ten en cuenta que todo argumento que le envíes
+a un actor al crearlo tiene que estar declarado como argumento
+en el método ``iniciar``.
+
+Por ejemplo, un mensaje de error habitual que mostrará pilas si olvidamos
+el nombre de los argumentos podría ser:
+
+```
+× TypeError: No se puede llamar al metodo 'iniciar' de la clase 'Alien'.
+×    Faltan 3 argumentos: energia, nombre, con_sombra.
+×    El método 'iniciar' espera estos 3 argumentos: ['energia', 'nombre', 'con_sombra']
+```
+
+Esto significa que hemos querido crear un actor a partir de una clase
+que espera 3 argumentos, pero solo hemos llamado incorrectamente.
+
+Regresando a nuestro ejemplo anterior, esto produciría un error:
+
+```
+alien = Alien(pilas)
+```
+
+mientras que este otro ejemplo sí funcionará, porque el método
+``iniciar`` de la clase ``Alien`` espera los argumentos ``energia``, ``nombre`` y
+``con_sombra``:
+
+```
+alien = Alien(pilas, energia=100, nombre="pepe alien", con_sombra=True))
+```
