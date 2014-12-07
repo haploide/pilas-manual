@@ -323,18 +323,19 @@ un objeto de la clase Grupo:</p>
 </code></pre>
 
 <p>y luego, para añadir actores al grupo puedes usar el
-método <code>append</code> e indicar la referencia del actor
+método <code>agregar</code> e indicar la referencia del actor
 que quieres agregar:</p>
 <pre class="prettyprint well"><code>bomba = pilas.actores.Bomba()
 pelota = pilas.actores.Pelota()
 
-mi_grupo.append(bomba)
-mi_grupo.append(pelota)
+mi_grupo.agregar(bomba)
+mi_grupo.agregar(pelota)
 
 mi_grupo.escala = [2]
 </code></pre>
 
 <p><img alt="" src="../imagenes/grupos/grupos_personalizado_escala.jpg" /></p>
+<p>Un detalle a tener en cuenta, el método <code>agregar</code> no solo te permite agregar actores, también podrías tomar un grupo y agregarle con algo como <code>grupo.agregar(otro_grupo)</code>.</p>
 
           </div>
 
