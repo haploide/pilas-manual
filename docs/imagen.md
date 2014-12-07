@@ -57,7 +57,7 @@ al anterior, solo que ahora usamos las propiedades `repetir_horizontal` y
 
     fondo = pilas.fondos.Fondo()
     fondo.imagen = pilas.imagenes.cargar('mi_fondo.png')
-    
+
     fondo.imagen.repetir_vertical = True
     fondo.imagen.repetir_horizontal = True
 
@@ -265,3 +265,79 @@ Como puedes ver, el concepto inicial es el mismo, cuando
 queremos cambiar de animación tenemos que cambiar de grilla, y
 cuando queremos avanzar la animación solamente tenemos que
 llamar al método ``avanzar``.
+
+## Animaciones
+
+Además de las imágenes y las grillas, pilas incluye un recurso llamado animación, que nos permite declarar y utilizar animaciones almacenadas en una grilla.
+
+Por ejemplo, si tenemos una grilla con varios cuadros de animación como aquí:
+
+![](../imagenes/imagen/alien-simple.png)
+
+podemos cargar la grilla completa y definir las dos
+animaciones por separado.
+
+Enumerando los cuadros de animación nos quedaría así:
+
+![](../imagenes/imagen/alien-simple-enumerado.png)
+
+y desde aquí podemos extraer dos animaciones:
+
+- La animación que podemos armar con los cuadros ``0, 1, 4``:
+
+![](../imagenes/imagen/anim2.gif)
+
+- Y la animación que se puede armar con los cuadros ``3, 4, 5``:
+
+![](../imagenes/imagen/anim1.gif)
+
+
+Luego, para indicarle a *pilas* como interpretar las animaciones podemos
+cargar la animación y especificar los cuadros:
+
+```python
+animacion = pilas.imagenes.cargar_animacion('alien.png', 5, 1)
+
+animacion.definir_animacion('baja_palanca', [0, 1, 4], 10)
+animacion.definir_animacion('parado', [3, 3, 3, 3, 4, 5, 4], 10)
+```
+
+Al llamar al método ``definir_animacion`` tenemos que especificar
+en nombre de la animación, los cuadros a mostrar y luego la velocidad (medido
+en cuadros por segundo.)
+
+El siguiente paso es crear al actor e indicarle que animación mostrar en
+cada momento:
+
+
+```python
+
+class MiActor(pilasengine.actores.Actor):
+
+    def iniciar(self):
+
+        # Las animaciones que cargamos antes:
+        animacion = pilas.imagenes.cargar_animacion('alien.png', 5, 1)
+
+        animacion.definir_animacion('baja_palanca', [0, 1, 4], 10)
+        animacion.definir_animacion('parado', [3, 3, 3, 3, 4, 5, 4], 10)
+
+        # Vinculamos la animación al actor
+        self.imagen = animacion
+
+        # Le indicamos que muestre la animación 'parado'
+        self.imagen.cargar_animacion('parado')
+
+    def actualizar(self):
+        self.imagen.avanzar()
+
+
+pilas.actores.vincular(MiActor)
+mi_actor = pilas.actores.MiActor()
+```
+
+
+Es decir, con esta nueva clase, podremos representar
+a nuestro actor y seleccionar cualquiera de las dos
+animaciones que declaramos usando el método ``cargar_animacion``, que en este caso usamos para cargar
+la animación ``parado``.
