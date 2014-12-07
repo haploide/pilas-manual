@@ -1,10 +1,9 @@
 # Grupos
 
-Ahora que podemos manejar a los actores de manera individual. Vamos
-a ver cómo organizarlos en grupos.
+Ahora que podemos manejar a los actores de manera individual, vamos a ver como organizarlos en grupos.
 
-Organizar a los actores en grupo es de utilidad, porque generalmente
-es una buena idea agrupar a los actores por características y
+Organizar a los actores en grupos es útil porque generalmente
+buscamos clasificar a los actores por características y
 tratarlos a todos por igual. Por ejemplo, en un juego de naves
 podríamos tener un grupo de naves, un grupo de estrellas y un
 grupo de disparos.
@@ -33,11 +32,11 @@ Esto es lo que veríamos en la ventana de pilas:
 A partir de ahora, la referencia `bombas` nos servirá para
 controlar a todas las bombas al mismo tiempo.
 
-Esta referencia es parecida a una lista de python
-normal. Así que podríamos contar cuantas bombas
-hay en la escena, o recorrer el grupo haciendo algo:
+Esta referencia (que llamamos `bombas`) es parecida a una lista de datos en `python`. Podríamos realizar operaciones típicas como contar, recorrer o clasificar de la misma forma que se hace en el lenguaje `python`.
 
-```
+Por ejemplo, para contar la cantidad de bombas que hemos creado y conocer sus coordenadas podemos ejecutar:
+
+```python
 >>> print "hay", len(bombas), "bombas"
 hay 5 bombas
 
@@ -54,7 +53,7 @@ Por ejemplo, imagina que quieres hacer que todas las
 bombas aparezcan en el centro de la ventana. Podrías
 hacer algo cómo esto:
 
-```
+```python
 bombas.x = 0
 ```
 
