@@ -107,17 +107,19 @@ mi_grupo = pilas.grupo.Grupo()
 ```
 
 y luego, para añadir actores al grupo puedes usar el
-método ``append`` e indicar la referencia del actor
+método ``agregar`` e indicar la referencia del actor
 que quieres agregar:
 
 ```
 bomba = pilas.actores.Bomba()
 pelota = pilas.actores.Pelota()
 
-mi_grupo.append(bomba)
-mi_grupo.append(pelota)
+mi_grupo.agregar(bomba)
+mi_grupo.agregar(pelota)
 
 mi_grupo.escala = [2]
 ```
 
 ![](../imagenes/grupos/grupos_personalizado_escala.jpg)
+
+Un detalle a tener en cuenta, el método ``agregar`` no solo te permite agregar actores, también podrías tomar un grupo y agregarle con algo como ``grupo.agregar(otro_grupo)``.
