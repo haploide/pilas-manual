@@ -275,3 +275,4 @@ opciones = pilas.interfaz.ListaSeleccion(['hola', 'opcion', 'tres'], cuando_sele
 Deberías ver en pantalla lo siguiente:
 
 ![](../imagenes/interfaz/lista_seleccion.gif)
+
