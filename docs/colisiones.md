@@ -122,3 +122,4 @@ zanahoria.figura_de_colision = rectangulo
 Ten en cuenta que existe un atajo para definir colisiones
 usando el concepto de etiquetas, que se verá en la siguiente
 página de este manual.
+
