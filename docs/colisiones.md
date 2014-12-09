@@ -115,3 +115,10 @@ zanahoria = pilas.actores.Zanahoria(x=100)
 rectangulo = pilas.fisica.Rectangulo(0, 0, 40, 100, sensor=True)
 zanahoria.figura_de_colision = rectangulo
 ```
+
+
+## Colisiones con etiquetas
+
+Ten en cuenta que existe un atajo para definir colisiones
+usando el concepto de etiquetas, que se verá en la siguiente
+página de este manual.
