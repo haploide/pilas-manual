@@ -3,10 +3,9 @@
 Pilas permite añadir funcionalidad a tus objetos
 de manera sencilla, dado que usamos el concepto
 de habilidades, un enfoque similar a la
-programación orientada a componentes [#]_ y mixins [#]_.
+programación orientada a [componentes](http://es.wikipedia.org/wiki/Programación_orientada_a_componentes)
+y [mixins](http://es.wikipedia.org/wiki/Mixin).
 
-.. [#] http://es.wikipedia.org/wiki/Programación_orientada_a_componentes
-.. [#] http://es.wikipedia.org/wiki/Mixin
 
 
 ## Un ejemplo
@@ -25,10 +24,16 @@ al actor fácilmente.
 El siguiente código hace eso:
 
 
-    import pilas
+    import pilasengine
 
+    pilas = pilasengine.iniciar()
+    
     mono = pilas.actores.Mono()
     mono.aprender(pilas.habilidades.AumentarConRueda)
+
+o bien:
+
+    mono.aprender('AumentarConRueda')
 
 así, cuando uses la rueda del mouse el tamaño del personaje aumentará
 o disminuirá.
@@ -73,11 +78,10 @@ lo mas independientes posibles, porque claramente lo mas
 divertido de este enfoque es poder combinar distintas
 habilidades para lograr comportamientos complejos.
 
-Así que te invitamos a que pruebes y experimientes
-mezclando habilidades.
+Así que te invitamos a experimentar y explorar la mezcla
+de habilidades.
 
-
-## Otras habilidades para investigar
+## Otras habilidades para utilizar
 
 Pilas viene con varias habilidades incluidas, pero
 lamentablemente este manual no las menciona a todas. Así
@@ -86,16 +90,13 @@ y consultarle directamente a él que habilidades tienes
 disponibles en tu versión de pilas.
 
 
-Para esto, abre un terminar de python y escribe lo siguiente:
+Para esto, abrí el intérprete de pilas y escribí lo siguiente:
 
 
-    import pilas
-    pilas.iniciar()
     dir(pilas.habilidades)
 
 esto imprimirá en pantalla todas las habilidades como una
 lista de cadenas.
-
 
 
 ## ¿Cómo funcionan las habilidades?
