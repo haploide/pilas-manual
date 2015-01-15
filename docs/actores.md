@@ -17,6 +17,10 @@ tuyos propios:
 
   - [Actor](#actor)
   - [Aceituna](#aceituna)
+  - [Animacion](#animacion)
+  - [Animado](#animado)
+  - [Bala](#bala)
+  - [Banana](#banana)
 
 ### Actor
 
@@ -77,3 +81,105 @@ El actor aceituna es super simple
 
 - ``aceituna.saludar(mensaje)``
 - ``aceituna.saltar()``
+
+
+### Animacion
+
+Representa una animación de una grilla de imágenes.
+
+Este actor toma una grilla de cuadros de animación
+y los reproduce hasta que la animación termina. Cuando
+la animación termina se elimina a si mismo.
+
+El constructor tiene algunos parámetros de utilidad:
+
+- El parámetro ``ciclica`` permite hacer animaciones infinitas,
+que se repiten siempre, por defecto vale ``False`` que significa que
+la animación terminará y no se repetirá.
+- El parámetro ``velocidad`` tiene que ser un número que indicará la
+cantidad de cuadros por segundo que se tienen que mostrar
+en la animación.
+
+Por ejemplo, para mostrar una explosión infinita podrías escribir:
+
+```
+grilla = pilas.imagenes.cargar_grilla("explosion.png", 7)
+animacion = pilas.actores.Animacion(grilla, ciclica=True, velocidad=1)
+```
+
+![](../imagenes/actores/explosion.png)
+
+
+*Métodos:*
+
+- ``animacion.saludar(grilla=None, ciclica=False, x=0, y=0, velocidad=10)``
+- ``animacion.definir_velocidad_de_animacion(velocidad_de_animacion)``
+- ``animacion.obtener_velocidad_de_animacion()``
+
+
+### Animado
+
+Representa un actor que tiene asociada una grilla con cuadros de animacion.
+
+Una de las variantes que introduce este actor es el
+método 'definir_cuadro', que facilita la animación de personajes.
+
+Por ejemplo, si tenemos una grilla con un pingüino, podríamos
+mostrarlo usando este código:
+
+```
+grilla = pilas.imagenes.cargar_grilla("pingu.png", 10)
+actor = Animado(grilla)
+actor.definir_cuadro(2)
+actor.definir_cuadro(5)
+```
+
+![](../imagenes/actores/pingu.png)
+
+*Métodos:*
+
+- ``actor.definir_cuadro(indice)``
+
+
+### Bala
+
+Representa un disparo que avanza en linea recta, con un ángulo
+de dirección y un sentido determinado.
+
+```
+bala = pilas.actores.Bala(rotacion=0, velocidad_maxima=9, angulo_de_movimiento=90)
+```
+
+
+y opcionalmente, si queremos que se llame a una función en el momento
+de eliminación del disparo podemos hacer así:
+
+
+```
+bala.cuando_se_elimina = funcion_a_invocar
+```
+
+### Banana
+
+Muestra una banana que se combina (temáticamente) con el actor Mono.
+
+![](../images/actores/banana.png)
+
+
+Este actor se podría usar cómo alimento o bonus para otros
+actores.
+
+Este actor tiene solo dos cuadros de animación que se pueden
+mostrar con los métodos ``abrir`` y ``cerrar``:
+
+```
+banana = pilas.actores.Banana()
+banana.abrir()
+banana.cerrar()
+```
+
+
+*Métodos:*
+
+- ``banana.abrir()``
+- ``banana.cerrar()``
