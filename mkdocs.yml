@@ -42,6 +42,7 @@ pages:
 - [depurando.md, Depurando]
 - [como_funciona_pilas_por_dentro.md, "¿Cómo funciona pilas por dentro?"]
 
+- [complementos.md, Complementos]
 - [desarrolladores.md, Guía para desarrolladores]
 
-theme_dir: 'themes/custom'
+theme: 'readthedocs'
