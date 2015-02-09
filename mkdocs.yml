@@ -45,4 +45,5 @@ pages:
 - [complementos.md, Complementos]
 - [desarrolladores.md, Guía para desarrolladores]
 
+theme_dir: 'custom_theme'
 theme: 'readthedocs'
