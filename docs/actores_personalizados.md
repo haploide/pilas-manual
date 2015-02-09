@@ -217,6 +217,8 @@ class Alien(pilasengine.actores.Actor):
 
         if con_sombra:
             self.sombra = pilas.actores.Sombra()
+            self.sombra.escala = 0.6
+            self.sombra.y = -45
         else:
             self.sombra = None
 
@@ -227,7 +229,7 @@ class Alien(pilasengine.actores.Actor):
         # actor.
         if self.sombra:
             self.sombra.x = self.x
-            self.sombra.y = self.y
+            self.sombra.y = self.y -45
 ```
 
 Y el resultado debería quedarte así:
