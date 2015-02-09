@@ -524,7 +524,7 @@ en github.</p>
   $(document).ready(function() {
      console.log("comenzando...");
      $('img').each(function(elemento) {
-        elemento.src = elemento.src.replace('github.io/imagenes', 'github.io/pilas-manual/imagenes');
+        this.src = this.src.replace('github.io/imagenes', 'github.io/pilas-manual/imagenes');
      });
   });
   </script>
