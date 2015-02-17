@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/modernizr.min.js"></script>
   <script type="text/javascript" src="../js/highlight.pack.js"></script>
   <script src="../js/theme.js"></script>
 
@@ -338,7 +338,7 @@ especie.</p>
 <p>Al crear un grupo de esta forma, todos los actores
 se colocarán en posiciones aleatorias.</p>
 <p>Esto es lo que veríamos en la ventana de pilas:</p>
-<p><img alt="" src="../../imagenes/grupos/grupos_bombas.jpg" /></p>
+<p><img alt="" src="../imagenes/grupos/grupos_bombas.jpg" /></p>
 <p>A partir de ahora, la referencia <code>bombas</code> nos servirá para
 controlar a todas las bombas al mismo tiempo.</p>
 <p>Esta referencia (que llamamos <code>bombas</code>) es parecida a una lista de datos en <code>python</code>. Podríamos realizar operaciones típicas como contar, recorrer o clasificar de la misma forma que se hace en el lenguaje <code>python</code>.</p>
@@ -361,7 +361,7 @@ hacer algo cómo esto:</p>
 </code></pre>
 
 <p>Y en la ventana obtendremos:</p>
-<p><img alt="" src="../../imagenes/grupos/grupos_bombas_x.jpg" /></p>
+<p><img alt="" src="../imagenes/grupos/grupos_bombas_x.jpg" /></p>
 <p>Incluso, les podríamos enseñar a las bombas a reaccionar
 como si fueran pelotas, es decir, que reboten e interactúen
 con la aceleración gravitatoria:</p>
@@ -370,7 +370,7 @@ con la aceleración gravitatoria:</p>
 
 <p>Ahora tendrás algo mucho mas interesante, un montón de
 actores rebotando entre sí:</p>
-<p><img alt="" src="../../imagenes/grupos/grupos_bombas_como_pelota.jpg" /></p>
+<p><img alt="" src="../imagenes/grupos/grupos_bombas_como_pelota.jpg" /></p>
 <p>Un consejo, la gravedad del escenario se puede modificar
 usando una sentencia como la que sigue:</p>
 <pre><code>pilas.fisica.gravedad_x = 200
@@ -404,7 +404,7 @@ mi_grupo.agregar(pelota)
 mi_grupo.escala = [2]
 </code></pre>
 
-<p><img alt="" src="../../imagenes/grupos/grupos_personalizado_escala.jpg" /></p>
+<p><img alt="" src="../imagenes/grupos/grupos_personalizado_escala.jpg" /></p>
 <p>Un detalle a tener en cuenta, el método <code>agregar</code> no solo te permite agregar actores, también podrías tomar un grupo y agregarle con algo como <code>grupo.agregar(otro_grupo)</code>.</p>
 
             </div>
@@ -430,18 +430,49 @@ mi_grupo.escala = [2]
     </p>
   </div>
 
-  Creado con <a href="http://www.mkdocs.org">MkDocs</a>.
+  Creado con <em>MkDocs</em>.
 
-  <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+  <script src='../js/jquery-1.11.1.js'></script>
 
   <script>
   $(document).ready(function() {
-     console.log("comenzando...");
      $('img').each(function(elemento) {
-        this.src = this.src.replace('github.io/imagenes', 'github.io/pilas-manual/imagenes');
+        if (this.src.indexOf('github.io') > 0) {
+          this.src = this.src.replace('github.io/imagenes', 'github.io/pilas-manual/imagenes');
+        }
      });
   });
   </script>
+
+  <script>
+  $(document).ready(function() {
+    String.prototype.endsWith = function(suffix){
+      return this.indexOf(suffix, this.length - suffix.length) !== -1;
+    };
+
+    $('a').each(function(){
+      var x=this.href;
+
+      if (!this.href.endsWith('html')) {
+        if (this.href.endsWith('/')) {
+          this.href = this.href + "index.html";
+        } else {
+          this.href = this.href + "/index.html";
+        }
+      }
+    });
+  });
+  </script>
+
+  <style>
+    .wy-nav-content-wrap {
+      background-color: white !important;
+    }
+
+    .wy-nav-content {
+      background-color: white !important;
+    }
+  </style>
 
 
 </footer>
