@@ -30,3 +30,4 @@ _deploy: generar
 	git subtree split --prefix=site --onto origin --branch gh-pages
 	git pull --all
 	git push --all origin
+
