@@ -163,7 +163,7 @@ bala.cuando_se_elimina = funcion_a_invocar
 
 Muestra una banana que se combina (temáticamente) con el actor Mono.
 
-![](../images/actores/banana.png)
+![](imagenes/actores/banana.png)
 
 
 Este actor se podría usar cómo alimento o bonus para otros
