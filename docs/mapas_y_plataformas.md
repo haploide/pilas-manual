@@ -39,7 +39,7 @@ la posición (8, 10):
 
     mapa.pintar_bloque(8, 10, 1)
 
-![](../imagenes/mapas_y_plataformas/mapa_un_bloque.jpg)
+![](imagenes/mapas_y_plataformas/mapa_un_bloque.jpg)
 
 
 Otro ejemplo: si queremos dibujar en la parte inferior de la
@@ -59,7 +59,7 @@ El tercer argumento será el índice de la grilla que indicamos
 anteriormente.
 
 
-![](../imagenes/mapas_y_plataformas/mapa_muchos_bloques.jpg)
+![](imagenes/mapas_y_plataformas/mapa_muchos_bloques.jpg)
 
 
 ## Colisiones con el escenario
@@ -109,7 +109,7 @@ Veamos como usar tiled para crear un escenario sencillo, primero
 tienes que crear un mapa desde el menú ``File``, se le solicitará
 indicar el tamaño del escenario:
 
-![](../imagenes/mapas_y_plataformas/tiled2.png)
+![](imagenes/mapas_y_plataformas/tiled2.png)
 
 Usa los valores por defecto, al menos por esta vez.
 
@@ -118,13 +118,13 @@ indicar cual es la grilla de imágenes que usarás en los bloques. Te
 recomiendo usar la imagen ``batalhao.png`` (de Silveins Neto), que
 está en la carpeta de ejemplos de pilas:
 
-![](../imagenes/mapas_y_plataformas/tiled3.png)
+![](imagenes/mapas_y_plataformas/tiled3.png)
 
 Ahora, lo mas divertido, comienza a dibujar sobre el escenario
 seleccionando bloques. Observa que el programa tiene varias herramientas
 para hacer que esto sea mucho mas sencillo:
 
-![](../imagenes/mapas_y_plataformas/tiled4.png)
+![](imagenes/mapas_y_plataformas/tiled4.png)
 
 
 Luego, asegúrate de que el programa guarda todos los datos en formato CSV, esto
@@ -132,7 +132,7 @@ es importante para que se pueda vincular con pilas. Para esto tienes
 que abrir el menú ``Edit`` y luego ``Preferences``, la pantalla de opciones
 te tiene que quedar así:
 
-![](../imagenes/mapas_y_plataformas/tiled5.png)
+![](imagenes/mapas_y_plataformas/tiled5.png)
 
 
 Listo, ahora solamente hay que guardar el mapa en un archivo. Ve al menú
@@ -161,7 +161,7 @@ Por ejemplo, en el escenario anterior, sería interesante colocar
 los bloques de pasto y la ruta en la capa que he llamado "suelo"
 y el resto de los objetos en otras capas como "obstáculos" y "paredes":
 
-![](../imagenes/mapas_y_plataformas/tiled6.png)
+![](imagenes/mapas_y_plataformas/tiled6.png)
 
 
 ## Un ejemplo completo
@@ -171,4 +171,4 @@ directorio de ejemplos de pilas, podrás observar un escenario
 muy simple con obstáculos y un personaje que se puede mover
 con el teclado:
 
-![](../imagenes/mapas_y_plataformas/tiled8.png)
+![](imagenes/mapas_y_plataformas/tiled8.png)

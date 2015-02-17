@@ -45,7 +45,7 @@ usuario).
 Este es un ejemplo de dos configuraciones distintas
 de atributos ``z``:
 
-![](../imagenes/controlando_la_pantalla/atributo_z.png)
+![](imagenes/controlando_la_pantalla/atributo_z.png)
 
 Ten en cuenta que inicialmente todos los actores
 tienen un atributo ``z=0``.

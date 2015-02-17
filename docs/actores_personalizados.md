@@ -17,7 +17,7 @@ Comencemos con una imagen sencilla para el
 actor, este archivo se llama ``alien.png`` y está
 en el directorio de nuestro código:
 
-![imagen alien.png](../imagenes/actores_personalizados/alien.png)
+![imagen alien.png](imagenes/actores_personalizados/alien.png)
 
 Luego, es momento de crear el código de la clase para
 agrupar todo lo relacionado a este nuevo actor. Por
@@ -49,7 +49,7 @@ alien = Alien(pilas)
 Ahora con el código completo, tendrías que ver al personaje
 en el centro de la pantalla:
 
-![imagen alien.png](../imagenes/actores_personalizados/completo.png)
+![imagen alien.png](imagenes/actores_personalizados/completo.png)
 
 
 ## Comportamiento heredado
@@ -65,7 +65,7 @@ Por ejemplo, podrías escribir algo como:
     alien.decir(u"¡oh, no, humanos!")
 
 
-![](../imagenes/actores_personalizados/decir.png)
+![](imagenes/actores_personalizados/decir.png)
 
 
 
@@ -102,14 +102,14 @@ Y ahora tenemos dos métodos nuevos para invocar:
     alien.saludar()
 
 
-![](../imagenes/actores_personalizados/saludar.png)
+![](imagenes/actores_personalizados/saludar.png)
 
 y otro un poquito mas complejo:
 
     alien.dar_vuelta()
 
 
-![](../imagenes/actores_personalizados/dar_vuelta.gif)
+![](imagenes/actores_personalizados/dar_vuelta.gif)
 
 
 
@@ -163,7 +163,7 @@ derecho.
 Así se ve mientras voy pulsando las teclas ``izquierda``
 y ``derecha``:
 
-![](../imagenes/actores_personalizados/caminando.gif)
+![](imagenes/actores_personalizados/caminando.gif)
 
 
 
@@ -234,7 +234,7 @@ class Alien(pilasengine.actores.Actor):
 
 Y el resultado debería quedarte así:
 
-![](../imagenes/actores_personalizados/personalizado.png)
+![](imagenes/actores_personalizados/personalizado.png)
 
 
 ## Detectando errores y problemas al inicializar

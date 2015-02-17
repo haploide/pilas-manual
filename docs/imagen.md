@@ -69,7 +69,7 @@ personajes es usar una grilla.
 La siguiente imagen es una grilla de 10 columnas
 que utilizamos para crear al personaje "pingu":
 
-![](../imagenes/imagen/pingu.png)
+![](imagenes/imagen/pingu.png)
 
 
 Internamente la imagen se almacena así, pero a la
@@ -173,7 +173,7 @@ a derecha y de arriba a abajo).
 Esta es la apariencia de la imágen que usamos antes y
 los números indican el órden con que pilas leerá los cuadros:
 
-![](../imagenes/imagen/grilla_con_columnas.png)
+![](imagenes/imagen/grilla_con_columnas.png)
 
 
 ## Haciendo animaciones sencillas
@@ -196,7 +196,7 @@ cuando llega al final.
 Veamos un ejemplo, esta imagen tiene ``6`` cuadros de animación
 ordenados en columnas:
 
-![](../imagenes/imagen/grilla_fuego.png)
+![](imagenes/imagen/grilla_fuego.png)
 
 
 Una forma sencilla de convertir esta animación en un actor
@@ -272,24 +272,24 @@ Además de las imágenes y las grillas, pilas incluye un recurso llamado animaci
 
 Por ejemplo, si tenemos una grilla con varios cuadros de animación como aquí:
 
-![](../imagenes/imagen/alien-simple.png)
+![](imagenes/imagen/alien-simple.png)
 
 podemos cargar la grilla completa y definir las dos
 animaciones por separado.
 
 Enumerando los cuadros de animación nos quedaría así:
 
-![](../imagenes/imagen/alien-simple-enumerado.png)
+![](imagenes/imagen/alien-simple-enumerado.png)
 
 y desde aquí podemos extraer dos animaciones:
 
 - La animación que podemos armar con los cuadros ``0, 1, 4``:
 
-![](../imagenes/imagen/anim2.gif)
+![](imagenes/imagen/anim2.gif)
 
 - Y la animación que se puede armar con los cuadros ``3, 4, 5``:
 
-![](../imagenes/imagen/anim1.gif)
+![](imagenes/imagen/anim1.gif)
 
 
 Luego, para indicarle a *pilas* como interpretar las animaciones podemos

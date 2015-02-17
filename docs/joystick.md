@@ -3,7 +3,7 @@
 El soporte para joysticks nos permite controlar actores usando varios
 modelos de mandos usb, por ejemplos los de **xbox** o similares:
 
-![](../imagenes/joystick/xbox.jpg)
+![](imagenes/joystick/xbox.jpg)
 
 
 ## Obtener dispositivos conectados

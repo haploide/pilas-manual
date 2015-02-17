@@ -27,7 +27,7 @@ tuyos propios:
 Representa un objeto visible en pantalla, algo que se ve y tiene
 la estructura inicial de actor
 
-![](../imagenes/actores/actor.png)
+![](imagenes/actores/actor.png)
 
 
 Un objeto Actor se tiene que crear siempre indicando una imagen. Si no
@@ -46,7 +46,7 @@ incluso, es equivalente hacer lo siguiente:
 El resultado será:
 
 
-![](../imagenes/actores/planeta_azul.png)
+![](imagenes/actores/planeta_azul.png)
 
 Luego, una vez que ha sido ejecutada la sentencia aparecerá
 el nuevo actor para que puedas manipularlo. Por ejemplo
@@ -73,7 +73,7 @@ con la imagen ``invisible.png``:
 
 El actor aceituna es super simple
 
-![](../imagenes/actores/aceituna.png)
+![](imagenes/actores/aceituna.png)
 
     aceituna = pilas.actores.Aceituna()
 
@@ -107,7 +107,7 @@ grilla = pilas.imagenes.cargar_grilla("explosion.png", 7)
 animacion = pilas.actores.Animacion(grilla, ciclica=True, velocidad=1)
 ```
 
-![](../imagenes/actores/explosion.png)
+![](imagenes/actores/explosion.png)
 
 
 *Métodos:*
@@ -134,7 +134,7 @@ actor.definir_cuadro(2)
 actor.definir_cuadro(5)
 ```
 
-![](../imagenes/actores/pingu.png)
+![](imagenes/actores/pingu.png)
 
 *Métodos:*
 

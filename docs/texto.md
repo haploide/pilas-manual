@@ -19,7 +19,7 @@ Para crear un mensaje tienes que escribir:
 y tu cadena de texto aparecerá en pantalla en color
 negro y con un tamaño predeterminado:
 
-![](../imagenes/texto/texto.jpg)
+![](imagenes/texto/texto.jpg)
 
 
 Si quieres puedes escribir texto de varias lineas usando el caracter

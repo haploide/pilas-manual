@@ -39,7 +39,7 @@ teclado.
 Esta es una imagen de cómo se vé el menú del
 ejemplo de mas arriba:
 
-![](../imagenes/menu/menu.jpg)
+![](imagenes/menu/menu.jpg)
 
 
 Cada vez que selecciones una opción aparecerá un

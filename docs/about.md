@@ -23,32 +23,32 @@ partes del mundo:
 <table class='about-core'>
 <tr>
   <td>
-    <img alt="" src="../imagenes/equipo/hugoruscitti.png">
+    <img alt="" src="imagenes/equipo/hugoruscitti.png">
     <br/>
     Hugo Ruscitti
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/wally.png">
+    <img alt="" src="imagenes/equipo/wally.png">
     <br/>
     Walter Velazquez
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/quiqueporta.png">
+    <img alt="" src="imagenes/equipo/quiqueporta.png">
     <br/>
     Quique Porta
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/fsalamero.png">
+    <img alt="" src="imagenes/equipo/fsalamero.png">
     <br/>
     Fernando Salamero
   </td>
 
 
   <td>
-    <img alt="" src="../imagenes/equipo/irvingprog.png">
+    <img alt="" src="imagenes/equipo/irvingprog.png">
     <br/>
     Irving Rodríguez
   </td>
@@ -61,31 +61,31 @@ partes del mundo:
 <table class='about-colaboradores'>
 <tr>
   <td>
-    <img alt="" src="../imagenes/equipo/malev.png">
+    <img alt="" src="imagenes/equipo/malev.png">
     <br/>
     Marcos Vanetta
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/lucianobaraglia.png">
+    <img alt="" src="imagenes/equipo/lucianobaraglia.png">
     <br/>
     Luciano Baraglia
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/hernantz.png">
+    <img alt="" src="imagenes/equipo/hernantz.png">
     <br/>
     hernantz
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/pablomouzo.png">
+    <img alt="" src="imagenes/equipo/pablomouzo.png">
     <br/>
     Pablo Mouzo
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/DiegoAccorinti.png">
+    <img alt="" src="imagenes/equipo/DiegoAccorinti.png">
     <br/>
     Diego Accorinti
   </td>
@@ -95,7 +95,7 @@ partes del mundo:
 <tr>
 
   <td>
-    <img alt="" src="../imagenes/equipo/leliel12.png">
+    <img alt="" src="imagenes/equipo/leliel12.png">
     <br/>
     JuanBC
 
@@ -103,28 +103,28 @@ partes del mundo:
 
 
   <td>
-    <img alt="" src="../imagenes/equipo/binary-sequence.png">
+    <img alt="" src="imagenes/equipo/binary-sequence.png">
     <br/>
     binary-sequence
 
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/josx.png">
+    <img alt="" src="imagenes/equipo/josx.png">
     <br/>
     José Luis Di Biase
 
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/felipe.png">
+    <img alt="" src="imagenes/equipo/felipe.png">
     <br/>
     Felipe González
 
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/ipedrazas.png">
+    <img alt="" src="imagenes/equipo/ipedrazas.png">
     <br/>
     Ivan Pedrazas
 
@@ -134,19 +134,19 @@ partes del mundo:
 
 <tr>
   <td>
-    <img alt="" src="../imagenes/equipo/jairot.png">
+    <img alt="" src="imagenes/equipo/jairot.png">
     <br/>
     Jairo Trad
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/tutuca.png">
+    <img alt="" src="imagenes/equipo/tutuca.png">
     <br/>
     Matías Iturburu
   </td>
 
   <td>
-    <img alt="" src="../imagenes/equipo/diego_rr.png">
+    <img alt="" src="imagenes/equipo/diego_rr.png">
     <br/>
     Diego Riquelme
   </td>

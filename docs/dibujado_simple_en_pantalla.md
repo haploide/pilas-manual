@@ -33,7 +33,7 @@ La siguiente imagen muestra lo que podría
 dibujar la tortuga con algunas sentencias de
 movimientos:
 
-![](../imagenes/dibujado_simple_en_pantalla/tortuga_dibuja_triangulo.jpg)
+![](imagenes/dibujado_simple_en_pantalla/tortuga_dibuja_triangulo.jpg)
 
 La imagen no alcanza a mostrar por completo el
 concepto, pero en pocas palabras se puede sintetizar
@@ -117,7 +117,7 @@ si prefieres otro color, o trazar una linea:
 
     pizarra.linea(0, 0, 200, 200, pilas.colores.verdeoscuro, grosor=5)
 
-![](../imagenes/dibujado_simple_en_pantalla/linea.jpg)
+![](imagenes/dibujado_simple_en_pantalla/linea.jpg)
 
 
 ## Pintando imágenes
@@ -137,7 +137,7 @@ indicarla a la pizarra que la dibuje en una posicion determinada.
 
 Así se verá:
 
-![](../imagenes/dibujado_simple_en_pantalla/pizarra_imagen.jpg)
+![](imagenes/dibujado_simple_en_pantalla/pizarra_imagen.jpg)
 
 Ten en cuenta que en estos casos, cuando estamos dibujando
 una imagen sobre otra, el punto destino (x, y) siempre indica
@@ -172,7 +172,7 @@ que pinte el cuadro actual de la grilla:
 
 Así se verá:
 
-![](../imagenes/dibujado_simple_en_pantalla/pizarra_grilla.jpg)
+![](imagenes/dibujado_simple_en_pantalla/pizarra_grilla.jpg)
 
 Esto es útil cuando se quieren pintar bloques de un escenario
 completo, por ejemplo podríamos tener una grilla con distintos

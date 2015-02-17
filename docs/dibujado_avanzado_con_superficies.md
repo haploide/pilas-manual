@@ -55,7 +55,7 @@ es un objeto que se comporta cómo una imagen, pero con la diferencia
 que podemos dibujar sobre ella libremente y crear desde el código la
 imagen que queramos:
 
-![](../imagenes/dibujo_avanzado/carita.png)
+![](imagenes/dibujo_avanzado/carita.png)
 
 Ten en cuenta que también estamos mostrando la superficie gracias a un
 actor, así que si rotamos el actor o cambiamos su escala la superficie

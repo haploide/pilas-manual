@@ -26,7 +26,7 @@ def saludar():
 boton.conectar(saludar)
 ```
 
-![](../imagenes/interfaz/boton_saludando.png)
+![](imagenes/interfaz/boton_saludando.png)
 
 Ten en cuenta que todos los objetos creados siguen siendo actores, así
 que se pueden manipular como vimos antes: escalar, rotar, moverse etc...
@@ -65,7 +65,7 @@ b.conectar(moverse)
 El resultado en pantalla será así:
 
 
-![](../imagenes/interfaz/boton.gif)
+![](imagenes/interfaz/boton.gif)
 
 
 ## Clase: Deslizador
@@ -85,7 +85,7 @@ el usuario puede regular cualquiera de los tres para ver
 los cambios en el actor:
 
 
-![](../imagenes/interfaz/deslizador.jpg)
+![](imagenes/interfaz/deslizador.jpg)
 
 
 Para construir un deslizador y asociarlo a una función
@@ -181,7 +181,7 @@ selector.conectar(cambiar_el_fondo)
 El resultado en pantalla será así:
 
 
-![](../imagenes/interfaz/selector.gif)
+![](imagenes/interfaz/selector.gif)
 
 #### Propiedades
 
@@ -204,7 +204,7 @@ muestra una caja y un pequeño cursor para
 ingresar texto:
 
 
-![](../imagenes/interfaz/ingreso_de_texto.png)
+![](imagenes/interfaz/ingreso_de_texto.png)
 
 Para usar este componente tienes que crearlo y luego leer o escribir el
 atributo `texto`, que contiene la cadena de texto de la caja:
@@ -274,5 +274,5 @@ opciones = pilas.interfaz.ListaSeleccion(['hola', 'opcion', 'tres'], cuando_sele
 
 Deberías ver en pantalla lo siguiente:
 
-![](../imagenes/interfaz/lista_seleccion.gif)
+![](imagenes/interfaz/lista_seleccion.gif)
 

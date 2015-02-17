@@ -108,7 +108,7 @@ El objeto de la clase Mundo se construye cuando se invoca a la
 función ``pilas.iniciar``. Su implementación está en el
 archivo ``mundo.py``:
 
-![](../imagenes/comofunciona/mundo.png)
+![](imagenes/comofunciona/mundo.png)
 
 Su responsabilidad es inicializar varios componentes de pilas, como
 el sistema de controles, la ventana, etc.
@@ -188,7 +188,7 @@ El objeto motor sabe que tiene que delegar el manejo multimedia
 a una instancia (o derivada) de la clase ``Motor`` (ver directorio
 ``pilas/motores/``:
 
-![](../imagenes/comofunciona/motores.png)
+![](imagenes/comofunciona/motores.png)
 
 
 El motor expone toda la funcionalidad que se necesita para
@@ -218,7 +218,7 @@ el comportamiento común de todos los actores.
 Por ejemplo, esta sería una versión reducida de la
 jerarquía de clases de los actores Mono, Pingu y Tortuga:
 
-![](../imagenes/comofunciona/actores.png)
+![](imagenes/comofunciona/actores.png)
 
 
 Hay dos métodos en los actores que se invocarán en
@@ -247,7 +247,7 @@ hacer estos dibujos.
 Las clases mas importantes a la hora de investigar el depurador
 están en el archivo ``depurador.py``:
 
-![](../imagenes/comofunciona/depurador.png)
+![](imagenes/comofunciona/depurador.png)
 
 
 El Depurador tiene dos atributos, tiene una pizarra para dibujar y
@@ -455,7 +455,7 @@ argumento, construye un objeto y lo guarda en su lista de habilidades.
 Este es un modelo de cómo se conocen las clases entre
 sí:
 
-![](../imagenes/comofunciona/habilidades.png)
+![](imagenes/comofunciona/habilidades.png)
 
 Entonces, una vez que invocamos a la sentencia, nuestro actor
 tendrá un nuevo objeto en su lista de habilidades, listo para

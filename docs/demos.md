@@ -28,7 +28,7 @@ inmediatamente despúes de evaluar estas sentencias, aparecerá en
 pantalla un grupo de piezas para que puedas
 empezar a acomodarlas usando el mouse.
 
-![](../imagenes/demos/piezas.jpg)
+![](imagenes/demos/piezas.jpg)
 
 Ten en cuenta que los ejemplos también reciben parámetros, así
 podemos alterar un poco mas el funcionamiento del minijuego.
@@ -49,7 +49,7 @@ Escribí lo siguiente:
 Si, ahora en pantalla aparece la imagen del mono pero separado
 en 4 piezas. Dado que hemos especificado 2 (filas) y 2 (columnas).
 
-![](../imagenes/demos/piezas_mono.jpg)
+![](imagenes/demos/piezas_mono.jpg)
 
 
 Puedes usar cualquier imagen que quieras para construir tu
@@ -73,4 +73,4 @@ complete el rompecabezas:
     pilas.ejecutar() # Necesario al ejecutar en scripts.
 
 
-![](../imagenes/demos/piezas_completo.jpg)
+![](imagenes/demos/piezas_completo.jpg)

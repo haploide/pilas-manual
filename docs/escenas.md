@@ -9,7 +9,7 @@ el menú principal, una presentanción y una
 pantalla de juego.
 
 
-![](../imagenes/escenas/escenas_juego.png)
+![](imagenes/escenas/escenas_juego.png)
 
 
 ## Cosas a tener en cuenta
@@ -54,13 +54,13 @@ Esto le dará a tu escena una vista
 mas agradable, porque carga un fondo de
 pantalla colorido y mas divertido:
 
-![](../imagenes/escenas/paisaje.jpg)
+![](imagenes/escenas/paisaje.jpg)
 
 o podrías usar un fondo de atardecer:
 
     pilas.fondos.Tarde()
 
-![](../imagenes/escenas/tarde.jpg)
+![](imagenes/escenas/tarde.jpg)
 
 ## Cómo crear nuevas escenas
 
@@ -95,7 +95,7 @@ Esto eliminará las escenas almacenadas y se colocará como la escena
 actual y activa:
 
 
-![](../imagenes/escenas/escena_simple.jpg)
+![](imagenes/escenas/escena_simple.jpg)
 
 Ahora, si quieres salir de la escena, simplemente tendrías
 que hacer un objeto de otra clase que represente otra escena y llamar a uno de

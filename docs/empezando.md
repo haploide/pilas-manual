@@ -10,13 +10,13 @@ Para ejecutar el asistente de pilas, abre un terminal y ejecuta el comando pilas
 
 En tu pantalla tiene que aparecer una ventana como esta.
 
-![](../imagenes/empezando/asistente.png)
+![](imagenes/empezando/asistente.png)
 
 ## Intérprete de pilas
 
 Haz click en Abrir intérprete y aparecerá esta ventana.
 
-![](../imagenes/empezando/interprete.png)
+![](imagenes/empezando/interprete.png)
 
 La ventana se divide en dos partes. La parte de abajo muestra el editor. Todo lo que escribas en el editor se ejecutará automáticamente. El resultado se muestra en la parte de arriba.
 
@@ -75,7 +75,7 @@ mono.gritar()
 
 En cualquiera de los dos casos, el personaje cambiará su aspecto y emitirá un sonido.
 
-![](../imagenes/empezando/smile.png)
+![](imagenes/empezando/smile.png)
 
 Incluso podríamos decirle al personaje que tiene que hablar algo, por ejemplo:
 
@@ -87,7 +87,7 @@ y el personaje mostrará exactamente lo que le indicamos que tiene que decir,
 cómo si fuera un personaje de comic:
 
 
-![](../imagenes/empezando/decir.png)
+![](imagenes/empezando/decir.png)
 
 A partir de ahora, comenzaremos a escribir algunos ejemplos. Ten en cuenta que no es necesario que escribas todo el código de los ejemplos, el intérprete de pilas te permite autocompletar sentencias mientras escribes.
 
@@ -109,7 +109,7 @@ mono.y = 100
 Ten en cuenta que x e y son las coordenadas de posición en el escenario. Por lo tanto el punto (0, 0) es el centro de la ventana. Y x aumenta hacia la derecha e y hacia arriba.
 
 
-![](../imagenes/empezando/normal.png)
+![](imagenes/empezando/normal.png)
 
 Este espacio de referencia se puede observar en detalle si pulsas la tecla F12, ahí observarás que el movimiento del mouse está asociado a una coordenada y cada actor también.
 
@@ -135,7 +135,7 @@ También contamos con un atributo que indica la rotación en grados que debe ten
 mono.rotacion = 40
 ```
 
-![](../imagenes/empezando/rotacion40.png)
+![](imagenes/empezando/rotacion40.png)
 
 o bien:
 
@@ -144,7 +144,7 @@ mono.rotacion = 80
 
 ```
 
-![](../imagenes/empezando/rotacion80.png)
+![](imagenes/empezando/rotacion80.png)
 
 
 La rotación siempre se indica en grados, e indica el grado de inclinación hacia la derecha.
@@ -220,7 +220,7 @@ b.explotar()
 p = pilas.actores.Pingu()    # se mueve con el teclado.
 ```
 
-![](../imagenes/empezando/resultado_parte_1.jpg)
+![](imagenes/empezando/resultado_parte_1.jpg)
 
 
 Es todo por ahora, seguí leyendo o comenzá a explorar por tu cuenta. A divertirse!

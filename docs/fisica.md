@@ -44,7 +44,7 @@ de actores chocando entre sí. Mas adelante veremos
 como personalizar y "controlar" un poco el escenario.
 
 
-![](../imagenes/fisica/fisica.png)
+![](imagenes/fisica/fisica.png)
 
 Los actores que tienen física son un poco particulares, pero
 aún así se los puede tratar como a otros actores. Por
@@ -70,7 +70,7 @@ simulación entre polígonos mucho mas primitiva y simple.
 
 Observa esta escena:
 
-![](../imagenes/fisica/fisica_1.jpg)
+![](imagenes/fisica/fisica_1.jpg)
 
 Cada uno de esos actores está asociado a una figura
 geométrica, la física en realidad se da en un nivel muy
@@ -82,7 +82,7 @@ Intenta lo siguiente, pulsa la tecla **F11** y observarás
 varias lineas de color rojo indicando las figuras de
 los cuerpos:
 
-![](../imagenes/fisica/fisica_2.jpg)
+![](imagenes/fisica/fisica_2.jpg)
 
 
 Las lineas rojas indican polígonos que el
@@ -127,7 +127,7 @@ y pulsa la tecla **F11**. Tendrías que ver el texto
 "F11 ModoFisica habilitado."
 en la esquina superior de la ventana:
 
-![](../imagenes/fisica/fisica_personalizada_1.jpg)
+![](imagenes/fisica/fisica_personalizada_1.jpg)
 
 Ahora genera dos figuras físicas, una circunferencia estática
 y otra dinámica:
@@ -143,7 +143,7 @@ en la parte superior de la ventana y luego caerá
 rebotando. Algo así:
 
 
-![](../imagenes/fisica/fisica_personalizada_2.jpg)
+![](imagenes/fisica/fisica_personalizada_2.jpg)
 
 Ahora bien, habrás notado que estas dos circunferencias las
 podemos ver porque está habilitado el módulo de depuración (que
@@ -173,7 +173,7 @@ bomba.aprender(pilas.habilidades.Imitar, circulo_dinamico)
 Esto es diferente a lo anterior, los objetos físicos ahora
 tienen apariencia:
 
-![](../imagenes/fisica/fisica_personalizada_3.jpg)
+![](imagenes/fisica/fisica_personalizada_3.jpg)
 
 
 Ahora podríamos desactivar el modo depuración física (pulsando
@@ -215,7 +215,7 @@ de box2D en coherencia con lo que estamos viendo en pantalla.
 30 pixels son equivalentes a 1 metro:
 
 
-![](../imagenes/fisica/escalas.png)
+![](imagenes/fisica/escalas.png)
 
 
 ## Cambiando la gravedad interactivamente

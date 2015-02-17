@@ -14,7 +14,7 @@ Las **colisiones físicas** son aquellas que generan una reacción que se puede
 visualizar como una respuesta física, por ejemplo si creamos 5 cajas y las
 hacemos rebotar entre sí, estas serían colisiones físicas:
 
-![](../imagenes/colisiones/cajas.png)
+![](imagenes/colisiones/cajas.png)
 
 ```
 cajas = pilas.actores.Caja() * 5
@@ -30,7 +30,7 @@ puntos, pasar de nivel etc..)
 Por ejemplo, una colisión programada sencilla se puede visualizar si creamos
 un personaje que se pueda mover con el mouse y se alimente comiendo bananas:
 
-![](../imagenes/colisiones/mono.png)
+![](imagenes/colisiones/mono.png)
 
 ```
 mono = pilas.actores.Mono()
@@ -50,13 +50,13 @@ El modo depuración física nos permite observar las figuras físicas de
 cada uno de los actores. Para activar este modo, podés pulsar la tecla **F12**
 o simplemente hacer click sobre el ícono "mostrar figuras físicas":
 
-![](../imagenes/colisiones/depurador.png)
+![](imagenes/colisiones/depurador.png)
 
 
 Con este modo habilitado, vas a poder observar la figura de colisión
 que lo representa:
 
-![](../imagenes/colisiones/ejemplo.png)
+![](imagenes/colisiones/ejemplo.png)
 
 En color blanco aparecen las figuras físicas, que al rebotar con otras
 producirán una reacción de choque y rebote. Y de color verde van a aparecer
@@ -103,7 +103,7 @@ La forma mas sencilla de cambiar una figura por otra, es crear la figura
 física primero y luego asignarla a la propiedad `figura_de_colision` del
 actor:
 
-![](../imagenes/colisiones/figuras.png)
+![](imagenes/colisiones/figuras.png)
 
 Para construir este ejemplo construímos dos actores, al primero lo dejamos
 tal cual, pero al segundo le cambiamos la figura de colisión por un rectángulo:

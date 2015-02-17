@@ -26,7 +26,7 @@ se colocarán en posiciones aleatorias.
 
 Esto es lo que veríamos en la ventana de pilas:
 
-![](../imagenes/grupos/grupos_bombas.jpg)
+![](imagenes/grupos/grupos_bombas.jpg)
 
 
 A partir de ahora, la referencia `bombas` nos servirá para
@@ -59,7 +59,7 @@ bombas.x = 0
 
 Y en la ventana obtendremos:
 
-![](../imagenes/grupos/grupos_bombas_x.jpg)
+![](imagenes/grupos/grupos_bombas_x.jpg)
 
 
 Incluso, les podríamos enseñar a las bombas a reaccionar
@@ -73,7 +73,7 @@ bombas.aprender(pilas.habilidades.RebotarComoPelota)
 Ahora tendrás algo mucho mas interesante, un montón de
 actores rebotando entre sí:
 
-![](../imagenes/grupos/grupos_bombas_como_pelota.jpg)
+![](imagenes/grupos/grupos_bombas_como_pelota.jpg)
 
 
 Un consejo, la gravedad del escenario se puede modificar
@@ -120,6 +120,6 @@ mi_grupo.agregar(pelota)
 mi_grupo.escala = [2]
 ```
 
-![](../imagenes/grupos/grupos_personalizado_escala.jpg)
+![](imagenes/grupos/grupos_personalizado_escala.jpg)
 
 Un detalle a tener en cuenta, el método ``agregar`` no solo te permite agregar actores, también podrías tomar un grupo y agregarle con algo como ``grupo.agregar(otro_grupo)``.
