@@ -42,7 +42,7 @@
     $('a').each(function(){
       var x=this.href;
 
-      if (!this.href.endsWith('html')) {
+      if (!this.href.endsWith('html') && this.href.indexOf('#') < 0) {
         if (this.href.endsWith('/')) {
           this.href = this.href + "index.html";
         } else {

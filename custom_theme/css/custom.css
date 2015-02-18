@@ -1,0 +1,11 @@
+img {
+  width: auto !important;
+}
+
+pre {
+  padding: 0px !important;
+}
+
+.hljs {
+  font-size: 15px;
+}
