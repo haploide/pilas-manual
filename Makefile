@@ -10,12 +10,13 @@ all:
 
 
 actualizar:
+	@echo " " >> Makefile
+	git add Makefile
 	git add docs
 	make generar
 	git add ./site/ Makefile
 	git commit -m "actualización y deploy."
 	make _deploy
-	@echo "\n" >> Makefile
 	@echo ""
 	@echo "Listo, la url es: http://hugoruscitti.github.io/pilas-manual"
 	@echo ""
@@ -32,4 +33,4 @@ _deploy: generar
 	git pull --all
 	git push --all origin
 
-
+ 
