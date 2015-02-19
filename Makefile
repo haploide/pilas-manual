@@ -15,6 +15,7 @@ actualizar:
 	git add ./site/ Makefile
 	git commit -m "actualización y deploy."
 	make _deploy
+	@echo "\n" >> Makefile
 	@echo ""
 	@echo "Listo, la url es: http://hugoruscitti.github.io/pilas-manual"
 	@echo ""
@@ -30,4 +31,5 @@ _deploy: generar
 	git subtree split --prefix=site --onto origin --branch gh-pages
 	git pull --all
 	git push --all origin
+
 
