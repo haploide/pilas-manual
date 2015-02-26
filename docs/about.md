@@ -14,7 +14,7 @@ y desarrollar cualquier tipo de software.
 ## El equipo
 
 En el desarrollo de pilas participamos varias personas, somos una comunidad
-abierta y colaborativa de programadores, docentes y estudiates de distintas
+abierta y colaborativa de programadores, docentes y estudiantes de distintas
 partes del mundo:
 
 
@@ -154,7 +154,11 @@ partes del mundo:
 </tr>
 </table>
 
-Te invitamos a participar del equipo, visitá nuestro [foro](http://foro-pilasengine.com.ar) y nuestro proyecto en [github](http://github.com/hugoruscitti/pilas) para obtener más información
+## ¿Cómo participar?
+
+Si queres participar en el equipo, visitá nuestro [foro](http://foro-pilasengine.com.ar) y nuestro proyecto en [github](http://github.com/hugoruscitti/pilas) para obtener más información.
+
+
 
 ## ¿Por qué pilas?
 
