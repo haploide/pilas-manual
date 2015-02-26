@@ -26,8 +26,7 @@ pages:
 - [controlando_la_pantalla.md, Controlando la pantalla]
 - [comportamientos.md, Comportamientos]
 - [escenas.md, Escenas]
-- [migrar_al_gestor_de_escenas.md, Como migrar mi juego al nuevo Gestor de Escenas]
-- [gestor_de_escenas.md, Nuevo Gestor de Escenas]
+
 - [demos.md, Demos]
 
 - [interfaz.md, Interfaz de usuario]
