@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .rst-content ul {
   margin: 1em;
@@ -131,4 +132,16 @@ table {
   font-style: normal;
   font-weight: 700;
   src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(dazS1PrQQuCxC3iOAJFEJRbnBKKEOwRKgsHDreGcocg.woff) format('woff');
+=======
+img {
+  width: auto !important;
+}
+
+pre {
+  padding: 0px !important;
+}
+
+.hljs {
+  font-size: 15px;
+>>>>>>> e7005ba39297ee7338be6c044534b7e382fa8123
 }
