@@ -11,17 +11,11 @@ $( document ).ready(function() {
     });
     $(document).on('click', "[data-toggle='rst-current-version']", function() {
       $("[data-toggle='rst-versions']").toggleClass("shift-up");
-<<<<<<< HEAD
-    });  
-    // Make tables responsive
-    $("table.docutils:not(.field-list)").wrap("<div class='wy-table-responsive'></div>");
-=======
     });
     // Make tables responsive
     $("table.docutils:not(.field-list)").wrap("<div class='wy-table-responsive'></div>");
 
     hljs.initHighlightingOnLoad();
->>>>>>> e7005ba39297ee7338be6c044534b7e382fa8123
 });
 
 window.SphinxRtdTheme = (function (jquery) {
