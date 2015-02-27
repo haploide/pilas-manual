@@ -31,7 +31,8 @@ preview:
 _deploy: generar
 	cd ../website__pilas-manual; git pull --all 
 	cp -r site/* ../website__pilas-manual/
-	cd ../website__pilas-manual; git commit -m "actualizacion y deploy."; git push --all origin
+	cd ../website__pilas-manual; git commit -am "actualizacion y deploy."; git push --all origin
+ 
  
  
  
