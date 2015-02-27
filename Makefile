@@ -29,14 +29,7 @@ preview:
 	mkdocs serve
 
 _deploy: generar
-	git subtree split --prefix=site --onto origin --branch gh-pages
-	git pull --all
-	git push --all origin
-
- 
- 
- 
- 
- 
- 
+	cd ../website__pilas-manual; git pull --all 
+	cp -r site/* ../website__pilas-manual/
+	cd ../website__pilas-manual; git push --all origin
  
