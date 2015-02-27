@@ -27,7 +27,7 @@ El siguiente código hace eso:
     import pilasengine
 
     pilas = pilasengine.iniciar()
-    
+
     mono = pilas.actores.Mono()
     mono.aprender(pilas.habilidades.AumentarConRueda)
 
@@ -43,7 +43,7 @@ las habilidades son algo que duran para toda la vida
 del actor.
 
 
-## Un ejemplo mas: hacer que un actor sea arrastrable por el mouse
+## Un ejemplo mas: hacer que un actor se pueda mover con el mouse
 
 Algo muy común en los juegos es que puedas
 tomar piezas con el mouse y moverlas por la pantalla.
@@ -89,9 +89,7 @@ que te recomendamos abrir un intérprete de python
 y consultarle directamente a él que habilidades tienes
 disponibles en tu versión de pilas.
 
-
 Para esto, abrí el intérprete de pilas y escribí lo siguiente:
-
 
     dir(pilas.habilidades)
 
@@ -99,38 +97,68 @@ esto imprimirá en pantalla todas las habilidades como una
 lista de cadenas.
 
 
-## ¿Cómo funcionan las habilidades?
+## Crear habilidades personalizadas
 
-Las habilidades son clases normales de python, solo que se han
-diseñado para representar funcionalidad y no entidades.
+Para crear una habilidad nueva, tienes que crear una clase
+y vincularla al módulo de habilidades.
 
-La vinculación con los actores se produce usando herencia
-múltiple, una de las virtudes de python.
+La clase tiene que heredar de ``pilasengine.habilidades.Habilidad`` y
+puede tener un método ``actualizar``, en donde generalmente se
+coloca la acción a realizar:
 
-Así que internamente lo que sucede cuando ejecutas una
-sentencia como:
+    class GirarPorSiempre(pilasengine.habilidades.Habilidad):
 
-    actor.aprender(pilas.habilidades.HabilidadDeEjemplo)
+        def actualizar(self):
+            self.receptor.rotacion += 1
 
-es que la instancia de la clase actor pasa a tener una
-superclase adicional, llamada ``HabilidadDeEjemplo``.
+    pilas.habilidades.vincular(GirarPorSiempre)
 
-A diferencia de la programación orientada a objetos
-clásica, en ``pilas`` los objetos no guardan una
-estrecha relación con una jerarquía de clases. Por el
-contrario, los objetos se combinan a conveniencia, y
-cada clase intenta tener solamente la mínima
-funcionalidad que se necesita.
+    actor = pilas.actores.Actor()
+    actor.aprender('GirarPorSiempre')
 
-Esta idea de combinación de objetos la hemos adoptado
-de la programación orientada a componentes. Por lo
-que puedes investigar en la red para conocer mas
-acerca de ello.
 
-## ¿Ideas?
+El método ``actualizar`` de la habilidad se ejecutará 60 veces por segundo, y
+en este caso harán que cualquier actor que aprenda la habilidad ``GirarPorSiempre``
+de vueltas constantemente.
 
-Si encuentras habilidades interesantes para desarrollar
-te invitamos compartir tus ideas con las personas
-que hacemos pilas y estamos en el foro de losersjuegos [#]_.
+Notá que dentro de los métodos de la habilidad, la variable ``self.receptor`` apunta
+al actor que conoce a esa habilidad.
 
-.. [#] http://www.losersjuegos.com.ar/foro
+Por último, en este ejemplo, vinculamos la nueva habilidad al módulo de
+habilidades usando el método ``pilas.habilidades.vincular``.
+
+### Argumentos iniciales para las habilidades
+
+Hay casos en donde queremos que las habilidades pueda recibir argumentos
+iniciales, para esos casos necesitamos crear el método ``iniciar`` y configurarlo
+correctamente.
+
+Siguiendo con nuestro ejemplo, imaginá que ahora queremos que esta habilidad
+nos permita hacer girar a los actores pero a diferentes velocidades: en algunos
+casos queremos enseñar a una actor a girar rápido y a otro mas lento. ¿Cómo
+sería en pilas?.
+
+Lo primero es crear la clase, muy parecida a la anterior, solamente que
+ahora creamos el método iniciar con dos argumentos, el primer es ``receptor``, que
+es obligatorio y el segundo es nuestro argumento de velocidad:
+
+    class GirarPorSiemprePersonalizado(pilasengine.habilidades.Habilidad):
+
+        def iniciar(self, receptor, velocidad):
+            self.receptor = receptor
+            self.velocidad = velocidad
+
+        def actualizar(self):
+            self.receptor.rotacion += self.velocidad
+
+    pilas.habilidades.vincular(GirarPorSiemprePersonalizado)
+
+
+Ahora, la nueva habilidad necesita que le especifiquemos la velocidad
+al iniciar, así que tenemos que usar algo así:
+
+    actor_lento = pilas.actores.Actor()
+    actor_lento.aprender('GirarPorSiemprePersonalizado', 1)
+
+    actor_rapido = pilas.actores.Actor(y=100)
+    actor_rapido.aprender('GirarPorSiemprePersonalizado', 5)
