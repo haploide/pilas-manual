@@ -1,5 +1,6 @@
 # Escenas
 
+
 Las escenas te permiten dividir el juego en partes
 reconocibles y que interactúan de manera diferente
 con el usuario.
@@ -112,5 +113,5 @@ Lo que necesitas hacer es especificar ese nuevo argumento en el método
             self.texto.rotacion += 1
 
 
-pilas, en este caso, va a tomar el argumento "Mi mensaje personalizado" y lo
+pilas, en este caso, va a tomar el argumento ``"Mi mensaje personalizado"`` y lo
 va a enviar al método ``iniciar`` con el nombre ``mensaje``.
