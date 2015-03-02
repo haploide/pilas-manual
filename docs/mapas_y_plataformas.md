@@ -153,13 +153,14 @@ generado con el programa **tiled**:
 ## Creando bloques sólidos con tiled
 
 Si quieres hacer bloques sólidos desde **tiled** solamente
-tienes que crear mas capas, la capa 0 se utilizará como
-decorado (todos los bloques son no-sólidos) y el resto de las
-capas serán siempre de bloques sólidos.
+tienes que crear una capa especial. Si una de las capas comienza
+con el nombre "solido" entonces pilas hará que cada uno
+de los bloques sea interpretado como un bloque sólido.
 
 Por ejemplo, en el escenario anterior, sería interesante colocar
 los bloques de pasto y la ruta en la capa que he llamado "suelo"
-y el resto de los objetos en otras capas como "obstáculos" y "paredes":
+y el resto de los objetos en otras capas que serán sólidas,
+en este caso "solido obstáculos" y "solido paredes":
 
 ![](imagenes/mapas_y_plataformas/tiled6.png)
 
@@ -172,3 +173,7 @@ muy simple con obstáculos y un personaje que se puede mover
 con el teclado:
 
 ![](imagenes/mapas_y_plataformas/tiled8.png)
+
+O bien, el ejemplo ``plataformas``:
+
+![](imagenes/mapas_y_plataformas/plataformas.png)
