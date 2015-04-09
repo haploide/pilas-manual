@@ -10,6 +10,7 @@ y respuestas``, no solo porque es muy sencilla de usar, sino
 también porque es una solución conocida y muy utilizada
 en otros lugares como en la web.
 
+
 ## ¿Que es un Evento?
 
 Los eventos representan algo que esperamos que ocurra
@@ -138,6 +139,24 @@ En la primera sentencia conecté la señal del evento a una función y le di
 un valor al argumento ``id``. Este valor será el identificador
 de ese enlace. Y en la siguiente linea se utilizó el identificador
 para desconectarla.
+
+
+## Lista de todos los eventos existentes
+
+| **Evento**          | **Parametros**  |
+|---------------------|-----------------|
+| mueve_camara        | x, y, dx, dy    |
+| mueve_mouse         | x, y, dx, dy    |
+| click_de_mouse      | boton, x, y     |
+| termina_click       | boton, x, y     |
+| mueve_rueda         | delta           |
+| pulsa_tecla         | codigo, texto   |
+| suelta_tecla        | codigo, texto   |
+| pulsa_tecla_escape  |                 |
+| cuando_actualiza    |                 |
+| pulsa_boton         | numero          |
+| mueve_pad           | x, y, x1, y1    |
+
 
 ## Consultado señales conectadas
 
