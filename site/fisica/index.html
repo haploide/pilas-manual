@@ -305,7 +305,7 @@
 <p>Pilas incluye integración con un sistema de física
 para realizar simulaciones y dotar a tus juegos
 de mas realismo y diversión.</p>
-<h2 id="el-protagonista-es-box2d">El protagonista es Box2D</h2>
+<h2 id="el-motor-box2d">El motor: Box2D</h2>
 <p>El motor de física seleccionado para pilas se llama Box2D, el mismo
 motor de física utilizado en el juego Angry Birds.</p>
 <p>Así, Box2D y PyBox2D son las bibliotecas protagonistas
@@ -365,11 +365,11 @@ el suelo y las paredes también están en el sistema de física.</p>
 <p>Si por algún motivo quieres que los objetos no estén contenidos
 en la pantalla, y sean un poco mas libres, podrías eliminar
 las paredes:</p>
-<pre><code>pilas.escena_actual().fisica.eliminar_paredes()
+<pre><code>pilas.fisica.eliminar_paredes()
 </code></pre>
 
 <p>o incluso podrías eliminar el suelo:</p>
-<pre><code>pilas.escena_actual().fisica.eliminar_suelo()
+<pre><code>pilas.fisica.eliminar_suelo()
 </code></pre>
 
 <p>Pero recuerda que los objetos que no se ven en la pantalla
@@ -459,12 +459,13 @@ para que los objetos puedan "flotar", ¿no?.</p>
 <p>Entonces, hay dos formas de cambiar la gravedad del escenario. Podrías
 cambiar la gravedad en cualquier momento invocando a la función
 <code>definir_gravedad</code> indicando la nueva gravedad, por ejemplo:</p>
-<pre><code>pilas.atajos.definir_gravedad(200, 0)
+<pre><code>pilas.fisica.definir_gravedad(200, 0)
 </code></pre>
 
-<p>o directamente especificar la gravedad cuando inicias pilas, por
-ejemplo:</p>
-<pre><code>pilas.fisica.definir_gravedad(90, 90)
+<p>o directamente especificar la gravedad usando las variables <code>x</code> e
+<code>y</code>:</p>
+<pre><code>pilas.fisica.gravedad_x = 90
+pilas.fisica.gravedad_y = 90
 </code></pre>
 
 <p>Ten en cuenta que el primer argumento es la aceleración horizontal y
