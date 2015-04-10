@@ -5,7 +5,7 @@ para realizar simulaciones y dotar a tus juegos
 de mas realismo y diversión.
 
 
-## El protagonista es Box2D
+## El motor: Box2D
 
 El motor de física seleccionado para pilas se llama Box2D, el mismo
 motor de física utilizado en el juego Angry Birds.
@@ -95,14 +95,14 @@ en la pantalla, y sean un poco mas libres, podrías eliminar
 las paredes:
 
 ```
-pilas.escena_actual().fisica.eliminar_paredes()
+pilas.fisica.eliminar_paredes()
 ```
 
 o incluso podrías eliminar el suelo:
 
 
 ```
-pilas.escena_actual().fisica.eliminar_suelo()
+pilas.fisica.eliminar_suelo()
 ```
 
 
@@ -235,14 +235,15 @@ cambiar la gravedad en cualquier momento invocando a la función
 
 
 ```
-pilas.atajos.definir_gravedad(200, 0)
+pilas.fisica.definir_gravedad(200, 0)
 ```
 
-o directamente especificar la gravedad cuando inicias pilas, por
-ejemplo:
+o directamente especificar la gravedad usando las variables ``x`` e
+``y``:
 
 ```
-pilas.fisica.definir_gravedad(90, 90)
+pilas.fisica.gravedad_x = 90
+pilas.fisica.gravedad_y = 90
 ```
 
 Ten en cuenta que el primer argumento es la aceleración horizontal y
