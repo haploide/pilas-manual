@@ -183,13 +183,6 @@
     
         
             <li class="toctree-l1 ">
-                <a class="" href="../demos">Demos</a>
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 ">
                 <a class="" href="../interfaz">Interfaz de usuario</a>
             </li>
         
@@ -339,7 +332,9 @@ conectado.</p>
 en pantalla siguiendo la posición del puntero
 del mouse, tendríamos que escribir algo como
 esto:</p>
-<pre><code>import pilas
+<pre><code class="python">import pilasengine
+
+pilas = pilasengine.iniciar()
 
 mono = pilas.actores.Mono()
 
@@ -351,7 +346,10 @@ pilas.eventos.mueve_mouse.conectar(mover_mono_a_la_posicion_del_mouse)
 
 # O puedes utilizar el método abreviado del actor.
 mono.mueve_mouse(mover_mono_a_la_posicion_del_mouse)
+
+pilas.ejecutar()
 </code></pre>
+
 <p>Es decir, la señal de evento que nos interesa es <code>mueve_mouse</code> (que se emite
 cada vez que el usuario mueve el mouse). Y a esta señal le conectamos
 la función que buscamos ejecutar cada vez que se mueva el mouse.</p>
@@ -478,14 +476,15 @@ y darle un nombre:</p>
 <p>luego, este nuevo objeto <code>evento</code> podrá ser utilizado como
 canal de comunicación: muchos actores podrán <code>conectarse</code> para
 recibir alertas y otros podrán <code>emitir</code> alertas:</p>
-<pre><code>def ha_ocurrido_un_evento(datos_evento):
-    print "Hola!!!", datos_evento
+<pre><code class="python">def ha_ocurrido_un_evento(datos_evento):
+    print &quot;Hola!!!&quot;, datos_evento
 
 evento.conectar(ha_ocurrido_un_evento)
 
 # En otra parte...
 evento.emitir(argumento1=123, argumento2=123)
 </code></pre>
+
 <p>Cuando se emite un evento se pueden pasar muchos argumentos, tantos
 como se quiera. Todos estos argumentos llegarán a la función de
 respuesta en forma de diccionario.</p>
