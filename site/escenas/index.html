@@ -340,11 +340,14 @@ nuestro juego creando la escena principal.</p>
 <p>La primer escena tendríamos que representarla
 con una clase, que herede de la escena Normal
 así:</p>
-<pre><code class="python">class PantallaBienvenida(pilas.escena.Normal):
+<pre><code class="python">class PantallaBienvenida(pilasengine.escenas.Escena):
 
     def iniciar(self):
-        pilas.fondos.Pasto()
-        texto = pilas.actores.Texto(&quot;Bienvenido a pilas!!!&quot;)
+        self.fondo = self.pilas.fondos.Volley()
+        pass
+
+    def ejecutar(self):
+        pass
 </code></pre>
 
 <p>Ahora, para poner en funcionamiento esta escena
@@ -367,7 +370,7 @@ pilas.escenas.PantallaBienvenida("Mi mensaje personalizado")
 </code></pre>
 <p>Lo que necesitas hacer es especificar ese nuevo argumento en el método
 <code>iniciar</code> así:</p>
-<pre><code class="python">class PantallaBienvenida(pilas.escena.Normal):
+<pre><code class="python">class PantallaBienvenida(pilasengine.escenas.Escena):
 
     def iniciar(self, mensaje):
         pilas.fondos.Pasto()
