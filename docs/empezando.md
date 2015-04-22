@@ -28,9 +28,9 @@ La parte de arriba es la que utilizaremos para interactuar con el motor. Y mas a
 Puedes ver que el intérprete viene con algunas líneas de ejemplo.
 
 ```
-import pilas
+import pilasengine
 
-pilas.iniciar()
+pilas = pilasengine.iniciar()
 mono = pilas.actores.Mono()
 ```
 

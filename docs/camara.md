@@ -24,10 +24,10 @@ del escenario, el punto central de la ventana.
 Si queremos que muestre otra parte del escenario
 podemos ejecutar una sentencia como la que sigue:
 
-
-    pilas.escena_actual().camara.x = [200]
-    pilas.escena_actual().camara.y = [200]
-
+```python
+pilas.camara.x = [200]
+pilas.camara.y = [200]
+```
 
 Con esto le estaríamos diciendo a la cámara que nos
 muestre el punto ``(200, 200)`` del escenario. Así
@@ -50,7 +50,9 @@ que vé un usuario o cualquier marcador auxiliar.
 Para que un actor no se vea afectado por la cámara, tienes
 que guardar el valor ``True`` dentro del atributo ``fijo``:
 
-    actor.fijo = True
+```python
+actor.fijo = True
+```
 
 Por lo general, todos los actores tienen este atributo a ``False``, porque
 viven en el escenario de juego y no se quedan fijos a la pantalla. Excepto

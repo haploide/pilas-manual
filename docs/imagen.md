@@ -8,9 +8,7 @@ el módulo `imagenes`. Por ejemplo, si tenemos una
 imagen llamada `hola.png` podríamos incorporarla a
 nuestro juego así:
 
-```
-import pilas
-
+```python
 hola = pilas.imagenes.cargar('hola.png')
 ```
 
@@ -234,32 +232,32 @@ Una forma de lograr esto de manera sencilla es crear tu propio
 actor, y que este tenga dos atributos, uno para cada animación:
 
 
-    class MiNave(pilas.actores.Actor):
+```python
+class MiNave(pilasengine.actores.Actor):
 
-        def __init__(self, x=0, y=0):
-            Actor.__init__(self, x=x, y=y)
-            self.animacion_detenida = pilas.imagenes.cargar_grilla("nave_detenida.png", 1)
-            self.animacion_movimiento = pilas.imagenes.cargar_grilla("nave_en_movimiento.png", 3)
-
+    def iniciar(self, x=0, y=0):
+        self.animacion_detenida = pilas.imagenes.cargar_grilla("nave_detenida.png", 1)
+        self.animacion_movimiento = pilas.imagenes.cargar_grilla("nave_en_movimiento.png", 3)
+```
 
 Luego, en el método ``actualizar`` del propio actor podrías
 avanzar la animación actual y permitirle al programador invocar
 métodos para intercambiar animaciones:
 
+```python
+class MiNave(pilasengine.actores.Actor):
 
-    class MiNave(pilas.actores.Actor):
+    # [...] codigo anterior
 
-        # [...] codigo anterior
+    def poner_en_movimiento(self):
+        self.imagen = self.animacion_movimiento
 
-        def poner_en_movimiento(self):
-            self.imagen = self.animacion_movimiento
+    def poner_en_reposo(self):
+        self.imagen = self.animacion_detenida
 
-        def poner_en_reposo(self):
-            self.imagen = self.animacion_detenida
-
-        def actualizar(self):
-            self.imagen.avanzar()
-
+    def actualizar(self):
+        self.imagen.avanzar()
+```
 
 Como puedes ver, el concepto inicial es el mismo, cuando
 queremos cambiar de animación tenemos que cambiar de grilla, y

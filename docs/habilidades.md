@@ -23,13 +23,14 @@ al actor fácilmente.
 
 El siguiente código hace eso:
 
+```python
+import pilasengine
 
-    import pilasengine
+pilas = pilasengine.iniciar()
 
-    pilas = pilasengine.iniciar()
-
-    mono = pilas.actores.Mono()
-    mono.aprender(pilas.habilidades.AumentarConRueda)
+mono = pilas.actores.Mono()
+mono.aprender(pilas.habilidades.AumentarConRueda)
+```
 
 o bien:
 
@@ -51,12 +52,14 @@ tomar piezas con el mouse y moverlas por la pantalla.
 Esta habilidad llamada ``Arrastrable`` representa eso, puedes vincularlo
 a cualquier actor y simplemente funciona:
 
+```python
+import pilasengine
 
-    import pilas
+pilas = pilasengine.iniciar()
 
-    mono = pilas.actores.Mono()
-    mono.aprender(pilas.habilidades.Arrastrable)
-
+mono = pilas.actores.Mono()
+mono.aprender(pilas.habilidades.Arrastrable)
+```
 
 ## Otro ejemplo: un actor que cambia de posición
 
@@ -64,12 +67,13 @@ Veamos otro ejemplo sencillo, si queremos que un actor
 se coloque en la posición del mouse cada vez que hacemos
 click, podemos usar la habilidad: ``SeguirClicks``.
 
+```python
+import pilasengine
 
-    import pilas
-
-    mono = pilas.actores.Mono()
-    mono.aprender(pilas.habilidades.SeguirClicks)
-
+pilas = pilasengine.iniciar()
+mono = pilas.actores.Mono()
+mono.aprender(pilas.habilidades.SeguirClicks)
+```
 
 ## Mezclar habilidades
 
@@ -91,7 +95,10 @@ disponibles en tu versión de pilas.
 
 Para esto, abrí el intérprete de pilas y escribí lo siguiente:
 
-    dir(pilas.habilidades)
+```python
+dir(pilas.habilidades)
+```
+
 
 esto imprimirá en pantalla todas las habilidades como una
 lista de cadenas.
@@ -106,15 +113,17 @@ La clase tiene que heredar de ``pilasengine.habilidades.Habilidad`` y
 puede tener un método ``actualizar``, en donde generalmente se
 coloca la acción a realizar:
 
-    class GirarPorSiempre(pilasengine.habilidades.Habilidad):
+```python
+class GirarPorSiempre(pilasengine.habilidades.Habilidad):
 
-        def actualizar(self):
-            self.receptor.rotacion += 1
+    def actualizar(self):
+        self.receptor.rotacion += 1
 
-    pilas.habilidades.vincular(GirarPorSiempre)
+pilas.habilidades.vincular(GirarPorSiempre)
 
-    actor = pilas.actores.Actor()
-    actor.aprender('GirarPorSiempre')
+actor = pilas.actores.Actor()
+actor.aprender('GirarPorSiempre')
+```
 
 
 El método ``actualizar`` de la habilidad se ejecutará 60 veces por segundo, y
@@ -142,23 +151,27 @@ Lo primero es crear la clase, muy parecida a la anterior, solamente que
 ahora creamos el método iniciar con dos argumentos, el primer es ``receptor``, que
 es obligatorio y el segundo es nuestro argumento de velocidad:
 
-    class GirarPorSiemprePersonalizado(pilasengine.habilidades.Habilidad):
+```python
+class GirarPorSiemprePersonalizado(pilasengine.habilidades.Habilidad):
 
-        def iniciar(self, receptor, velocidad):
-            self.receptor = receptor
-            self.velocidad = velocidad
+    def iniciar(self, receptor, velocidad):
+        self.receptor = receptor
+        self.velocidad = velocidad
 
-        def actualizar(self):
-            self.receptor.rotacion += self.velocidad
+    def actualizar(self):
+        self.receptor.rotacion += self.velocidad
 
-    pilas.habilidades.vincular(GirarPorSiemprePersonalizado)
-
+pilas.habilidades.vincular(GirarPorSiemprePersonalizado)
+```
 
 Ahora, la nueva habilidad necesita que le especifiquemos la velocidad
 al iniciar, así que tenemos que usar algo así:
 
-    actor_lento = pilas.actores.Actor()
-    actor_lento.aprender('GirarPorSiemprePersonalizado', 1)
 
-    actor_rapido = pilas.actores.Actor(y=100)
-    actor_rapido.aprender('GirarPorSiemprePersonalizado', 5)
+```python
+actor_lento = pilas.actores.Actor()
+actor_lento.aprender('GirarPorSiemprePersonalizado', 1)
+
+actor_rapido = pilas.actores.Actor(y=100)
+actor_rapido.aprender('GirarPorSiemprePersonalizado', 5)
+```

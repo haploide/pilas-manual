@@ -52,20 +52,24 @@ en pantalla siguiendo la posición del puntero
 del mouse, tendríamos que escribir algo como
 esto:
 
+```python
+import pilasengine
 
-    import pilas
+pilas = pilasengine.iniciar()
 
-    mono = pilas.actores.Mono()
+mono = pilas.actores.Mono()
 
-    def mover_mono_a_la_posicion_del_mouse(evento):
-        mono.x = evento.x
-        mono.y = evento.y
+def mover_mono_a_la_posicion_del_mouse(evento):
+    mono.x = evento.x
+    mono.y = evento.y
 
-    pilas.eventos.mueve_mouse.conectar(mover_mono_a_la_posicion_del_mouse)
+pilas.eventos.mueve_mouse.conectar(mover_mono_a_la_posicion_del_mouse)
 
-    # O puedes utilizar el método abreviado del actor.
-    mono.mueve_mouse(mover_mono_a_la_posicion_del_mouse)
+# O puedes utilizar el método abreviado del actor.
+mono.mueve_mouse(mover_mono_a_la_posicion_del_mouse)
 
+pilas.ejecutar()
+```
 
 
 Es decir, la señal de evento que nos interesa es ``mueve_mouse`` (que se emite
@@ -187,14 +191,16 @@ luego, este nuevo objeto ``evento`` podrá ser utilizado como
 canal de comunicación: muchos actores podrán ``conectarse`` para
 recibir alertas y otros podrán ``emitir`` alertas:
 
+```python
+def ha_ocurrido_un_evento(datos_evento):
+    print "Hola!!!", datos_evento
 
-    def ha_ocurrido_un_evento(datos_evento):
-        print "Hola!!!", datos_evento
+evento.conectar(ha_ocurrido_un_evento)
 
-    evento.conectar(ha_ocurrido_un_evento)
+# En otra parte...
+evento.emitir(argumento1=123, argumento2=123)
+```
 
-    # En otra parte...
-    evento.emitir(argumento1=123, argumento2=123)
 
 Cuando se emite un evento se pueden pasar muchos argumentos, tantos
 como se quiera. Todos estos argumentos llegarán a la función de

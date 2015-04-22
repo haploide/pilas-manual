@@ -13,9 +13,10 @@ Para hacer que un personaje emita un mensaje sencillo
 puedes usar el método ``decir``:
 
 
-    actor = pilas.actores.Mono()
-    actor.decir("Eh!, ahora puedo hablar...")
-
+```python
+actor = pilas.actores.Mono()
+actor.decir("Eh!, ahora puedo hablar...")
+```
 
 Esto hará que el personaje muestre un globo similar al
 de las historietas con las frases que has colocado.
@@ -36,14 +37,15 @@ crear un objeto de la clase ``Dialogo``, luego
 indicarle la secuencia de conversación y por último
 iniciar el dialogo:
 
+```python
+dialogo = pilas.actores.Dialogo()
 
-    dialogo = pilas.actores.Dialogo()
+dialogo.decir(mono, "Hola, como estas?")
+dialogo.decir(otro_mono, "Perfecto!!, gracias...")
+dialogo.decir(mono, "genial...")
 
-    dialogo.decir(mono, "Hola, como estas?")
-    dialogo.decir(otro_mono, "Perfecto!!, gracias...")
-    dialogo.decir(mono, "genial...")
-
-    dialogo.iniciar()
+dialogo.comenzar()
+```
 
 Ahora cuando ejecutes este programa, solamente aparecerá
 el primer mensaje ``"Hola, cómo estas?"`` y solo cuando el
@@ -75,9 +77,12 @@ el usuario elija una repuesta el personaje volverá a
 decirlo:
 
 
-    def cuando_responde_color_favorito(respuesta):
-        dialogo.decir(mono, "he dicho: " + respuesta)
+```python
+def cuando_responde_color_favorito(respuesta):
+    dialogo.decir(mono, "he dicho: " + respuesta)
 
-    dialogo.elegir(mono, "Mi color favorito es el...", ["rojo", "verde", "azul"], cuando_responde_color_favorito)
+dialogo.elegir(mono, "Mi color favorito es el...", ["rojo", "verde", "azul"], cuando_responde_color_favorito)
+```
+
 
 ![](imagenes/dialogos/pregunta.jpg)

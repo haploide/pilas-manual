@@ -52,8 +52,8 @@ ejemplo, si quieres poder arrastrar y soltar figuras con
 el mouse, puedes enseñarles una habilidad:
 
 ```
-pelotas.aprender(pilas.habilidades.Arrastrable)
-cajas.aprender(pilas.habilidades.Arrastrable)
+pelotas.aprender("arrastrable")
+cajas.aprender("arrastrable")
 ```
 
 ## Modo depuración de física

@@ -36,8 +36,9 @@ Si quieres que el juego inicie alguno de los modos, puedes usar la
 función ``pilas.atajos.definir_modos``. Por ejemplo, para habilitar el
 modo depuración física podrías escribir:
 
-
-    pilas.atajos.definir_modos(fisica=True)
+```
+    pilas.depurador.definir_modos(fisica=True)
+```
 
 esta función tiene varios argumentos opcionales, cómo ``posicion``, ``radios`` etc. Mira
 la definición de la función para obtener mas detalles.

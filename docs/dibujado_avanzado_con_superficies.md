@@ -28,27 +28,28 @@ y con dos ojitos. Lo primero que tenemos que hacer
 es crear una superficie, dibujar sobre ella, y luego
 crear un actor con esa apariencia:
 
-    import pilas
+```python
+import pilasengine
 
-    pilas.iniciar()
+pilas = pilasengine.iniciar()
 
-    superficie = pilas.imagenes.cargar_superficie(100, 100)
+superficie = pilas.imagenes.cargar_superficie(100, 100)
 
-    # dibujamos el cuerpo
-    superficie.circulo(50, 50, 40, color=pilas.colores.verdeoscuro, relleno=True)
+# dibujamos el cuerpo
+superficie.circulo(50, 50, 40, color=pilas.colores.verdeoscuro, relleno=True)
 
-    # un ojo
-    superficie.circulo(35, 35, 10, color=pilas.colores.blanco, relleno=True)
-    superficie.circulo(32, 35, 5, color=pilas.colores.negro, relleno=True)
+# un ojo
+superficie.circulo(35, 35, 10, color=pilas.colores.blanco, relleno=True)
+superficie.circulo(32, 35, 5, color=pilas.colores.negro, relleno=True)
 
-    # el otro ojo
-    superficie.circulo(67, 35, 10, color=pilas.colores.blanco, relleno=True)
-    superficie.circulo(64, 35, 5, color=pilas.colores.negro, relleno=True)
+# el otro ojo
+superficie.circulo(67, 35, 10, color=pilas.colores.blanco, relleno=True)
+superficie.circulo(64, 35, 5, color=pilas.colores.negro, relleno=True)
 
-    pilas.actores.Actor(superficie)
+pilas.actores.Actor(superficie)
 
-    pilas.ejecutar() # Necesario al ejecutar en scripts.
-
+pilas.ejecutar() # Necesario al ejecutar en scripts.
+```
 
 Es decir, una vez que creamos la superficie, en realidad lo que obtenemos
 es un objeto que se comporta cómo una imagen, pero con la diferencia

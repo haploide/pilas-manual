@@ -10,25 +10,26 @@ nombres de funciones para invocar.
 Un menú sencillo podría tener dos opciones, una
 para iniciar el juego y otra para salir:
 
+```python
+import pilasengine
 
-    import pilas
+pilas = pilasengine.iniciar()
+pilas.fondos.Selva()
 
-    pilas.iniciar()
-    pilas.fondos.Selva()
+def iniciar_juego():
+    print "Tengo que iniciar el juego"
 
-    def iniciar_juego():
-        print "Tengo que iniciar el juego"
+def salir_del_juego():
+    print "Tengo que salir..."
 
-    def salir_del_juego():
-        print "Tengo que salir..."
+pilas.actores.Menu(
+        [
+            ('iniciar juego', iniciar_juego),
+            ('salir', salir_del_juego),
+        ])
 
-    pilas.actores.Menu(
-            [
-                ('iniciar juego', iniciar_juego),
-                ('salir', salir_del_juego),
-            ])
-
-    pilas.ejecutar()
+pilas.ejecutar()
+```
 
 
 Si escribes este texto en un programa, funciona, aunque no
@@ -54,22 +55,24 @@ dos partes que son muy importantes.
 Primero declaramos funciones que hacen algo, como por
 ejemplo:
 
+```python
+def iniciar_juego():
+    print "Tengo que iniciar el juego"
+```
 
-    def iniciar_juego():
-        print "Tengo que iniciar el juego"
 
 Y luego, cuando creamos el menú, armamos una lista
 de tuplas, donde el primer elemento es la cadena
 de texto que queremos mostrar, y el segundo elemento
 es la función a invocar:
 
-
-    pilas.actores.Menu(
-            [
-                ('iniciar juego', iniciar_juego),
-                ('salir', salir_del_juego),
-            ])
-
+```python
+pilas.actores.Menu(
+        [
+            ('iniciar juego', iniciar_juego),
+            ('salir', salir_del_juego),
+        ])
+```
 
 Es importante que el argumento se construya usando
 una lista como la anterior.
@@ -88,12 +91,13 @@ en casi todos los casos. Por ejemplo, nuestro código
 anterior se podría poner mas interesante si mejoramos
 la función ``iniciar_juego`` y la función ``salir_del_juego``:
 
+```python
+def iniciar_juego():
+    pilas.ejemplos.Piezas()
 
-    def iniciar_juego():
-        pilas.ejemplos.Piezas()
-
-    def salir_del_juego():
-        pilas.terminar()
+def salir_del_juego():
+    pilas.terminar()
+```
 
 ## Los menúes son actores
 
@@ -103,9 +107,10 @@ su tamaño como si se tratara de cualquier otro
 personaje del juego:
 
 
-    mi_menu.escala = 2
-    mi_menu.x = [300, 0]
-
+```python
+mi_menu.escala = 2
+mi_menu.x = [300, 0]
+```
 
 Muchos juegos hace uso de esta característica, por
 ejemplo, para que el menú aparezca por debajo de la pantalla

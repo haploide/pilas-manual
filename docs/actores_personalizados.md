@@ -271,6 +271,6 @@ mientras que este otro ejemplo sí funcionará, porque el método
 ``iniciar`` de la clase ``Alien`` espera los argumentos ``energia``, ``nombre`` y
 ``con_sombra``:
 
-```
+```python
 alien = Alien(pilas, energia=100, nombre="pepe alien", con_sombra=True))
 ```
