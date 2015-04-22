@@ -66,11 +66,14 @@ con una clase, que herede de la escena Normal
 así:
 
 ```python
-class PantallaBienvenida(pilas.escena.Normal):
+class PantallaBienvenida(pilasengine.escenas.Escena):
 
     def iniciar(self):
-        pilas.fondos.Pasto()
-        texto = pilas.actores.Texto("Bienvenido a pilas!!!")
+        self.fondo = self.pilas.fondos.Volley()
+        pass
+
+    def ejecutar(self):
+        pass
 ```
 
 Ahora, para poner en funcionamiento esta escena
@@ -104,7 +107,7 @@ Lo que necesitas hacer es especificar ese nuevo argumento en el método
 ``iniciar`` así:
 
 ```python
-class PantallaBienvenida(pilas.escena.Normal):
+class PantallaBienvenida(pilasengine.escenas.Escena):
 
     def iniciar(self, mensaje):
         pilas.fondos.Pasto()
