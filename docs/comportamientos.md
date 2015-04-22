@@ -5,8 +5,8 @@ tener una forma de indicarle a los actores
 una rutina o tarea para que la realicen.
 
 En pilas usamos el concepto de comportamiento. Un
-comportamiento es un objeto que le dice a
-un actor qué debe hacer en todo momento.
+comportamiento es un objeto que simboliza una
+acción a realizar por un actor.
 
 La utilidad de usar componentes es que puedes
 asociarlos y intercambiarlos libremente para
@@ -19,6 +19,7 @@ un lado a otro en un pasillo:
 - dar una vuelta completa.
 - caminar hacia la derecha hasta el fin del pasillo.
 - dar una vuelta completa.
+- y repetir ...
 
 En este caso hay 4 comportamientos, y queda en nuestro
 control si queremos que luego de los 4 comportamientos
@@ -31,29 +32,68 @@ Veamos un ejemplo sencillo, vamos a crear un actor Mono
 y decirle que se mueva de izquierda a derecha una
 sola vez:
 
-    import pilas
+    import pilasengine
 
-    pilas.iniciar()
+    pilas = pilasengine.iniciar()
     mono = pilas.actores.Mono()
 
     pasos = 200
 
-    moverse_a_la_derecha = pilas.comportamientos.Avanzar(pasos)
-    mono.hacer_luego(moverse_a_la_derecha)
+    mono.hacer("Avanzar", pasos)
 
-    mono.rotacion = [180] # Dar la vuelta.
+    # Dar la vuelta.
+    mono.rotacion = [180]
 
-    moverse_a_la_izquierda = pilas.comportamientos.Avanzar(pasos)
-    mono.hacer_luego(moverse_a_la_izquierda)
+    mono.hacer("Avanzar", pasos)
 
-    pilas.ejecutar() # Necesario al ejecutar en scripts.
-
-De hecho, tenemos una variante que puede ser un poco
-mas interesante; decirle al mono que repita estas tareas todo
-el tiempo:
+    # Solo necesario al ejecutar en scripts.
+    pilas.ejecutar()
 
 
-    mono.hacer_luego(moverse_a_la_derecha, True)
+## Listado de todos los Comportamientos existentes
 
-Donde el segundo argumento indica si el comportamiento
-se tiene que repetir todo el tiempo o no.
+| **Evento**          | **Parametros**                                                |
+|---------------------|---------------------------------------------------------------|
+| Proyectil           | velocidad_maxima, aceleracion, angulo_de_movimiento, gravedad |
+| Saltar              | velocidad_inicial, cuando_termina                             |
+| Avanzar             | pasos, velocidad                                              |
+| Girar               | delta, velocidad                                              |
+| Orbitar             | x, y, radio, velocidad, direccion                             |
+| OrbitarSobreActor   | actor, radio, velocidad, direccion                            |
+
+
+## Comportamientos personalizados
+
+
+Para crear un comportamiento personalizado necesitamos crear una
+clase que herede de ``pilasengine.comportamientos.Comportamiento`` y
+luego implementar los métodos ``iniciar`` y ``ejecutar``.
+
+
+    class Desaparecer(pilasengine.comportamientos.Comportamiento):
+
+        def iniciar(self, receptor):
+            self.receptor = receptor
+
+        def actualizar(self):
+            if self.receptor.transparencia < 100:
+                self.receptor.transparencia += 1
+            else:
+                # Con retornar True le indicamos a pilas que este
+                # comportamiento terminó y tiene que pasar al siguiente.
+                return True
+
+    mono = pilas.actores.Mono()
+    mono.hacer("Desaparecer")
+
+
+## Encadenando comportamientos
+
+
+Los comportamientos de los actores están diseñados para encadenarse, y que
+se puedan reproducir uno detrás de otro. Por ejemplo:
+
+    mono = pilas.actores.Mono()
+    mono.hacer("Saltar")
+    mono.hacer("Avanzar", 200)
+    mono.hacer("Saltar")

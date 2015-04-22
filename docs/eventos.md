@@ -141,7 +141,7 @@ de ese enlace. Y en la siguiente linea se utilizó el identificador
 para desconectarla.
 
 
-## Lista de todos los eventos existentes
+## Listado de todos los eventos existentes
 
 | **Evento**          | **Parametros**  |
 |---------------------|-----------------|
