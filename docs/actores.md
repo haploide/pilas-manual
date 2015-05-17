@@ -77,7 +77,7 @@ El actor aceituna es super simple
 
     aceituna = pilas.actores.Aceituna()
 
-*Métodos:*
+*Comportamientos:*
 
 - ``aceituna.saludar(mensaje)``
 - ``aceituna.saltar()``
@@ -110,9 +110,8 @@ animacion = pilas.actores.Animacion(grilla, ciclica=True, velocidad=1)
 ![](imagenes/actores/explosion.png)
 
 
-*Métodos:*
+*Comportamientos:*
 
-- ``animacion.saludar(grilla=None, ciclica=False, x=0, y=0, velocidad=10)``
 - ``animacion.definir_velocidad_de_animacion(velocidad_de_animacion)``
 - ``animacion.obtener_velocidad_de_animacion()``
 
@@ -136,7 +135,7 @@ actor.definir_cuadro(5)
 
 ![](imagenes/actores/pingu.png)
 
-*Métodos:*
+*Comportamientos:*
 
 - ``actor.definir_cuadro(indice)``
 
@@ -179,7 +178,7 @@ banana.cerrar()
 ```
 
 
-*Métodos:*
+*Comportamientos:*
 
 - ``banana.abrir()``
 - ``banana.cerrar()``
