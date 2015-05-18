@@ -78,14 +78,14 @@ primitivo de figuras. El aspecto de las cosas es
 solo eso, un aspecto. Lo que "manda" en el comportamiento
 físico son las figuras geométricas (cuerpos).
 
-Intenta lo siguiente, pulsa la tecla **F11** y observarás
-varias lineas de color rojo indicando las figuras de
-los cuerpos:
+Intenta lo siguiente, pulsa la tecla **F11** o pulsá el
+botón "mostrar figuras físicas" que aparece abajo a la
+derecha:
 
 ![](imagenes/fisica/fisica_2.jpg)
 
 
-Las lineas rojas indican polígonos que el
+Las lineas blancas indican polígonos que el
 motor de física puede controlar, las cajas tienen forma
 rectangular, los actores Pelota tienen figuras circulares, y
 el suelo y las paredes también están en el sistema de física.
@@ -123,13 +123,12 @@ y son invisibles (al principio), pero luego se pueden vincular
 a cualquier actor con facilidad.
 
 Intenta lo siguiente, ingresa en el modo interactivo de pilas
-y pulsa la tecla **F11**. Tendrías que ver el texto
-"F11 ModoFisica habilitado."
-en la esquina superior de la ventana:
+y pulsa la tecla **F11** o pulsá el botón "mostrar figuras físicas" que
+aparece abajo a la derecha:
 
 ![](imagenes/fisica/fisica_personalizada_1.jpg)
 
-Ahora genera dos figuras físicas, una circunferencia estática
+Ahora creá dos figuras físicas, una circunferencia estática
 y otra dinámica:
 
 ```
@@ -163,7 +162,7 @@ círculo que sea una bomba:
 
 ```
 mono = pilas.actores.Mono()
-mono.aprender(pilas.habilidades.Imitar(circulo))
+mono.aprender(pilas.habilidades.Imitar, circulo)
 
 bomba = pilas.actores.Bomba()
 bomba.aprender(pilas.habilidades.Imitar, circulo_dinamico)
@@ -235,17 +234,17 @@ cambiar la gravedad en cualquier momento invocando a la función
 
 
 ```
-pilas.fisica.definir_gravedad(200, 0)
+pilas.fisica.definir_gravedad(-2, 0)
 ```
 
 o directamente especificar la gravedad usando las variables ``x`` e
 ``y``:
 
 ```
-pilas.fisica.gravedad_x = 90
-pilas.fisica.gravedad_y = 90
+pilas.fisica.gravedad_x = 9
+pilas.fisica.gravedad_y = 9
 ```
 
 Ten en cuenta que el primer argumento es la aceleración horizontal y
 la segunda componente es la aceleración vertical. Los valores originales
-de la gravedad son `0` y `-90`.
+de la gravedad son `0` y `-9`.
