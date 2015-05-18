@@ -4,9 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% block htmltitle %}
-  <title>{{ page_title }}</title>
-  {% endblock %}
+
+  <title>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
 
   {# CSS #}
   <link rel="stylesheet" href="{{ base_url }}/css/theme.css" type="text/css" />
