@@ -44,7 +44,7 @@ las habilidades son algo que duran para toda la vida
 del actor.
 
 
-## Un ejemplo mas: hacer que un actor se pueda mover con el mouse
+## Un ejemplo más: hacer que un actor se pueda mover con el mouse
 
 Algo muy común en los juegos es que puedas
 tomar piezas con el mouse y moverlas por la pantalla.
@@ -85,24 +85,31 @@ habilidades para lograr comportamientos complejos.
 Así que te invitamos a experimentar y explorar la mezcla
 de habilidades.
 
-## Otras habilidades para utilizar
 
-Pilas viene con varias habilidades incluidas, pero
-lamentablemente este manual no las menciona a todas. Así
-que te recomendamos abrir un intérprete de python
-y consultarle directamente a él que habilidades tienes
-disponibles en tu versión de pilas.
-
-Para esto, abrí el intérprete de pilas y escribí lo siguiente:
-
-```python
-dir(pilas.habilidades)
-```
+## Listado de habilidades existentes
 
 
-esto imprimirá en pantalla todas las habilidades como una
-lista de cadenas.
 
+| **Habilidad**                | **Parametros**                                                                                                    |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Arrastrable                  |                                                                                                                   |
+| AumentarConRueda             |                                                                                                                   |
+| Disparar                     | municion, grupo_enemigos, cuando_elimina_enemigo, frecuencia_de_disparo, angulo_salida_disparo ...                |
+| EliminarseSiSaleDePantalla   |                                                                                                                   |
+| Imitar                       | objeto_a_imitar, con_escala, con_rotacion                                                                         |
+| LimitadoABordesDePantalla    |                                                                                                                   |
+| MirarAlActor                 | actor_a_seguir, lado_seguimiento="ARRIBA"                                                                         |
+| MoverseComoCoche             | control, velocidad_maxima, aceleracion, deceleracion, rozamiento, velocidad_rotacion                              |
+| MoverseConElTeclado          | control, direcciones, velocidad_maxima, aceleracion, deceleracion, con_rotacion, velocidad_rotacion, marcha_atras |
+| PuedeExplotar                |                                                                                                                   |
+| PuedeExplotarConHumo         |                                                                                                                   |
+| RebotarComoCaja              |                                                                                                                   |
+| RebotarComoPelota            |                                                                                                                   |
+| RotarConMouse                |                                                                                                                   |
+| SeMantieneEnPantalla         | permitir_salida                                                                                                   |
+| SeguirAlMouse                |                                                                                                                   |
+| SeguirClicks                 |                                                                                                                   |
+| SiempreEnElCentro            |                                                                                                                   |
 
 ## Crear habilidades personalizadas
 
