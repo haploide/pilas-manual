@@ -35,3 +35,4 @@ _deploy: generar
 	cp -r site/* ../website__pilas-manual/
 	cd ../website__pilas-manual; git commit -am "actualizacion y deploy."; git push origin gh-pages
  
+ 
