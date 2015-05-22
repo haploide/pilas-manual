@@ -274,9 +274,7 @@
                         
                             <li><a class="toctree-l4" href="#un-ejemplo-mas-hacer-que-un-actor-se-pueda-mover-con-el-mouse">Un ejemplo más: hacer que un actor se pueda mover con el mouse</a></li>
                         
-                            <li><a class="toctree-l4" href="#otro-ejemplo-un-actor-que-cambia-de-posicion">Otro ejemplo: un actor que cambia de posición</a></li>
-                        
-                            <li><a class="toctree-l4" href="#mezclar-habilidades">Mezclar habilidades</a></li>
+                            <li><a class="toctree-l4" href="#una-habilidad-mas-compleja-disparar">Una habilidad más compleja: Disparar</a></li>
                         
                             <li><a class="toctree-l4" href="#listado-de-habilidades-existentes">Listado de habilidades existentes</a></li>
                         
@@ -392,33 +390,38 @@ a cualquier actor y simplemente funciona:</p>
 pilas = pilasengine.iniciar()
 
 mono = pilas.actores.Mono()
-mono.aprender(pilas.habilidades.Arrastrable)
+mono.aprender(&quot;arrastrable&quot;)
 </code></pre>
 
-<h2 id="otro-ejemplo-un-actor-que-cambia-de-posicion">Otro ejemplo: un actor que cambia de posición</h2>
-<p>Veamos otro ejemplo sencillo, si queremos que un actor
-se coloque en la posición del mouse cada vez que hacemos
-click, podemos usar la habilidad: <code>SeguirClicks</code>.</p>
+<h2 id="una-habilidad-mas-compleja-disparar">Una habilidad más compleja: Disparar</h2>
+<p>Una habilidad que tiene más complejidad que las anteriores
+es disparar, una habilidad que te permite hacer que un
+personaje pueda crear "disparos" sean de la clase que sea.</p>
+<p>Por ejemplo, lo mas sencillo es indicarle a un actor
+que puede disparar, usando una munición por omisión:</p>
 <pre><code class="python">import pilasengine
 
 pilas = pilasengine.iniciar()
+
 mono = pilas.actores.Mono()
-mono.aprender(pilas.habilidades.SeguirClicks)
+mono.aprender(&quot;moverseComoCoche&quot;)
+mono.aprender(&quot;disparar&quot;)
 </code></pre>
 
-<h2 id="mezclar-habilidades">Mezclar habilidades</h2>
-<p>En pilas se ha intentado hacer que las habilidades sean
-lo mas independientes posibles, porque claramente lo mas
-divertido de este enfoque es poder combinar distintas
-habilidades para lograr comportamientos complejos.</p>
-<p>Así que te invitamos a experimentar y explorar la mezcla
-de habilidades.</p>
+<p>Y como resultado vamos a conseguir que nuestro
+actor se pueda mover con el teclado y disparar con la tecla
+espacio.</p>
+<p>Y si queremos cambiar la munición de la habilidad
+disparar, podemos especificarlo con el parámetro <code>municion</code>:</p>
+<pre><code class="python">mono.aprender(&quot;disparar&quot;, municion=&quot;aceituna&quot;)
+</code></pre>
+
 <h2 id="listado-de-habilidades-existentes">Listado de habilidades existentes</h2>
 <table>
 <thead>
 <tr>
 <th><strong>Habilidad</strong></th>
-<th><strong>Parametros</strong></th>
+<th><strong>Parámetros</strong></th>
 </tr>
 </thead>
 <tbody>

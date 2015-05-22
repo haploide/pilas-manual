@@ -58,39 +58,45 @@ import pilasengine
 pilas = pilasengine.iniciar()
 
 mono = pilas.actores.Mono()
-mono.aprender(pilas.habilidades.Arrastrable)
+mono.aprender("arrastrable")
 ```
 
-## Otro ejemplo: un actor que cambia de posición
+## Una habilidad más compleja: Disparar
 
-Veamos otro ejemplo sencillo, si queremos que un actor
-se coloque en la posición del mouse cada vez que hacemos
-click, podemos usar la habilidad: ``SeguirClicks``.
+Una habilidad que tiene más complejidad que las anteriores
+es disparar, una habilidad que te permite hacer que un
+personaje pueda crear "disparos" sean de la clase que sea.
+
+Por ejemplo, lo mas sencillo es indicarle a un actor
+que puede disparar, usando una munición por omisión:
 
 ```python
 import pilasengine
 
 pilas = pilasengine.iniciar()
+
 mono = pilas.actores.Mono()
-mono.aprender(pilas.habilidades.SeguirClicks)
+mono.aprender("moverseComoCoche")
+mono.aprender("disparar")
 ```
 
-## Mezclar habilidades
+Y como resultado vamos a conseguir que nuestro
+actor se pueda mover con el teclado y disparar con la tecla
+espacio.
 
-En pilas se ha intentado hacer que las habilidades sean
-lo mas independientes posibles, porque claramente lo mas
-divertido de este enfoque es poder combinar distintas
-habilidades para lograr comportamientos complejos.
+Y si queremos cambiar la munición de la habilidad
+disparar, podemos especificarlo con el parámetro ``municion``:
 
-Así que te invitamos a experimentar y explorar la mezcla
-de habilidades.
 
+```python
+mono.aprender("disparar", municion="aceituna")
+```
 
 ## Listado de habilidades existentes
 
 
 
-| **Habilidad**                | **Parametros**                                                                                           |
+| **Habilidad**                | **Parámetros**                                                                                           |
 |------------------------------|----------------------------------------------------------------------------------------------------------|
 | Arrastrable                  |                                                                                                          |
 | AumentarConRueda             |                                                                                                          |
