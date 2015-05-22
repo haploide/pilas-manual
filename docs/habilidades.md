@@ -90,26 +90,26 @@ de habilidades.
 
 
 
-| **Habilidad**                | **Parametros**                                                                                                    |
-|------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Arrastrable                  |                                                                                                                   |
-| AumentarConRueda             |                                                                                                                   |
-| Disparar                     | municion, grupo_enemigos, cuando_elimina_enemigo, frecuencia_de_disparo, angulo_salida_disparo ...                |
-| EliminarseSiSaleDePantalla   |                                                                                                                   |
-| Imitar                       | objeto_a_imitar, con_escala, con_rotacion                                                                         |
-| LimitadoABordesDePantalla    |                                                                                                                   |
-| MirarAlActor                 | actor_a_seguir, lado_seguimiento="ARRIBA"                                                                         |
-| MoverseComoCoche             | control, velocidad_maxima, aceleracion, deceleracion, rozamiento, velocidad_rotacion                              |
-| MoverseConElTeclado          | control, direcciones, velocidad_maxima, aceleracion, deceleracion, con_rotacion, velocidad_rotacion, marcha_atras |
-| PuedeExplotar                |                                                                                                                   |
-| PuedeExplotarConHumo         |                                                                                                                   |
-| RebotarComoCaja              |                                                                                                                   |
-| RebotarComoPelota            |                                                                                                                   |
-| RotarConMouse                |                                                                                                                   |
-| SeMantieneEnPantalla         | permitir_salida                                                                                                   |
-| SeguirAlMouse                |                                                                                                                   |
-| SeguirClicks                 |                                                                                                                   |
-| SiempreEnElCentro            |                                                                                                                   |
+| **Habilidad**                | **Parametros**                                                                                           |
+|------------------------------|----------------------------------------------------------------------------------------------------------|
+| Arrastrable                  |                                                                                                          |
+| AumentarConRueda             |                                                                                                          |
+| Disparar                     | municion, grupo_enemigos, cuando_elimina_enemigo, frecuencia_de_disparo, angulo_salida_disparo ...       |
+| EliminarseSiSaleDePantalla   |                                                                                                          |
+| Imitar                       | objeto_a_imitar, con_escala, con_rotacion                                                                |
+| LimitadoABordesDePantalla    |                                                                                                          |
+| MirarAlActor                 | actor_a_seguir, lado_seguimiento="ARRIBA"                                                                |
+| MoverseComoCoche             | control, velocidad_maxima, aceleracion, deceleracion, rozamiento, velocidad_rotacion                     |
+| MoverseConElTeclado          | control, direcciones, velocidad_maxima, aceleracion, con_rotacion, velocidad_rotacion, marcha_atras      |
+| PuedeExplotar                |                                                                                                          |
+| PuedeExplotarConHumo         |                                                                                                          |
+| RebotarComoCaja              |                                                                                                          |
+| RebotarComoPelota            |                                                                                                          |
+| RotarConMouse                |                                                                                                          |
+| SeMantieneEnPantalla         | permitir_salida                                                                                          |
+| SeguirAlMouse                |                                                                                                          |
+| SeguirClicks                 |                                                                                                          |
+| SiempreEnElCentro            |                                                                                                          |
 
 ## Crear habilidades personalizadas
 
