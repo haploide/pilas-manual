@@ -4,9 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
   
   <title>Fisica</title>
   
+=======
+
+  <title>Fisica - pilas-engine</title>
+>>>>>>> d59883ccf7c64cf4eea864d8f93f9d262b0cbfd9
 
   
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -43,6 +48,8 @@
             <li class="toctree-l1 ">
                 <a class="" href="..">Principal</a>
                 
+<<<<<<< HEAD
+=======
             </li>
         
 
@@ -51,13 +58,18 @@
             <li class="toctree-l1 ">
                 <a class="" href="../instalacion/">Instalación</a>
                 
+>>>>>>> d59883ccf7c64cf4eea864d8f93f9d262b0cbfd9
             </li>
         
 
     
         
             <li class="toctree-l1 ">
+<<<<<<< HEAD
+                <a class="" href="../instalacion/">Instalación</a>
+=======
                 <a class="" href="../about/">Acerca de ...</a>
+>>>>>>> d59883ccf7c64cf4eea864d8f93f9d262b0cbfd9
                 
             </li>
         
@@ -65,7 +77,11 @@
     
         
             <li class="toctree-l1 ">
+<<<<<<< HEAD
+                <a class="" href="../about/">Acerca de ...</a>
+=======
                 <a class="" href="../empezando/">Empezando y los primeros pasos con pilas</a>
+>>>>>>> d59883ccf7c64cf4eea864d8f93f9d262b0cbfd9
                 
             </li>
         
@@ -73,7 +89,11 @@
     
         
             <li class="toctree-l1 ">
+<<<<<<< HEAD
+                <a class="" href="../empezando/">Empezando y los primeros pasos con pilas</a>
+=======
                 <a class="" href="../actores/">Actores</a>
+>>>>>>> d59883ccf7c64cf4eea864d8f93f9d262b0cbfd9
                 
             </li>
         
@@ -81,7 +101,11 @@
     
         
             <li class="toctree-l1 ">
+<<<<<<< HEAD
+                <a class="" href="../actores/">Actores</a>
+=======
                 <a class="" href="../actores_personalizados/">Actores personalizados</a>
+>>>>>>> d59883ccf7c64cf4eea864d8f93f9d262b0cbfd9
                 
             </li>
         
@@ -89,7 +113,11 @@
     
         
             <li class="toctree-l1 ">
+<<<<<<< HEAD
+                <a class="" href="../actores_personalizados/">Actores personalizados</a>
+=======
                 <a class="" href="../grupos/">Grupos</a>
+>>>>>>> d59883ccf7c64cf4eea864d8f93f9d262b0cbfd9
                 
             </li>
         
@@ -97,6 +125,19 @@
     
         
             <li class="toctree-l1 ">
+<<<<<<< HEAD
+                <a class="" href="../grupos/">Grupos</a>
+=======
+                <a class="" href="../colisiones/">Colisiones</a>
+>>>>>>> d59883ccf7c64cf4eea864d8f93f9d262b0cbfd9
+                
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
+<<<<<<< HEAD
                 <a class="" href="../colisiones/">Colisiones</a>
                 
             </li>
@@ -105,6 +146,8 @@
     
         
             <li class="toctree-l1 ">
+=======
+>>>>>>> d59883ccf7c64cf4eea864d8f93f9d262b0cbfd9
                 <a class="" href="../etiquetas/">Etiquetas</a>
                 
             </li>
@@ -404,11 +447,11 @@ geométrica, la física en realidad se da en un nivel muy
 primitivo de figuras. El aspecto de las cosas es
 solo eso, un aspecto. Lo que "manda" en el comportamiento
 físico son las figuras geométricas (cuerpos).</p>
-<p>Intenta lo siguiente, pulsa la tecla <strong>F11</strong> y observarás
-varias lineas de color rojo indicando las figuras de
-los cuerpos:</p>
+<p>Intenta lo siguiente, pulsa la tecla <strong>F11</strong> o pulsá el
+botón "mostrar figuras físicas" que aparece abajo a la
+derecha:</p>
 <p><img alt="" src="../imagenes/fisica/fisica_2.jpg" /></p>
-<p>Las lineas rojas indican polígonos que el
+<p>Las lineas blancas indican polígonos que el
 motor de física puede controlar, las cajas tienen forma
 rectangular, los actores Pelota tienen figuras circulares, y
 el suelo y las paredes también están en el sistema de física.</p>
@@ -433,11 +476,10 @@ propios actores de ese comportamiento?.</p>
 y son invisibles (al principio), pero luego se pueden vincular
 a cualquier actor con facilidad.</p>
 <p>Intenta lo siguiente, ingresa en el modo interactivo de pilas
-y pulsa la tecla <strong>F11</strong>. Tendrías que ver el texto
-"F11 ModoFisica habilitado."
-en la esquina superior de la ventana:</p>
+y pulsa la tecla <strong>F11</strong> o pulsá el botón "mostrar figuras físicas" que
+aparece abajo a la derecha:</p>
 <p><img alt="" src="../imagenes/fisica/fisica_personalizada_1.jpg" /></p>
-<p>Ahora genera dos figuras físicas, una circunferencia estática
+<p>Ahora creá dos figuras físicas, una circunferencia estática
 y otra dinámica:</p>
 <pre><code>circulo = pilas.fisica.Circulo(0, 0, 50, dinamica=False)
 circulo_dinamico = pilas.fisica.Circulo(10, 200, 50)
@@ -461,7 +503,7 @@ cómo figuras geométricas.</p>
 que el primer circulo (el del centro) sea un mono, y el otro
 círculo que sea una bomba:</p>
 <pre><code>mono = pilas.actores.Mono()
-mono.aprender(pilas.habilidades.Imitar(circulo))
+mono.aprender(pilas.habilidades.Imitar, circulo)
 
 bomba = pilas.actores.Bomba()
 bomba.aprender(pilas.habilidades.Imitar, circulo_dinamico)
@@ -509,18 +551,22 @@ para que los objetos puedan "flotar", ¿no?.</p>
 <p>Entonces, hay dos formas de cambiar la gravedad del escenario. Podrías
 cambiar la gravedad en cualquier momento invocando a la función
 <code>definir_gravedad</code> indicando la nueva gravedad, por ejemplo:</p>
-<pre><code>pilas.fisica.definir_gravedad(200, 0)
+<pre><code>pilas.fisica.definir_gravedad(-2, 0)
 </code></pre>
 
 <p>o directamente especificar la gravedad usando las variables <code>x</code> e
 <code>y</code>:</p>
-<pre><code>pilas.fisica.gravedad_x = 90
-pilas.fisica.gravedad_y = 90
+<pre><code>pilas.fisica.gravedad_x = 9
+pilas.fisica.gravedad_y = 9
 </code></pre>
 
 <p>Ten en cuenta que el primer argumento es la aceleración horizontal y
 la segunda componente es la aceleración vertical. Los valores originales
+<<<<<<< HEAD
 de la gravedad son <code>0</code> y <code>-90</code>.</p>
+=======
+de la gravedad son <code>0</code> y <code>-9</code>.</p>
+>>>>>>> d59883ccf7c64cf4eea864d8f93f9d262b0cbfd9
             </div>
           </div>
           <footer>

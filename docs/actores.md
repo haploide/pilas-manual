@@ -21,6 +21,67 @@ tuyos propios:
   - [Animado](#animado)
   - [Bala](#bala)
   - [Banana](#banana)
+  - [ActorEliminadoException](#actor)
+  - [ActorEliminado](#actor)
+  - [Banana](#banana)
+  - [Bomba](#bomba)
+  - [Boton](#boton)
+  - [Caja](#caja)
+  - [Calvo](#calvo)
+  - [Controlador](#controlador)
+  - [Cooperativista](#cooperativista)
+  - [DeslizadorHorizontal](#deslizador_horizontal)
+  - [Dialogo](#dialogo)
+  - [Dinamita](#dinamita)
+  - [DisparoLaser](#disparo_laser)
+  - [Ejes](#ejes)
+  - [Emisor](#emisor)
+  - [Energia](#energia)
+  - [Estrella](#estrella)
+  - [EstrellaNinja](#estrella_ninja)
+  - [Estudiante](#estudiante)
+  - [Explosion](#explosion)
+  - [ExplosionDeHumo](#explosion_de_humo)
+  - [Fantasma](#fantasma)
+  - [Globo](#globo)
+  - [Grupo](#grupo)
+  - [Humo](#humo)
+  - [ManejadorPropiedad](#manejador_propiedad)
+  - [Manzana](#manzana)
+  - [Mapa](#mapa)
+  - [MapaTiled](#mapa_tiled)
+  - [Martian](#martian)
+  - [Maton](#maton)
+  - [MensajeError](#mensaje_error)
+  - [Menu](#menu)
+  - [Menu](#menu)
+  - [Misil](#misil)
+  - [Moneda](#moneda)
+  - [Mono](#mono)
+  - [Municion](#municion)
+  - [Nave](#nave)
+  - [NaveKids](#nave_kids)
+  - [NaveRoja](#nave_roja)
+  - [Opcion](#opcion)
+  - [Ovni](#ovni)
+  - [Pacman](#pacman)
+  - [Palo](#palo)
+  - [Particula](#particula)
+  - [Pelota](#pelota)
+  - [Piedra](#piedra)
+  - [Pingu](#pingu)
+  - [Pizarra](#pizarra)
+  - [Planeta](#planeta)
+  - [Puntaje](#puntaje)
+  - [Shaolin](#shaolin)
+  - [Sombra](#sombra)
+  - [Sonido](#sonido)
+  - [Temporizador](#temporizador)
+  - [Texto](#texto)
+  - [TextoInferior](#texto_inferior)
+  - [Tortuga](#tortuga)
+  - [Zanahoria](#zanahoria)
+
 
 ### Actor
 
@@ -182,3 +243,686 @@ banana.cerrar()
 
 - ``banana.abrir()``
 - ``banana.cerrar()``
+
+
+### Bomba
+
+Representa una bomba que puede explotar...
+
+La bomba adquiere la habilidad explotar al momento de crearse, así
+que puedes invocar a su método "explotar" y la bomba hará un
+explosión en pantalla con sonido.
+
+![](imagenes/actores/bomba.png)
+
+
+```
+bomba = pilas.actores.Bomba()
+bomba.explotar()
+```
+
+*Comportamientos:*
+
+- ``bomba.explotar()``
+
+
+### Boton
+
+Representa un boton que reacciona al ser presionado
+
+![](imagenes/actores/boton.png)
+
+*Comportamientos:*
+
+- ``boton.conectar_normal(funcion, argumentos...)``
+- ``boton.conectar_presionado(funcion, argumentos...)``
+- ``boton.activar()``
+- ``boton.desactivar()``
+- ``boton.desconectar_normal(function)``
+- ``boton.desconectar_presionado(function)``
+
+
+### Caja
+
+Representa una caja que posee fisica.
+
+![](imagenes/actores/caja.png)
+
+
+### Calvo
+
+
+Representa un personaje de juego tipo RPG.
+
+![](imagenes/actores/calvo.png)
+
+
+### Cooperativista
+
+
+Representa un Cooperativista que puede caminar y trabajar.
+
+![](imagenes/actores/cooperativista.png)
+
+*Comportamientos:*
+
+- ``cooperativista.cambiar_animacion(nombre)``
+
+
+
+
+### DeslizadorHorizontal
+
+
+*Comportamientos:*
+
+- ``deslizador.conectar(function)``
+- ``deslizador.desconectar(function)``
+
+
+### Dialogo
+
+Representa una secuencia de mensajes entre varios actores.
+
+>>> mono = pilas.actores.Mono()
+>>> mono2 = pilas.actores.Mono()
+>>> dialogo = pilas.actores.Dialogo()
+>>> dialogo.decir(mono, "Hola Mundo")
+>>> dialogo.decir(mono2, "Estoy diciendo algo")
+>>> dialogo.comenzar()
+
+![](imagenes/actores/mono_dice.png)
+
+*Comportamientos:*
+
+- ``dialogo.decir(actor, mensaje)``
+- ``dialogo.comenzar()``
+
+
+### Dinamita
+
+Una dinamita que puede explotar.
+
+![](imagenes/actores/dinamita.png)
+
+*Comportamientos:*
+
+- ``dinamita.explotar()``
+
+
+### DisparoLaser
+
+Muestra un disparo que avanza por la pantalla.
+
+    .. image:: images/actores/disparo_laser.png
+
+    Este actor se podría usar como arma para juegos de naves
+    generalmente. Por ejemplo, el actor NaveRoja dispara usando
+    este actor como munición.
+
+![](imagenes/actores/disparo_laser.png)
+
+
+
+### Ejes
+
+
+...
+
+![](imagenes/actores/ejes.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Emisor
+
+
+...
+
+![](imagenes/actores/emisor.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Energia
+
+
+...
+
+![](imagenes/actores/energia.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Estrella
+
+
+...
+
+![](imagenes/actores/estrella.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### EstrellaNinja
+
+
+...
+
+![](imagenes/actores/estrella_ninja.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Estudiante
+
+
+...
+
+![](imagenes/actores/estudiante.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Explosion
+
+
+...
+
+![](imagenes/actores/explosion.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### ExplosionDeHumo
+
+
+...
+
+![](imagenes/actores/explosion_de_humo.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Fantasma
+
+
+...
+
+![](imagenes/actores/fantasma.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Globo
+
+
+...
+
+![](imagenes/actores/globo.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Grupo
+
+
+...
+
+![](imagenes/actores/grupo.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Humo
+
+
+...
+
+![](imagenes/actores/humo.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### ManejadorPropiedad
+
+
+...
+
+![](imagenes/actores/manejador_propiedad.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Manzana
+
+
+...
+
+![](imagenes/actores/manzana.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Mapa
+
+
+...
+
+![](imagenes/actores/mapa.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### MapaTiled
+
+
+...
+
+![](imagenes/actores/mapa_tiled.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Martian
+
+
+...
+
+![](imagenes/actores/martian.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Maton
+
+
+...
+
+![](imagenes/actores/maton.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### MensajeError
+
+
+...
+
+![](imagenes/actores/mensaje_error.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Menu
+
+
+...
+
+![](imagenes/actores/menu.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Menu
+
+
+...
+
+![](imagenes/actores/menu.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Misil
+
+
+...
+
+![](imagenes/actores/misil.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Moneda
+
+
+...
+
+![](imagenes/actores/moneda.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Mono
+
+
+...
+
+![](imagenes/actores/mono.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Municion
+
+
+...
+
+![](imagenes/actores/municion.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Nave
+
+
+...
+
+![](imagenes/actores/nave.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### NaveKids
+
+
+...
+
+![](imagenes/actores/nave_kids.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### NaveRoja
+
+
+...
+
+![](imagenes/actores/nave_roja.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Opcion
+
+
+...
+
+![](imagenes/actores/opcion.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Ovni
+
+
+...
+
+![](imagenes/actores/ovni.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Pacman
+
+
+...
+
+![](imagenes/actores/pacman.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Palo
+
+
+...
+
+![](imagenes/actores/palo.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Particula
+
+
+...
+
+![](imagenes/actores/particula.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Pelota
+
+
+...
+
+![](imagenes/actores/pelota.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Piedra
+
+
+...
+
+![](imagenes/actores/piedra.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Pingu
+
+
+...
+
+![](imagenes/actores/pingu.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Pizarra
+
+
+...
+
+![](imagenes/actores/pizarra.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Planeta
+
+
+...
+
+![](imagenes/actores/planeta.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Puntaje
+
+
+...
+
+![](imagenes/actores/puntaje.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Shaolin
+
+
+...
+
+![](imagenes/actores/shaolin.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Sombra
+
+
+...
+
+![](imagenes/actores/sombra.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Sonido
+
+
+...
+
+![](imagenes/actores/sonido.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Temporizador
+
+
+...
+
+![](imagenes/actores/temporizador.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Texto
+
+
+...
+
+![](imagenes/actores/texto.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### TextoInferior
+
+
+...
+
+![](imagenes/actores/texto_inferior.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Tortuga
+
+
+...
+
+![](imagenes/actores/tortuga.png)
+
+*Comportamientos:*
+
+- ``..``
+
+
+### Zanahoria
+
+
+...
+
+![](imagenes/actores/zanahoria.png)
+
+*Comportamientos:*
+
+- ``..``
