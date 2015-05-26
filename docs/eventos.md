@@ -10,6 +10,7 @@ y respuestas``, no solo porque es muy sencilla de usar, sino
 también porque es una solución conocida y muy utilizada
 en otros lugares como en la web.
 
+
 ## ¿Que es un Evento?
 
 Los eventos representan algo que esperamos que ocurra
@@ -51,20 +52,24 @@ en pantalla siguiendo la posición del puntero
 del mouse, tendríamos que escribir algo como
 esto:
 
+```python
+import pilasengine
 
-    import pilas
+pilas = pilasengine.iniciar()
 
-    mono = pilas.actores.Mono()
+mono = pilas.actores.Mono()
 
-    def mover_mono_a_la_posicion_del_mouse(evento):
-        mono.x = evento.x
-        mono.y = evento.y
+def mover_mono_a_la_posicion_del_mouse(evento):
+    mono.x = evento.x
+    mono.y = evento.y
 
-    pilas.eventos.mueve_mouse.conectar(mover_mono_a_la_posicion_del_mouse)
+pilas.eventos.mueve_mouse.conectar(mover_mono_a_la_posicion_del_mouse)
 
-    # O puedes utilizar el método abreviado del actor.
-    mono.mueve_mouse(mover_mono_a_la_posicion_del_mouse)
+# O puedes utilizar el método abreviado del actor.
+mono.mueve_mouse(mover_mono_a_la_posicion_del_mouse)
 
+pilas.ejecutar()
+```
 
 
 Es decir, la señal de evento que nos interesa es ``mueve_mouse`` (que se emite
@@ -139,6 +144,24 @@ un valor al argumento ``id``. Este valor será el identificador
 de ese enlace. Y en la siguiente linea se utilizó el identificador
 para desconectarla.
 
+
+## Listado de todos los eventos existentes
+
+| **Evento**          | **Parametros**  |
+|---------------------|-----------------|
+| mueve_camara        | x, y, dx, dy    |
+| mueve_mouse         | x, y, dx, dy    |
+| click_de_mouse      | boton, x, y     |
+| termina_click       | boton, x, y     |
+| mueve_rueda         | delta           |
+| pulsa_tecla         | codigo, texto   |
+| suelta_tecla        | codigo, texto   |
+| pulsa_tecla_escape  |                 |
+| cuando_actualiza    |                 |
+| pulsa_boton         | numero          |
+| mueve_pad           | x, y, x1, y1    |
+
+
 ## Consultado señales conectadas
 
 Durante el desarrollo es útil poder observar qué
@@ -168,14 +191,16 @@ luego, este nuevo objeto ``evento`` podrá ser utilizado como
 canal de comunicación: muchos actores podrán ``conectarse`` para
 recibir alertas y otros podrán ``emitir`` alertas:
 
+```python
+def ha_ocurrido_un_evento(datos_evento):
+    print "Hola!!!", datos_evento
 
-    def ha_ocurrido_un_evento(datos_evento):
-        print "Hola!!!", datos_evento
+evento.conectar(ha_ocurrido_un_evento)
 
-    evento.conectar(ha_ocurrido_un_evento)
+# En otra parte...
+evento.emitir(argumento1=123, argumento2=123)
+```
 
-    # En otra parte...
-    evento.emitir(argumento1=123, argumento2=123)
 
 Cuando se emite un evento se pueden pasar muchos argumentos, tantos
 como se quiera. Todos estos argumentos llegarán a la función de

@@ -65,13 +65,16 @@ La primer escena tendríamos que representarla
 con una clase, que herede de la escena Normal
 así:
 
-    class PantallaBienvenida(pilas.escena.Normal):
+```python
+class PantallaBienvenida(pilasengine.escenas.Escena):
 
+    def iniciar(self):
+        self.fondo = self.pilas.fondos.Volley()
+        pass
 
-        def iniciar(self):
-            pilas.fondos.Pasto()
-            texto = pilas.actores.Texto("Bienvenido a pilas!!!")
-
+    def ejecutar(self):
+        pass
+```
 
 Ahora, para poner en funcionamiento esta escena
 simplemente tienes que decirle a pilas que esta escena es la activa:
@@ -103,15 +106,16 @@ Si quieres crear una escena pasándole un argumento de esta forma:
 Lo que necesitas hacer es especificar ese nuevo argumento en el método
 ``iniciar`` así:
 
-    class PantallaBienvenida(pilas.escena.Normal):
+```python
+class PantallaBienvenida(pilasengine.escenas.Escena):
 
-        def iniciar(self, mensaje):
-            pilas.fondos.Pasto()
-            self.texto = pilas.actores.Texto(mensaje)
+    def iniciar(self, mensaje):
+        pilas.fondos.Pasto()
+        self.texto = pilas.actores.Texto(mensaje)
 
-        def actualizar(self):
-            self.texto.rotacion += 1
-
+    def actualizar(self):
+        self.texto.rotacion += 1
+```
 
 pilas, en este caso, va a tomar el argumento ``"Mi mensaje personalizado"`` y lo
 va a enviar al método ``iniciar`` con el nombre ``mensaje``.

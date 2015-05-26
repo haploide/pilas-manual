@@ -38,10 +38,3 @@ _deploy: generar
  
  
  
- 
- 
- 
- 
- 
- 
- 

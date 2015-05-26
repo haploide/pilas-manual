@@ -103,7 +103,7 @@ Para crear un grupo vacío tienes que crear
 un objeto de la clase Grupo:
 
 ```
-mi_grupo = pilas.grupo.Grupo()
+mi_grupo = pilas.actores.Grupo()
 ```
 
 y luego, para añadir actores al grupo puedes usar el

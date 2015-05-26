@@ -20,8 +20,22 @@ la tarea", y dependiendo de lo que queramos,
 tenemos que escribir algo cómo:
 
 
-    pilas.escena_actual().agregar_tarea(tiempo, funcion, parametros)
+```python
+pilas.tareas.agregar(tiempo, funcion, parametros)
+```
 
+Por ejemplo, para hacer que un actor espere 5 segundos
+antes de emitir un mensaje:
+
+
+```python
+mono = pilas.actores.Mono()
+
+def emitir_mensaje():
+  mono.decir("Hola")
+
+pilas.tareas.agregar(5, emitir_mensaje)  
+```
 
 Hay tres tipos de creaciones de tareas:
 
@@ -46,12 +60,15 @@ la función que ha creado la tarea y detenerla.
 
 Por ejemplo:
 
-    escena = pilas.escena_actual()
-    una_tarea = escena.agregar_tarea_siempre(5, funcion)
+```python
+una_tarea = pilas.tareas.siempre(5, funcion)
+```
 
 y luego, cuando queramos que la tarea finalice
 y no se vuelva a ejecutar, tendríamos que ejecutar
 una sentencia como esta:
 
 
-    una_tarea.terminar()
+```python
+una_tarea.terminar()
+```

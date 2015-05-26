@@ -16,7 +16,7 @@ hacemos rebotar entre sí, estas serían colisiones físicas:
 
 ![](imagenes/colisiones/cajas.png)
 
-```
+```python
 cajas = pilas.actores.Caja() * 5
 ```
 
@@ -32,9 +32,9 @@ un personaje que se pueda mover con el mouse y se alimente comiendo bananas:
 
 ![](imagenes/colisiones/mono.png)
 
-```
+```python
 mono = pilas.actores.Mono()
-mono.aprender(pilas.habilidades.Arrastrable)
+mono.aprender("Arrastrable")
 bananas = pilas.actores.Banana() * 10
 
 def cuando_colisiona(mono, banana):
@@ -79,7 +79,7 @@ Para acceder a las figuras de colisión tienes que usar el atributo
 cambiando el atributo ``radio_de_colisión`` por ejemplo:
 
 
-```
+```python
 mono = pilas.actores.Mono()
 mono.radio_de_colision = 30
 mono.radio_de_colision = 80
@@ -108,11 +108,11 @@ actor:
 Para construir este ejemplo construímos dos actores, al primero lo dejamos
 tal cual, pero al segundo le cambiamos la figura de colisión por un rectángulo:
 
-```
+```python
 zanahoria_normal = pilas.actores.Zanahoria(x=-100)
 
 zanahoria = pilas.actores.Zanahoria(x=100)
-rectangulo = pilas.fisica.Rectangulo(0, 0, 40, 100, sensor=True)
+rectangulo = pilas.fisica.Rectangulo(0, 0, 40, 100, sensor=True, dinamica=False)
 zanahoria.figura_de_colision = rectangulo
 ```
 
@@ -122,4 +122,3 @@ zanahoria.figura_de_colision = rectangulo
 Ten en cuenta que existe un atajo para definir colisiones
 usando el concepto de etiquetas, que se verá en la siguiente
 página de este manual.
-

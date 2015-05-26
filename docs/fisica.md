@@ -5,7 +5,7 @@ para realizar simulaciones y dotar a tus juegos
 de mas realismo y diversión.
 
 
-## El protagonista es Box2D
+## El motor: Box2D
 
 El motor de física seleccionado para pilas se llama Box2D, el mismo
 motor de física utilizado en el juego Angry Birds.
@@ -52,8 +52,8 @@ ejemplo, si quieres poder arrastrar y soltar figuras con
 el mouse, puedes enseñarles una habilidad:
 
 ```
-pelotas.aprender(pilas.habilidades.Arrastrable)
-cajas.aprender(pilas.habilidades.Arrastrable)
+pelotas.aprender("arrastrable")
+cajas.aprender("arrastrable")
 ```
 
 ## Modo depuración de física
@@ -78,14 +78,14 @@ primitivo de figuras. El aspecto de las cosas es
 solo eso, un aspecto. Lo que "manda" en el comportamiento
 físico son las figuras geométricas (cuerpos).
 
-Intenta lo siguiente, pulsa la tecla **F11** y observarás
-varias lineas de color rojo indicando las figuras de
-los cuerpos:
+Intenta lo siguiente, pulsa la tecla **F11** o pulsá el
+botón "mostrar figuras físicas" que aparece abajo a la
+derecha:
 
 ![](imagenes/fisica/fisica_2.jpg)
 
 
-Las lineas rojas indican polígonos que el
+Las lineas blancas indican polígonos que el
 motor de física puede controlar, las cajas tienen forma
 rectangular, los actores Pelota tienen figuras circulares, y
 el suelo y las paredes también están en el sistema de física.
@@ -95,14 +95,14 @@ en la pantalla, y sean un poco mas libres, podrías eliminar
 las paredes:
 
 ```
-pilas.escena_actual().fisica.eliminar_paredes()
+pilas.fisica.eliminar_paredes()
 ```
 
 o incluso podrías eliminar el suelo:
 
 
 ```
-pilas.escena_actual().fisica.eliminar_suelo()
+pilas.fisica.eliminar_suelo()
 ```
 
 
@@ -123,13 +123,12 @@ y son invisibles (al principio), pero luego se pueden vincular
 a cualquier actor con facilidad.
 
 Intenta lo siguiente, ingresa en el modo interactivo de pilas
-y pulsa la tecla **F11**. Tendrías que ver el texto
-"F11 ModoFisica habilitado."
-en la esquina superior de la ventana:
+y pulsa la tecla **F11** o pulsá el botón "mostrar figuras físicas" que
+aparece abajo a la derecha:
 
 ![](imagenes/fisica/fisica_personalizada_1.jpg)
 
-Ahora genera dos figuras físicas, una circunferencia estática
+Ahora creá dos figuras físicas, una circunferencia estática
 y otra dinámica:
 
 ```
@@ -163,7 +162,7 @@ círculo que sea una bomba:
 
 ```
 mono = pilas.actores.Mono()
-mono.aprender(pilas.habilidades.Imitar(circulo))
+mono.aprender(pilas.habilidades.Imitar, circulo)
 
 bomba = pilas.actores.Bomba()
 bomba.aprender(pilas.habilidades.Imitar, circulo_dinamico)
@@ -220,7 +219,7 @@ de box2D en coherencia con lo que estamos viendo en pantalla.
 
 ## Cambiando la gravedad interactivamente
 
-Por defecto, la gravedad del escenario es de (0, -90), esto
+Por defecto, la gravedad del escenario es de (0, -9), esto
 significa que los objetos se dirigen hacia abajo, y lo hacen con
 una aceleración de 90 mts/s^2 (metros sobre segundos cuadrados).
 

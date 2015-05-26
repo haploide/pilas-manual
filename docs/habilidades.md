@@ -23,13 +23,14 @@ al actor fácilmente.
 
 El siguiente código hace eso:
 
+```python
+import pilasengine
 
-    import pilasengine
+pilas = pilasengine.iniciar()
 
-    pilas = pilasengine.iniciar()
-
-    mono = pilas.actores.Mono()
-    mono.aprender(pilas.habilidades.AumentarConRueda)
+mono = pilas.actores.Mono()
+mono.aprender(pilas.habilidades.AumentarConRueda)
+```
 
 o bien:
 
@@ -43,7 +44,7 @@ las habilidades son algo que duran para toda la vida
 del actor.
 
 
-## Un ejemplo mas: hacer que un actor se pueda mover con el mouse
+## Un ejemplo más: hacer que un actor se pueda mover con el mouse
 
 Algo muy común en los juegos es que puedas
 tomar piezas con el mouse y moverlas por la pantalla.
@@ -51,51 +52,70 @@ tomar piezas con el mouse y moverlas por la pantalla.
 Esta habilidad llamada ``Arrastrable`` representa eso, puedes vincularlo
 a cualquier actor y simplemente funciona:
 
+```python
+import pilasengine
 
-    import pilas
+pilas = pilasengine.iniciar()
 
-    mono = pilas.actores.Mono()
-    mono.aprender(pilas.habilidades.Arrastrable)
+mono = pilas.actores.Mono()
+mono.aprender("arrastrable")
+```
+
+## Una habilidad más compleja: Disparar
+
+Una habilidad que tiene más complejidad que las anteriores
+es disparar, una habilidad que te permite hacer que un
+personaje pueda crear "disparos" sean de la clase que sea.
+
+Por ejemplo, lo mas sencillo es indicarle a un actor
+que puede disparar, usando una munición por omisión:
+
+```python
+import pilasengine
+
+pilas = pilasengine.iniciar()
+
+mono = pilas.actores.Mono()
+mono.aprender("moverseComoCoche")
+mono.aprender("disparar")
+```
+
+Y como resultado vamos a conseguir que nuestro
+actor se pueda mover con el teclado y disparar con la tecla
+espacio.
+
+Y si queremos cambiar la munición de la habilidad
+disparar, podemos especificarlo con el parámetro ``municion``:
 
 
-## Otro ejemplo: un actor que cambia de posición
+```python
+mono.aprender("disparar", municion="aceituna")
+```
 
-Veamos otro ejemplo sencillo, si queremos que un actor
-se coloque en la posición del mouse cada vez que hacemos
-click, podemos usar la habilidad: ``SeguirClicks``.
-
-
-    import pilas
-
-    mono = pilas.actores.Mono()
-    mono.aprender(pilas.habilidades.SeguirClicks)
+## Listado de habilidades existentes
 
 
-## Mezclar habilidades
 
-En pilas se ha intentado hacer que las habilidades sean
-lo mas independientes posibles, porque claramente lo mas
-divertido de este enfoque es poder combinar distintas
-habilidades para lograr comportamientos complejos.
-
-Así que te invitamos a experimentar y explorar la mezcla
-de habilidades.
-
-## Otras habilidades para utilizar
-
-Pilas viene con varias habilidades incluidas, pero
-lamentablemente este manual no las menciona a todas. Así
-que te recomendamos abrir un intérprete de python
-y consultarle directamente a él que habilidades tienes
-disponibles en tu versión de pilas.
-
-Para esto, abrí el intérprete de pilas y escribí lo siguiente:
-
-    dir(pilas.habilidades)
-
-esto imprimirá en pantalla todas las habilidades como una
-lista de cadenas.
-
+| **Habilidad**                | **Parámetros**                                                                                           |
+|------------------------------|----------------------------------------------------------------------------------------------------------|
+| Arrastrable                  |                                                                                                          |
+| AumentarConRueda             |                                                                                                          |
+| Disparar                     | municion, grupo_enemigos, cuando_elimina_enemigo, frecuencia_de_disparo, angulo_salida_disparo ...       |
+| EliminarseSiSaleDePantalla   |                                                                                                          |
+| Imitar                       | objeto_a_imitar, con_escala, con_rotacion                                                                |
+| LimitadoABordesDePantalla    |                                                                                                          |
+| MirarAlActor                 | actor_a_seguir, lado_seguimiento="ARRIBA"                                                                |
+| MoverseComoCoche             | control, velocidad_maxima, aceleracion, deceleracion, rozamiento, velocidad_rotacion                     |
+| MoverseConElTeclado          | control, direcciones, velocidad_maxima, aceleracion, con_rotacion, velocidad_rotacion, marcha_atras      |
+| PuedeExplotar                |                                                                                                          |
+| PuedeExplotarConHumo         |                                                                                                          |
+| RebotarComoCaja              |                                                                                                          |
+| RebotarComoPelota            |                                                                                                          |
+| RotarConMouse                |                                                                                                          |
+| SeMantieneEnPantalla         | permitir_salida                                                                                          |
+| SeguirAlMouse                |                                                                                                          |
+| SeguirClicks                 |                                                                                                          |
+| SiempreEnElCentro            |                                                                                                          |
 
 ## Crear habilidades personalizadas
 
@@ -106,15 +126,17 @@ La clase tiene que heredar de ``pilasengine.habilidades.Habilidad`` y
 puede tener un método ``actualizar``, en donde generalmente se
 coloca la acción a realizar:
 
-    class GirarPorSiempre(pilasengine.habilidades.Habilidad):
+```python
+class GirarPorSiempre(pilasengine.habilidades.Habilidad):
 
-        def actualizar(self):
-            self.receptor.rotacion += 1
+    def actualizar(self):
+        self.receptor.rotacion += 1
 
-    pilas.habilidades.vincular(GirarPorSiempre)
+pilas.habilidades.vincular(GirarPorSiempre)
 
-    actor = pilas.actores.Actor()
-    actor.aprender('GirarPorSiempre')
+actor = pilas.actores.Actor()
+actor.aprender('GirarPorSiempre')
+```
 
 
 El método ``actualizar`` de la habilidad se ejecutará 60 veces por segundo, y
@@ -142,23 +164,27 @@ Lo primero es crear la clase, muy parecida a la anterior, solamente que
 ahora creamos el método iniciar con dos argumentos, el primer es ``receptor``, que
 es obligatorio y el segundo es nuestro argumento de velocidad:
 
-    class GirarPorSiemprePersonalizado(pilasengine.habilidades.Habilidad):
+```python
+class GirarPorSiemprePersonalizado(pilasengine.habilidades.Habilidad):
 
-        def iniciar(self, receptor, velocidad):
-            self.receptor = receptor
-            self.velocidad = velocidad
+    def iniciar(self, receptor, velocidad):
+        self.receptor = receptor
+        self.velocidad = velocidad
 
-        def actualizar(self):
-            self.receptor.rotacion += self.velocidad
+    def actualizar(self):
+        self.receptor.rotacion += self.velocidad
 
-    pilas.habilidades.vincular(GirarPorSiemprePersonalizado)
-
+pilas.habilidades.vincular(GirarPorSiemprePersonalizado)
+```
 
 Ahora, la nueva habilidad necesita que le especifiquemos la velocidad
 al iniciar, así que tenemos que usar algo así:
 
-    actor_lento = pilas.actores.Actor()
-    actor_lento.aprender('GirarPorSiemprePersonalizado', 1)
 
-    actor_rapido = pilas.actores.Actor(y=100)
-    actor_rapido.aprender('GirarPorSiemprePersonalizado', 5)
+```python
+actor_lento = pilas.actores.Actor()
+actor_lento.aprender('GirarPorSiemprePersonalizado', 1)
+
+actor_rapido = pilas.actores.Actor(y=100)
+actor_rapido.aprender('GirarPorSiemprePersonalizado', 5)
+```

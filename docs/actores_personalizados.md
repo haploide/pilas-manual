@@ -181,11 +181,12 @@ Estos son algunos ejemplos de invocación, cada
 una de estas sentencias te mostrará el código
 de la clase completa:
 
-    pilas.ver(pilasengine.actores.Mono)
-    pilas.ver(pilasengine.actores.Aceituna)
-    pilas.ver(pilasengine.actores.Pacman)
-    pilas.ver(mono)
-
+```python
+pilas.ver(pilasengine.actores.Mono)
+pilas.ver(pilasengine.actores.Aceituna)
+pilas.ver(pilasengine.actores.Pacman)
+pilas.ver(mono)
+```
 
 ## Parametros iniciales para los actores
 
@@ -270,6 +271,6 @@ mientras que este otro ejemplo sí funcionará, porque el método
 ``iniciar`` de la clase ``Alien`` espera los argumentos ``energia``, ``nombre`` y
 ``con_sombra``:
 
-```
+```python
 alien = Alien(pilas, energia=100, nombre="pepe alien", con_sombra=True))
 ```

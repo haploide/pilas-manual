@@ -6,7 +6,7 @@ pilas incluye un intérprete interactivo que te permite escribir código de pyth
 
 ## Iniciando pilas
 
-Para ejecutar el asistente de pilas, abre un terminal y ejecuta el comando pilas.
+Para ejecutar el asistente de pilas, abre un terminal y ejecuta el comando `pilasengine`.
 
 En tu pantalla tiene que aparecer una ventana como esta.
 
@@ -28,9 +28,9 @@ La parte de arriba es la que utilizaremos para interactuar con el motor. Y mas a
 Puedes ver que el intérprete viene con algunas líneas de ejemplo.
 
 ```
-import pilas
+import pilasengine
 
-pilas.iniciar()
+pilas = pilasengine.iniciar()
 mono = pilas.actores.Mono()
 ```
 
@@ -99,14 +99,14 @@ Veamos algunas de estas características:
 
 ## Posición
 
-Podemos cambiar la posición de un actor mediante las propiedades x e y:
+Podemos cambiar la posición de un actor mediante las propiedades `x` e `y`:
 
 ```
 mono.x = 100
 mono.y = 100
 ```
 
-Ten en cuenta que x e y son las coordenadas de posición en el escenario. Por lo tanto el punto (0, 0) es el centro de la ventana. Y x aumenta hacia la derecha e y hacia arriba.
+Ten en cuenta que`x` e `y` son las coordenadas de posición en el escenario. Por lo tanto el punto (0, 0) es el centro de la ventana. Y x aumenta hacia la derecha e y hacia arriba.
 
 
 ![](imagenes/empezando/normal.png)
@@ -114,7 +114,7 @@ Ten en cuenta que x e y son las coordenadas de posición en el escenario. Por lo
 Este espacio de referencia se puede observar en detalle si pulsas la tecla F12, ahí observarás que el movimiento del mouse está asociado a una coordenada y cada actor también.
 
 
-Nota:
+**Nota**:
 
 > Para que tenga efecto, debes tener seleccionada la ventana de resultado (parte de arriba). Haz click sobre ella antes de pulsar F12.
 
@@ -147,7 +147,7 @@ mono.rotacion = 80
 ![](imagenes/empezando/rotacion80.png)
 
 
-La rotación siempre se indica en grados, e indica el grado de inclinación hacia la derecha.
+La rotación siempre se indica en grados, e indica el grado de inclinación hacia la izquierda.
 
 ## Animaciones
 
@@ -157,7 +157,7 @@ Cualquiera de todas las propiedes que vimos anteriormente se pueden usar para ha
 mono.rotacion = [360]
 ```
 
-¿por qué?, porque los caracteres [ y ] representan una lista de valores, y cuando pilas ve esta lista asignada a un atributo de pilas, intenta hacer una animación.
+¿por qué?, porque los caracteres [ y ] representan una lista de valores, y cuando pilas ve esta lista asignada a un atributo de un `actor`, intenta hacer una animación.
 
 Veamos otro ejemplo, si queremos que un personaje como el mono se mueva horizontalmente con una animación podemos escribir esto:
 
@@ -171,7 +171,7 @@ Python permite multiplicar listas, así que podríamos multiplicarlas para repet
 
 ```
 # Sólo en python.
-mono.x = [-200, 200] * 5 # ir de una lado a otro 5 veces.
+mono.x = [-200, 200] * 5 # ir de un lado a otro 5 veces.
 ```
 
 o incluso podríamos alterarles la velocidad, digamos que el ir y regresar se tiene que hacer muy lento, en unos 10 segundos:

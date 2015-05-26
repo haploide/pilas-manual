@@ -46,13 +46,17 @@ El siguiente código es el que se utilizó para
 dibujar esa linea de dos colores:
 
 
-    import pilas
+```python
+import pilasengine
 
-    pilas.iniciar()
-    tortuga = pilas.actores.Tortuga()
-    tortuga.avanzar(30)
-    tortuga.color = pilas.colores.azul
-    tortuga.avanzar(200)
+pilas = pilasengine.iniciar()
+
+tortuga = pilas.actores.Tortuga()
+tortuga.avanzar(30)
+tortuga.color = pilas.colores.azul
+tortuga.avanzar(200)
+```
+
 
 Algo muy valioso en términos didácticos, es que
 uno podría animarse a realizar dibujos simples cómo
@@ -65,7 +69,6 @@ Para manejar a este actor tienes varios comandos
 inspirados en logo.
 
 Esta es una lista de los comandos mas utilizados:
-
 
 
 Método completo  | nombre corto | ejemplo                                | ¿que hace?
@@ -106,16 +109,17 @@ dibujar un punto en el centro de la
 pantalla se puede usar el siguiente
 código:
 
-
-    pizarra = pilas.actores.Pizarra()
-    pizarra.dibujar_punto(0, 0)
+```python
+pizarra = pilas.actores.Pizarra()
+pizarra.dibujar_punto(0, 0)
+```
 
 incluso podrías usar el argumento opcional ``color``
 si prefieres otro color, o trazar una linea:
 
-
-
-    pizarra.linea(0, 0, 200, 200, pilas.colores.verdeoscuro, grosor=5)
+```python
+pizarra.linea(0, 0, 200, 200, pilas.colores.verdeoscuro, grosor=5)
+```
 
 ![](imagenes/dibujado_simple_en_pantalla/linea.jpg)
 
@@ -169,6 +173,7 @@ que pinte el cuadro actual de la grilla:
 
     grilla = pilas.imagenes.cargar_grilla("pingu.png", 10)
     pizarra.pintar_grilla(grilla, 0, 0)
+
 
 Así se verá:
 
