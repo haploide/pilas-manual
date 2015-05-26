@@ -221,7 +221,7 @@ de box2D en coherencia con lo que estamos viendo en pantalla.
 ## Cambiando la gravedad interactivamente
 
 Por defecto, la gravedad del escenario es de (0, -90), esto
-significa que los objetos "caen" hacia abajo, y lo hacen con
+significa que los objetos se dirigen hacia abajo, y lo hacen con
 una aceleración de 90 mts/s^2 (metros sobre segundos cuadrados).
 
 Pero no estás obligado a que esto sea siempre así, de hecho
@@ -229,22 +229,18 @@ si quieres hacer un juego que transcurra en el espacio seguramente
 vas a querer eliminar por completo la gravedad del escenario
 para que los objetos puedan "flotar", ¿no?.
 
-Entonces, hay dos formas de cambiar la gravedad del escenario. Podrías
-cambiar la gravedad en cualquier momento invocando a la función
-`definir_gravedad` indicando la nueva gravedad, por ejemplo:
-
-
-```
-pilas.atajos.definir_gravedad(200, 0)
-```
-
-o directamente especificar la gravedad cuando inicias pilas, por
-ejemplo:
+Entonces, Podrías cambiar la gravedad en cualquier momento cambiando
+los atributos ``gravedad_x`` o ``gravedad_y`` del objeto
+``fisica`` así:
 
 ```
-pilas.fisica.definir_gravedad(90, 90)
+pilas.fisica.gravedad_x = 20
+pilas.fisica.gravedad_y = 0
 ```
 
-Ten en cuenta que el primer argumento es la aceleración horizontal y
-la segunda componente es la aceleración vertical. Los valores originales
-de la gravedad son `0` y `-90`.
+El atributo ``gravedad_x`` representará la aceleración horizontal, donde los
+valores positivos acelerán los objetos hacia la derecha, y los valores
+negativos a la izquierda.
+
+De forma similar funciona el atributo ``gravedad_y``, los valores positivos
+aceleran los objetos hacia arriba y los valores negativos hacia abajo.
