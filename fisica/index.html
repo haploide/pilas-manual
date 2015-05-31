@@ -497,28 +497,25 @@ de box2D en coherencia con lo que estamos viendo en pantalla.</p>
 <p>30 pixels son equivalentes a 1 metro:</p>
 <p><img alt="" src="../imagenes/fisica/escalas.png" /></p>
 <h2 id="cambiando-la-gravedad-interactivamente">Cambiando la gravedad interactivamente</h2>
-<p>Por defecto, la gravedad del escenario es de (0, -90), esto
-significa que los objetos "caen" hacia abajo, y lo hacen con
+<p>Por defecto, la gravedad del escenario es de (0, -9), esto
+significa que los objetos se dirigen hacia abajo, y lo hacen con
 una aceleración de 90 mts/s^2 (metros sobre segundos cuadrados).</p>
 <p>Pero no estás obligado a que esto sea siempre así, de hecho
 si quieres hacer un juego que transcurra en el espacio seguramente
 vas a querer eliminar por completo la gravedad del escenario
 para que los objetos puedan "flotar", ¿no?.</p>
-<p>Entonces, hay dos formas de cambiar la gravedad del escenario. Podrías
-cambiar la gravedad en cualquier momento invocando a la función
-<code>definir_gravedad</code> indicando la nueva gravedad, por ejemplo:</p>
-<pre><code>pilas.fisica.definir_gravedad(-2, 0)
+<p>Entonces, Podrías cambiar la gravedad en cualquier momento cambiando
+los atributos <code>gravedad_x</code> o <code>gravedad_y</code> del objeto
+<code>fisica</code> así:</p>
+<pre><code>pilas.fisica.gravedad_x = 20
+pilas.fisica.gravedad_y = 0
 </code></pre>
 
-<p>o directamente especificar la gravedad usando las variables <code>x</code> e
-<code>y</code>:</p>
-<pre><code>pilas.fisica.gravedad_x = 9
-pilas.fisica.gravedad_y = 9
-</code></pre>
-
-<p>Ten en cuenta que el primer argumento es la aceleración horizontal y
-la segunda componente es la aceleración vertical. Los valores originales
-de la gravedad son <code>0</code> y <code>-9</code>.</p>
+<p>El atributo <code>gravedad_x</code> representará la aceleración horizontal, donde los
+valores positivos acelerán los objetos hacia la derecha, y los valores
+negativos a la izquierda.</p>
+<p>De forma similar funciona el atributo <code>gravedad_y</code>, los valores positivos
+aceleran los objetos hacia arriba y los valores negativos hacia abajo.</p>
             </div>
           </div>
           <footer>

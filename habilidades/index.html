@@ -416,6 +416,18 @@ disparar, podemos especificarlo con el parámetro <code>municion</code>:</p>
 <pre><code class="python">mono.aprender(&quot;disparar&quot;, municion=&quot;aceituna&quot;)
 </code></pre>
 
+<p>Esta habilidad también es útil para hacer un enemigo que dispare
+automáticamente cada determinado tiempo, por ejemplo 1 segundo:</p>
+<pre><code class="python">mono = pilas.actores.Mono()
+mono.aprender(&quot;Disparar&quot;, control=None)
+
+def dispara():
+     mono.disparar()
+     return True
+
+pilas.tareas.agregar(1, dispara)
+</code></pre>
+
 <h2 id="listado-de-habilidades-existentes">Listado de habilidades existentes</h2>
 <table>
 <thead>
