@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Controles - pilas-engine</title>
+  <title>Tipos de juegos - pilas-engine</title>
 
   
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -47,8 +47,15 @@
 
     
         
-            <li class="toctree-l1 ">
-                <a class="" href="../que_juegos/">Tipos de juegos</a>
+            <li class="toctree-l1 current">
+                <a class="current" href="./">Tipos de juegos</a>
+                
+                    <ul>
+                    
+                        <li class="toctree-l3"><a href="#que-tipos-de-juegos-se-pueden-realizar">¿Qué tipos de juegos se pueden realizar?</a></li>
+                        
+                    
+                    </ul>
                 
             </li>
         
@@ -127,19 +134,8 @@
 
     
         
-            <li class="toctree-l1 current">
-                <a class="current" href="./">Controles</a>
-                
-                    <ul>
-                    
-                        <li class="toctree-l3"><a href="#controles">Controles</a></li>
-                        
-                            <li><a class="toctree-l4" href="#investigando-al-objeto-control">Investigando al objeto control</a></li>
-                        
-                            <li><a class="toctree-l4" href="#donde-consultar-los-controles">¿Dónde consultar los controles?</a></li>
-                        
-                    
-                    </ul>
+            <li class="toctree-l1 ">
+                <a class="" href="../controles/">Controles</a>
                 
             </li>
         
@@ -341,7 +337,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." onclick='return alternar_menu();'>Docs</a> &raquo;</li>
-    <li>Controles</li>
+    <li>Tipos de juegos</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -350,55 +346,21 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="controles">Controles</h1>
-<p>Si quieres conocer el estado de los controles en pilas,
-tienes que usar el objeto <code>pilas.control</code>.</p>
-<p>Por ejemplo, para hacer que un actor se mueva por la pantalla simplemente puedes crear al actor y escribir estas sentencias.</p>
-<pre><code>if pilas.control.izquierda:
-    mono.x -= 1
-elif pilas.control.derecha:
-    mono.x += 1
-</code></pre>
-<p>Esta no es la única forma de mover a un personaje por la pantalla, pero suele ser la mas conveniente porque es muy directa, y se puede escribir en cualquier parte del código.</p>
-<blockquote>
-<p>Nota: Recuerda que para poder interactuar con el teclado, debes seleccionar la ventana de resultado. Haz click en la parte de arriba del intérprete de pilas para seleccionarla.</p>
-</blockquote>
-<h2 id="investigando-al-objeto-control">Investigando al objeto control</h2>
-<p>En realidad, cuando usamos a <code>pilas.control</code>,
-accedemos a un objeto que tienen varios atributos.</p>
-<p>Estos atributos pueden valer <code>True</code> o <code>False</code>,
-dependiendo de la pulsación de las teclas:</p>
-<ul>
-<li>izquierda</li>
-<li>derecha</li>
-<li>arriba</li>
-<li>abajo</li>
-<li>boton</li>
-</ul>
-<p>Esto te permite simplificar el código, porque no tienes que conocer específicamente las teclas que activan cada acción, y en todos los juegos serán las mismas teclas.</p>
-<h2 id="donde-consultar-los-controles">¿Dónde consultar los controles?</h2>
-<p>El mejor lugar para consultar el estado de los controles es en la actualización de un actor.</p>
-<p>Esto se logra colocando un método llamado <code>actualizar</code> dentro del actor y haciendo la consulta ahí. Veamos un actor sencillo que se pueda mover de izquierda a derecha. El código sería así:</p>
-<pre><code>import pilasengine
-
-pilas = pilasengine.iniciar()
-
-class MiActor(pilasengine.actores.Actor):
-
-    def iniciar(self):
-        self.imagen = pilas.imagenes.cargar("aceituna.png")
-
-    def actualizar(self):
-        if pilas.control.izquierda:
-            self.x -= 10
-
-        if pilas.control.derecha:
-            self.x += 10
-
-MiActor(pilas)
-
-pilas.ejecutar() # Necesario al ejecutar en scripts.
-</code></pre>
+              <h1 id="que-tipos-de-juegos-se-pueden-realizar">¿Qué tipos de juegos se pueden realizar?</h1>
+<p>Mediante pilas-engine se pueden hacer juegos en dos
+dimensiones, utilizando colisiones, gráficos, efectos
+de partículas y animación.</p>
+<p>Por ejemplo, un juego sencillo de pilas podría verse así:</p>
+<p><img alt="" src="../imagenes/que_juegos/naves.jpg" /></p>
+<p>Incluso podemos usar las dos dimensiones para simular
+una vista aérea.</p>
+<p><img alt="" src="../imagenes/que_juegos/autos.jpg" /></p>
+<p>y editar los niveles usando bloques para simular plataformas.</p>
+<p><img alt="" src="../imagenes/que_juegos/plataformas.jpg" /></p>
+<p>Por último un ejemplo más complejo de videojuego podría
+incluir un suelo en perspectiva, para simular profundidad, como
+en el juego <strong>shaolin's blind fury</strong>:</p>
+<p><img alt="" src="../imagenes/que_juegos/perspectiva.jpg" /></p>
             </div>
           </div>
           <footer>
@@ -406,10 +368,10 @@ pilas.ejecutar() # Necesario al ejecutar en scripts.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../joystick/" class="btn btn-neutral float-right" title="Joystick"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../instalacion/" class="btn btn-neutral float-right" title="Instalación"/>Siguiente <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../fisica/" class="btn btn-neutral" title="Fisica"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+        <a href=".." class="btn btn-neutral" title="Principal"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
       
     </div>
   
