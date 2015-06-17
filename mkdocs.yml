@@ -1,6 +1,7 @@
 site_name: pilas-engine
 pages:
 - [index.md, Principal]
+- [que_juegos.md, Tipos de juegos]
 - [instalacion.md, Instalación]
 - [about.md, Acerca de ...]
 - [empezando.md, Empezando y los primeros pasos con pilas]
