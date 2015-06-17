@@ -31,24 +31,9 @@ preview:
 	mkdocs serve
 
 _deploy: generar
-	cd ../website__pilas-manual; git pull --all 
+	cd ../website__pilas-manual; git pull origin gh-pages 
 	cp -r site/* ../website__pilas-manual/
 	cd ../website__pilas-manual; git commit -am "actualizacion y deploy."; git push origin gh-pages
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
  
  

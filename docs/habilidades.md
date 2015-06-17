@@ -44,7 +44,7 @@ las habilidades son algo que duran para toda la vida
 del actor.
 
 
-## Un ejemplo mas: hacer que un actor se pueda mover con el mouse
+## Un ejemplo más: hacer que un actor se pueda mover con el mouse
 
 Algo muy común en los juegos es que puedas
 tomar piezas con el mouse y moverlas por la pantalla.
@@ -58,51 +58,79 @@ import pilasengine
 pilas = pilasengine.iniciar()
 
 mono = pilas.actores.Mono()
-mono.aprender(pilas.habilidades.Arrastrable)
+mono.aprender("arrastrable")
 ```
 
-## Otro ejemplo: un actor que cambia de posición
+## Una habilidad más compleja: Disparar
 
-Veamos otro ejemplo sencillo, si queremos que un actor
-se coloque en la posición del mouse cada vez que hacemos
-click, podemos usar la habilidad: ``SeguirClicks``.
+Una habilidad que tiene más complejidad que las anteriores
+es disparar, una habilidad que te permite hacer que un
+personaje pueda crear "disparos" sean de la clase que sea.
+
+Por ejemplo, lo mas sencillo es indicarle a un actor
+que puede disparar, usando una munición por omisión:
 
 ```python
 import pilasengine
 
 pilas = pilasengine.iniciar()
+
 mono = pilas.actores.Mono()
-mono.aprender(pilas.habilidades.SeguirClicks)
+mono.aprender("moverseComoCoche")
+mono.aprender("disparar")
 ```
 
-## Mezclar habilidades
+Y como resultado vamos a conseguir que nuestro
+actor se pueda mover con el teclado y disparar con la tecla
+espacio.
 
-En pilas se ha intentado hacer que las habilidades sean
-lo mas independientes posibles, porque claramente lo mas
-divertido de este enfoque es poder combinar distintas
-habilidades para lograr comportamientos complejos.
+Y si queremos cambiar la munición de la habilidad
+disparar, podemos especificarlo con el parámetro ``municion``:
 
-Así que te invitamos a experimentar y explorar la mezcla
-de habilidades.
-
-## Otras habilidades para utilizar
-
-Pilas viene con varias habilidades incluidas, pero
-lamentablemente este manual no las menciona a todas. Así
-que te recomendamos abrir un intérprete de python
-y consultarle directamente a él que habilidades tienes
-disponibles en tu versión de pilas.
-
-Para esto, abrí el intérprete de pilas y escribí lo siguiente:
 
 ```python
-dir(pilas.habilidades)
+mono.aprender("disparar", municion="aceituna")
 ```
 
+Esta habilidad también es útil para hacer un enemigo que dispare
+automáticamente cada determinado tiempo, por ejemplo 1 segundo:
 
-esto imprimirá en pantalla todas las habilidades como una
-lista de cadenas.
 
+```python
+mono = pilas.actores.Mono()
+mono.aprender("Disparar", control=None)
+
+def dispara():
+     mono.disparar()
+     return True
+
+pilas.tareas.agregar(1, dispara)
+```
+
+## Listado de habilidades existentes
+
+
+
+| **Habilidad**                | **Parámetros**                                                                                           |
+|------------------------------|----------------------------------------------------------------------------------------------------------|
+| Arrastrable                  |                                                                                                          |
+| AumentarConRueda             |                                                                                                          |
+| Disparar                     | municion, grupo_enemigos, cuando_elimina_enemigo, frecuencia_de_disparo, angulo_salida_disparo ...       |
+| EliminarseSiSaleDePantalla   |                                                                                                          |
+| Imitar                       | objeto_a_imitar, con_escala, con_rotacion                                                                |
+| LimitadoABordesDePantalla    |                                                                                                          |
+| MirarAlActor                 | actor_a_seguir, lado_seguimiento="ARRIBA"                                                                |
+| MoverseComoCoche             | control, velocidad_maxima, aceleracion, deceleracion, rozamiento, velocidad_rotacion                     |
+| MoverseConElTeclado          | control, direcciones, velocidad_maxima, aceleracion, con_rotacion, velocidad_rotacion, marcha_atras      |
+| PuedeExplotar                |                                                                                                          |
+| PuedeExplotarConHumo         |                                                                                                          |
+| RebotarComoCaja              |                                                                                                          |
+| RebotarComoPelota            |                                                                                                          |
+| RotarConMouse                |                                                                                                          |
+| SeMantieneEnPantalla         | permitir_salida                                                                                          |
+| SeguirAlMouse                |                                                                                                          |
+| SeguirClicks                 |                                                                                                          |
+| SiempreEnElCentro            |                                                                                                          |
 
 ## Crear habilidades personalizadas
 
