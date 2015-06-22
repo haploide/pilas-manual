@@ -557,6 +557,9 @@ bomba.explotar()
 <h3 id="boton">Boton</h3>
 <p>Representa un boton que reacciona al ser presionado</p>
 <p><img alt="" src="../imagenes/actores/boton.png" /></p>
+<pre><code>boton = pilas.actores.Boton()
+boton.conectar_presionado(funcion, argumentos...)
+</code></pre>
 <p><em>Comportamientos:</em></p>
 <ul>
 <li><code>boton.conectar_normal(funcion, argumentos...)</code></li>
@@ -569,15 +572,27 @@ bomba.explotar()
 <h3 id="caja">Caja</h3>
 <p>Representa una caja que posee fisica.</p>
 <p><img alt="" src="../imagenes/actores/caja.png" /></p>
+<pre><code>caja = pilas.actores.Caja()
+caja.imitar(actor_a_imitar)
+</code></pre>
+<p><em>Comportamientos:</em></p>
+<ul>
+<li><code>caja.imitar(actor_a_imitar)</code></li>
+</ul>
 <h3 id="calvo">Calvo</h3>
 <p>Representa un personaje de juego tipo RPG.</p>
 <p><img alt="" src="../imagenes/actores/calvo.png" /></p>
+<pre><code>calvo = pilas.actores.Calvo()</code></pre>
 <h3 id="cooperativista">Cooperativista</h3>
 <p>Representa un Cooperativista que puede caminar y trabajar.</p>
 <p><img alt="" src="../imagenes/actores/cooperativista.png" /></p>
+<p>Este actor tiene seis animaciones <code>ok</code>, <code>parado</code>, <code>camina</code>, <code>alerta</code>, <code>trabajando</code>, <code>parado_sujeta</code> y <code>camina_sujeta</code></p>
+<pre><code>cooperativista = pilas.actores.Cooperativista()
+cooperativista.cambiar_animacion('ok')
+</code></pre>
 <p><em>Comportamientos:</em></p>
 <ul>
-<li><code>cooperativista.cambiar_animacion(nombre)</code></li>
+<li><code>cooperativista.cambiar_animacion(nombre_animacion)</code></li>
 </ul>
 <h3 id="deslizadorhorizontal">DeslizadorHorizontal</h3>
 <p><em>Comportamientos:</em></p>
@@ -608,6 +623,8 @@ dialogo.comenzar()</p>
 <h3 id="dinamita">Dinamita</h3>
 <p>Una dinamita que puede explotar.</p>
 <p><img alt="" src="../imagenes/actores/dinamita.png" /></p>
+<pre><code>dinamita = pilas.actores.Dinamita()
+</code></pre>
 <p><em>Comportamientos:</em></p>
 <ul>
 <li><code>dinamita.explotar()</code></li>
@@ -622,12 +639,10 @@ este actor como munición.
 </code></pre>
 <p><img alt="" src="../imagenes/actores/disparo_laser.png" /></p>
 <h3 id="ejes">Ejes</h3>
-<p>...</p>
+<p>Representa el eje de coordenadas tomado como sistema de referencia.</p>
 <p><img alt="" src="../imagenes/actores/ejes.png" /></p>
-<p><em>Comportamientos:</em></p>
-<ul>
-<li><code>..</code></li>
-</ul>
+<p>Este actor es útil para mostrar que la ventana de pilas tiene una referencia, y que las posiciones responden a este modelo.</p>
+<pre><code>eje = pilas.actores.Eje()</code></pre>
 <h3 id="emisor">Emisor</h3>
 <p>...</p>
 <p><img alt="" src="../imagenes/actores/emisor.png" /></p>
