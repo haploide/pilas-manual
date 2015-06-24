@@ -43,7 +43,7 @@ _deploy:
 	@echo "$(V)deploy: copiando arhivos site$(N)"
 	cp -r site/* ../website__pilas-manual/
 	@echo "$(V)deploy: actualizando$(N)"
-	cd ../website__pilas-manual; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
+	cd ../website__pilas-manual; echo " " > index.html; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
  
  
 iniciar:
