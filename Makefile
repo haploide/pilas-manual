@@ -13,7 +13,7 @@ all:
 
 actualizar:
 	@echo " " >> Makefile
-	#git pull origin master
+	git pull origin master
 	git add Makefile
 	git add docs
 	make generar
@@ -43,6 +43,7 @@ iniciar:
 	cd ../; git clone git@github.com:hugoruscitti/pilas-manual.git website__pilas
 	cd ../; cd website__pilas; git checkout gh-pages; git pull origin gh-pages
 
+ 
  
  
  
