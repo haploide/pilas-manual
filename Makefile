@@ -13,16 +13,16 @@ all:
 
 actualizar:
 	@echo " " >> Makefile
-	@echo " $(V)Obteniendo ultimos cambios$(N)"
+	@echo "$(V)Obteniendo ultimos cambios$(N)"
 	git pull origin master
 	git add Makefile
 	git add docs
 	make generar
-	@echo " $(V)git add site$(N)"
+	@echo "$(V)git add site$(N)"
 	git add ./site/ Makefile
 	git add .
 	git commit -m "actualización y deploy."
-	@echo " $(V)push a github de maste$(N)"
+	@echo "$(V)push a github: origin master$(N)"
 	git push origin master
 	make _deploy
 	@echo ""
@@ -31,46 +31,22 @@ actualizar:
 
 
 generar:
-	@echo " $(V)generar: compilando ... $(N)"
+	@echo "$(V)generar: compilando ... $(N)"
 	mkdocs build
 
 preview:
 	mkdocs serve --clean
 
 _deploy:
-	@echo " $(V)deploy: obteniendo cambios remotos$(N)"
+	@echo "$(V)deploy: obteniendo cambios remotos$(N)"
 	cd ../website__pilas-manual; git pull origin gh-pages 
-	@echo " $(V)deploy: copiando arhivos site$(N)"
+	@echo "$(V)deploy: copiando arhivos site$(N)"
 	cp -r site/* ../website__pilas-manual/
-	@echo " $(V)deploy: actualizando$(N)"
+	@echo "$(V)deploy: actualizando$(N)"
 	cd ../website__pilas-manual; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
  
  
 iniciar:
 	cd ../; git clone git@github.com:hugoruscitti/pilas-manual.git website__pilas
 	cd ../; cd website__pilas; git checkout gh-pages; git pull origin gh-pages
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
