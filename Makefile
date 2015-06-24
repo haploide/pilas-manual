@@ -13,11 +13,12 @@ all:
 
 actualizar:
 	@echo " " >> Makefile
-	git pull origin master
+	#git pull origin master
 	git add Makefile
 	git add docs
 	make generar
 	git add ./site/ Makefile
+	git add .
 	git commit -m "actualización y deploy."
 	git push origin master
 	make _deploy
@@ -42,6 +43,8 @@ iniciar:
 	cd ../; git clone git@github.com:hugoruscitti/pilas-manual.git website__pilas
 	cd ../; cd website__pilas; git checkout gh-pages; git pull origin gh-pages
 
+ 
+ 
  
  
  
