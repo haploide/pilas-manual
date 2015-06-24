@@ -3,6 +3,8 @@ V=[01;32m
 
 all:
 	@echo ""
+	@echo "  $(V)iniciar$(N)        clona todo lo necesario para hacer el deploy."
+	@echo ""
 	@echo "  $(V)generar$(N)        Genera la versión estática."
 	@echo "  $(V)preview$(N)        Abre una versión preliminar."
 	@echo "  $(V)actualizar$(N)     Atajo para ajustes rápidos (commit + deploy)."
@@ -35,6 +37,11 @@ _deploy: generar
 	cp -r site/* ../website__pilas-manual/
 	cd ../website__pilas-manual; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
  
+ 
+iniciar:
+	cd ../; git clone git@github.com:hugoruscitti/pilas-manual.git website__pilas
+	cd ../; cd website__pilas; git checkout gh-pages; git pull origin gh-pages
+
  
  
  
