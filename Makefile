@@ -39,11 +39,11 @@ preview:
 
 _deploy:
 	@echo "$(V)deploy: obteniendo cambios remotos$(N)"
-	cd ../website__pilas-manual; git pull origin gh-pages 
+	cd ../website__pilas; git pull origin gh-pages 
 	@echo "$(V)deploy: copiando arhivos site$(N)"
-	cp -r site/* ../website__pilas-manual/
+	cp -r site/* ../website__pilas/
 	@echo "$(V)deploy: actualizando$(N)"
-	cd ../website__pilas-manual; echo " " > index.html; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
+	cd ../website__pilas; echo " " > index.html; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
  
  
 iniciar:
