@@ -31,7 +31,7 @@ generar:
 	mkdocs build
 
 preview:
-	mkdocs serve
+	mkdocs serve --clean
 
 _deploy: generar
 	cd ../website__pilas-manual; git pull origin gh-pages 
