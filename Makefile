@@ -39,17 +39,18 @@ preview:
 
 _deploy:
 	@echo "$(V)deploy: obteniendo cambios remotos$(N)"
-	cd ../website__pilas; git pull origin gh-pages 
+	cd ../website__pilas-manual; git pull origin gh-pages 
 	@echo "$(V)deploy: copiando arhivos site$(N)"
-	rm -r -f ../website__pilas/*
-	cp -r site/* ../website__pilas/
+	rm -r -f ../website__pilas-manual/*
+	cp -r site/* ../website__pilas-manual/
 	@echo "$(V)deploy: actualizando$(N)"
-	cd ../website__pilas; echo " " > index.html; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
+	cd ../website__pilas-manual; echo " " > index.html; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
  
  
 iniciar:
-	cd ../; git clone git@github.com:hugoruscitti/pilas-manual.git website__pilas
-	cd ../; cd website__pilas; git checkout gh-pages; git pull origin gh-pages
+	cd ../; git clone git@github.com:hugoruscitti/pilas-manual.git website__pilas-manual
+	cd ../; cd website__pilas-manual; git checkout gh-pages; git pull origin gh-pages
+ 
  
  
  
