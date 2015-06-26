@@ -27,6 +27,7 @@ actualizar:
 	make _deploy
 	@echo ""
 	@echo "Listo, la url es: http://hugoruscitti.github.io/pilas-manual"
+	@echo "                  (http://manua.pilas-engine.com.ar)"
 	@echo ""
 
 
@@ -51,6 +52,7 @@ _deploy:
 iniciar:
 	cd ../; git clone git@github.com:hugoruscitti/pilas-manual.git website__pilas-manual
 	cd ../; cd website__pilas-manual; git checkout gh-pages; git pull origin gh-pages
+ 
  
  
  
