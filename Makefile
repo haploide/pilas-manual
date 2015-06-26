@@ -45,12 +45,13 @@ _deploy:
 	cp -r site/* ../website__pilas-manual/
 	cp CNAME ../website__pilas-manual/
 	@echo "$(V)deploy: actualizando$(N)"
-	cd ../website__pilas-manual; echo " " > index.html; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
+	cd ../website__pilas-manual; echo " " >> index.html; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
  
  
 iniciar:
 	cd ../; git clone git@github.com:hugoruscitti/pilas-manual.git website__pilas-manual
 	cd ../; cd website__pilas-manual; git checkout gh-pages; git pull origin gh-pages
+ 
  
  
  
