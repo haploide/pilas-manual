@@ -66,8 +66,9 @@ sola vez:
 
 
 Para crear un comportamiento personalizado necesitamos crear una
-clase que herede de ``pilasengine.comportamientos.Comportamiento`` y
-luego implementar los métodos ``iniciar`` y ``ejecutar``.
+clase que herede de ``pilasengine.comportamientos.Comportamiento``, 
+luego implementar los métodos ``iniciar``/``ejecutar`` y por último
+vincular el comportamiento.
 
 
     class Desaparecer(pilasengine.comportamientos.Comportamiento):
@@ -84,6 +85,7 @@ luego implementar los métodos ``iniciar`` y ``ejecutar``.
                 return True
 
     mono = pilas.actores.Mono()
+    pilas.comportamientos.vincular(Desaparecer)
     mono.hacer("Desaparecer")
 
 
