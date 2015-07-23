@@ -320,16 +320,18 @@ Representa un Cooperativista que puede caminar y trabajar.
 - ``deslizador.desconectar(function)``
 
 
-### Dialogo
+### Diálogo
 
 Representa una secuencia de mensajes entre varios actores.
 
->>> mono = pilas.actores.Mono()
->>> mono2 = pilas.actores.Mono()
->>> dialogo = pilas.actores.Dialogo()
->>> dialogo.decir(mono, "Hola Mundo")
->>> dialogo.decir(mono2, "Estoy diciendo algo")
->>> dialogo.comenzar()
+```python
+mono = pilas.actores.Mono()
+mono2 = pilas.actores.Mono()
+dialogo = pilas.actores.Dialogo()
+dialogo.decir(mono, "Hola Mundo")
+dialogo.decir(mono2, "Estoy diciendo algo")
+dialogo.comenzar()
+```
 
 ![](imagenes/actores/mono_dice.png)
 
@@ -354,26 +356,11 @@ Una dinamita que puede explotar.
 
 Muestra un disparo que avanza por la pantalla.
 
-    .. image:: images/actores/disparo_laser.png
-
-    Este actor se podría usar como arma para juegos de naves
-    generalmente. Por ejemplo, el actor NaveRoja dispara usando
-    este actor como munición.
+Este actor se podría usar como arma para juegos de naves
+generalmente. Por ejemplo, el actor NaveRoja dispara usando
+este actor como munición.
 
 ![](imagenes/actores/disparo_laser.png)
-
-
-
-### Ejes
-
-
-...
-
-![](imagenes/actores/ejes.png)
-
-*Comportamientos:*
-
-- ``..``
 
 
 ### Emisor
@@ -424,18 +411,6 @@ Muestra un disparo que avanza por la pantalla.
 - ``..``
 
 
-### Estudiante
-
-
-...
-
-![](imagenes/actores/estudiante.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
 ### Explosion
 
 
@@ -472,42 +447,6 @@ Muestra un disparo que avanza por la pantalla.
 - ``..``
 
 
-### Globo
-
-
-...
-
-![](imagenes/actores/globo.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
-### Grupo
-
-
-...
-
-![](imagenes/actores/grupo.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
-### Humo
-
-
-...
-
-![](imagenes/actores/humo.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
 ### ManejadorPropiedad
 
 
@@ -526,30 +465,6 @@ Muestra un disparo que avanza por la pantalla.
 ...
 
 ![](imagenes/actores/manzana.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
-### Mapa
-
-
-...
-
-![](imagenes/actores/mapa.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
-### MapaTiled
-
-
-...
-
-![](imagenes/actores/mapa_tiled.png)
 
 *Comportamientos:*
 
@@ -580,36 +495,12 @@ Muestra un disparo que avanza por la pantalla.
 - ``..``
 
 
-### MensajeError
-
-
-...
-
-![](imagenes/actores/mensaje_error.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
 ### Menu
 
 
 ...
 
-![](imagenes/actores/menu.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
-### Menu
-
-
-...
-
-![](imagenes/actores/menu.png)
+![](imagenes/actores/menu.jpg)
 
 *Comportamientos:*
 
@@ -652,18 +543,6 @@ Muestra un disparo que avanza por la pantalla.
 - ``..``
 
 
-### Municion
-
-
-...
-
-![](imagenes/actores/municion.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
 ### Nave
 
 
@@ -700,18 +579,6 @@ Muestra un disparo que avanza por la pantalla.
 - ``..``
 
 
-### Opcion
-
-
-...
-
-![](imagenes/actores/opcion.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
 ### Ovni
 
 
@@ -730,30 +597,6 @@ Muestra un disparo que avanza por la pantalla.
 ...
 
 ![](imagenes/actores/pacman.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
-### Palo
-
-
-...
-
-![](imagenes/actores/palo.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
-### Particula
-
-
-...
-
-![](imagenes/actores/particula.png)
 
 *Comportamientos:*
 
@@ -856,48 +699,12 @@ Muestra un disparo que avanza por la pantalla.
 - ``..``
 
 
-### Sonido
-
-
-...
-
-![](imagenes/actores/sonido.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
-### Temporizador
-
-
-...
-
-![](imagenes/actores/temporizador.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
 ### Texto
 
 
 ...
 
 ![](imagenes/actores/texto.png)
-
-*Comportamientos:*
-
-- ``..``
-
-
-### TextoInferior
-
-
-...
-
-![](imagenes/actores/texto_inferior.png)
 
 *Comportamientos:*
 

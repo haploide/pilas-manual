@@ -36,7 +36,7 @@ generar:
 	mkdocs build --clean
 
 preview:
-	mkdocs serve --clean
+	mkdocs serve 
 
 _deploy:
 	@echo "$(V)deploy: obteniendo cambios remotos$(N)"
