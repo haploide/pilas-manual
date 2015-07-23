@@ -243,6 +243,8 @@
                 
                     <li><a class="toctree-l4" href="#objetos-sensibles-a-la-camara">Objetos sensibles a la cámara</a></li>
                 
+                    <li><a class="toctree-l4" href="#movimientos-de-camara">Movimientos de cámara</a></li>
+                
             
             </ul>
         
@@ -371,6 +373,14 @@ que guardar el valor <code>True</code> dentro del atributo <code>fijo</code>:</p
 <p>Por lo general, todos los actores tienen este atributo a <code>False</code>, porque
 viven en el escenario de juego y no se quedan fijos a la pantalla. Excepto
 los textos que siempre permanecen en la parte superior de la ventana.</p>
+<h2 id="movimientos-de-camara">Movimientos de cámara</h2>
+<p>Para darle acción a los juegos se puede aplicar un movimiento de cámara, o vibración. Por ejemplo al momento de perder una vida o cuando ocurre una explosión.</p>
+<p>El método para realizar un movimiento es <code>camara.vibrar</code> y admite dos
+argumentos, uno de intensidad y otro de duración o tiempo.</p>
+<p>Aquí hay dos ejemplos de invocación:</p>
+<pre><code>pilas.camara.vibrar()
+pilas.camara.vibrar(intensidad=2, tiempo=3)
+</code></pre>
               
             </div>
           </div>

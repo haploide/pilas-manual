@@ -33,7 +33,7 @@ actualizar:
 
 generar:
 	@echo "$(V)generar: compilando ... $(N)"
-	mkdocs build
+	mkdocs build --clean
 
 preview:
 	mkdocs serve --clean

@@ -26,7 +26,7 @@ se colocarán en posiciones aleatorias.
 
 Esto es lo que veríamos en la ventana de pilas:
 
-![](imagenes/grupos/grupos_bombas.jpg)
+![](imagenes/grupos/grupos_bombas.png)
 
 
 A partir de ahora, la referencia `bombas` nos servirá para

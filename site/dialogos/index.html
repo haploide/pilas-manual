@@ -236,8 +236,6 @@
                 
                     <li><a class="toctree-l4" href="#conversaciones">Conversaciones</a></li>
                 
-                    <li><a class="toctree-l4" href="#preguntas">Preguntas</a></li>
-                
             
             </ul>
         
@@ -376,25 +374,6 @@ no aparecerá inmediatamente. El mensaje aparecerá cuando
 corresponda según el orden de la conversación que se siga.</p>
 <p>Si quieres que un botón accione un mensaje y lo haga
 de manera inmediata tendrías que usar un método cómo <code>dialogo.decir_inmediatamente</code>.</p>
-<h2 id="preguntas">Preguntas</h2>
-<p>Para desarrollar conversaciones con preguntas también
-puedes usar a los diálogos. Lo único diferente es que las
-preguntas traerán asociada una repuesta del usuario, y para
-manejar el resultado tienes que escribir una función.</p>
-<p>La función se invocará cuando el usuario haga click en
-alguna de las opciones. Y cuando se llame la función
-se pasará la respuesta que ha elegido como una cadena
-de texto.</p>
-<p>Aquí tienes una ejemplo de una pregunta con 3 respuestas. Cuando
-el usuario elija una repuesta el personaje volverá a
-decirlo:</p>
-<pre><code class="python">def cuando_responde_color_favorito(respuesta):
-    dialogo.decir(mono, &quot;he dicho: &quot; + respuesta)
-
-dialogo.elegir(mono, &quot;Mi color favorito es el...&quot;, [&quot;rojo&quot;, &quot;verde&quot;, &quot;azul&quot;], cuando_responde_color_favorito)
-</code></pre>
-
-<p><img alt="" src="../imagenes/dialogos/pregunta.jpg" /></p>
               
             </div>
           </div>
