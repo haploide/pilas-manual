@@ -27,7 +27,7 @@ actualizar:
 	make _deploy
 	@echo ""
 	@echo "Listo, la url es: http://hugoruscitti.github.io/pilas-manual"
-	@echo "                  (http://manua.pilas-engine.com.ar)"
+	@echo "                  (http://manual.pilas-engine.com.ar)"
 	@echo ""
 
 
