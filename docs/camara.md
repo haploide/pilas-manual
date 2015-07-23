@@ -57,3 +57,18 @@ actor.fijo = True
 Por lo general, todos los actores tienen este atributo a ``False``, porque
 viven en el escenario de juego y no se quedan fijos a la pantalla. Excepto
 los textos que siempre permanecen en la parte superior de la ventana.
+
+
+## Movimientos de cámara
+
+Para darle acción a los juegos se puede aplicar un movimiento de cámara, o vibración. Por ejemplo al momento de perder una vida o cuando ocurre una explosión.
+
+El método para realizar un movimiento es ``camara.vibrar`` y admite dos
+argumentos, uno de intensidad y otro de duración o tiempo.
+
+Aquí hay dos ejemplos de invocación:
+
+```
+pilas.camara.vibrar()
+pilas.camara.vibrar(intensidad=2, tiempo=3)
+```

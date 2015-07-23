@@ -44,7 +44,7 @@ de actores chocando entre sí. Mas adelante veremos
 como personalizar y "controlar" un poco el escenario.
 
 
-![](imagenes/fisica/fisica.png)
+![](imagenes/fisica/fisica.jpg)
 
 Los actores que tienen física son un poco particulares, pero
 aún así se los puede tratar como a otros actores. Por

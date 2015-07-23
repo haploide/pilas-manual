@@ -55,8 +55,8 @@ motor, uno de ellos es `Mono`, un simpático chimpancé.
 
 Nota:
 
-> Puedes ver todos los actores disponibles en pilas ejecutando
-`pilas.actores.listar_actores()`.
+> Puedes ver todos los en la escena actual ejecutando
+`pilas.actores.listar_actores()` o abriendo el panel lateral de actores.
 
 
 Tenemos al actor `mono`. Para indicarle acciones solo tenemos que utilizar su nombre y sentencias simples.
@@ -183,7 +183,7 @@ mono.x = [-200, 200], 10
 
 ## Pidiendo ayuda
 
-Recuerda que cada componente de pilas está documentado como un módulo de python. Por lo tanto, puedes ejecutar una sentencia cómo:
+Recuerda que cada componente de pilas está documentado y codificado como un módulo o clase del lenguaje de programación python. Por lo tanto, puedes ejecutar una sentencia cómo:
 
 ```
 help(mono)
@@ -199,6 +199,8 @@ ejecutando la sentencia:
 pilas.ver(mono)
 ```
 
+Y claro, ten en cuenta que si escribes `mono.` el intérprete comenzará a autocompletar todos los métodos y propiedades.
+
 ## Eliminando a un actor
 
 Para eliminar un actor de la escena tienes que llamar al método eliminar:
@@ -209,7 +211,7 @@ mono.eliminar()
 
 ## Conclusión
 
-Hemos visto los pasos principales para gestionar actores. Ten en cuenta que el módulo pilas.actores es donde se guardarán todos los actores.
+Hemos visto los pasos principales para gestionar actores. Ten en cuenta que el módulo `pilas.actores` es donde se guardarán todos los actores.
 
 Un buen ejercicio es ponerse a investigar el módulo actores. Hay muchos actores, estos son algunos ejemplos de código para probar:
 

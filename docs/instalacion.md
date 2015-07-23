@@ -6,7 +6,7 @@ Existen 2 formas de instalar la biblioteca, así que veremos cada una por separa
 
 La forma mas sencilla de instalar pilas es descargando alguna de las versiones empaquetadas desde nuestro sitio web:
 
- - [http://www.pilas-engine.com.ar/descargas.html](http://www.pilas-engine.com.ar/descargas.html)
+ - [http://www.pilas-engine.com.ar](http://www.pilas-engine.com.ar)
 
 ## Opción 2 - Avanzada, desde repositorios
 

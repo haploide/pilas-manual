@@ -33,7 +33,7 @@ La siguiente imagen muestra lo que podría
 dibujar la tortuga con algunas sentencias de
 movimientos:
 
-![](imagenes/dibujado_simple_en_pantalla/tortuga_dibuja_triangulo.jpg)
+![](imagenes/dibujado_simple_en_pantalla/tortuga_dibuja_triangulo.png)
 
 La imagen no alcanza a mostrar por completo el
 concepto, pero en pocas palabras se puede sintetizar

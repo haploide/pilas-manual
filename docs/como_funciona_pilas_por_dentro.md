@@ -1,5 +1,10 @@
 # ¿Cómo funciona pilas por dentro?
 
+**NOTA: Esta sección describe el funcionamiento interno de la
+versión 0.83 de pilas-engine, que si bien no es la versión más
+reciente, muchas instrucciones son útiles para entender el funcionamiento
+interno de la aplicación.**
+
 Pilas es un proyecto con una arquitectura de objetos
 grande. Tiene mucha funcionalidad, incluye un
 motor de física, muchos personaje pre-diseñados, eventos, escenas
@@ -52,11 +57,6 @@ Hay tres grandes bibliotecas que se utilizan dentro de pilas:
 
 - Box2D
 - Qt4
-
-.. image:: images/logos/box2d.png
-
-.. image:: images/logos/qt-logo.jpg
-
 
 Box2D se utiliza cómo motor de física, mientras que Qt es un
 motor multimedia utilizado para dibujar, reproducir sonidos y
