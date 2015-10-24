@@ -94,7 +94,7 @@ puedes escribir algo como esto:
 
 ```
 def cuando_cambia(valor):
-    print "El deslizador tiene grado:", valor
+    print("El deslizador tiene grado:", valor)
 
 deslizador = pilas.interfaz.Deslizador()
 deslizador.conectar(cuando_cambia)
@@ -145,9 +145,9 @@ atributo ``seleccionado``:
 
 ```
 if selector.seleccionado:
-    print "El selector esta seleccionado."
+    print("El selector esta seleccionado.")
 else:
-    print "El selector no esta seleccionado."
+    print("El selector no esta seleccionado.")
 ```
 
 aunque en lugar de consultar la variable, es mucho mejor asociarle
@@ -156,7 +156,7 @@ selector cambia de estado (seleccionado/deseleccionado):
 
 ```
 def cuando_el_selector_cambia(estado):
-    print "El selector ahora esta en estado:", estado
+    print("El selector ahora esta en estado:", estado)
 
 selector.definir_accion(cuando_el_selector_cambia)
 ```
@@ -252,7 +252,7 @@ Por ejemplo, el siguiente código muestra una lista e imprime por consola cuando
 
 ```
 def cuando_selecciona(opcion):
-    print "Ha seleccionado la opcion:", opcion
+    print("Ha seleccionado la opcion:", opcion)
 
 consulta = pilas.interfaz.ListaSeleccion(['Uno', 'Dos', 'Tres'], cuando_selecciona)
 ```
@@ -275,4 +275,3 @@ opciones = pilas.interfaz.ListaSeleccion(['hola', 'opcion', 'tres'], cuando_sele
 Deberías ver en pantalla lo siguiente:
 
 ![](imagenes/interfaz/lista_seleccion.gif)
-

@@ -413,10 +413,10 @@ se invoquen con el argumento ``evento`` representando esos detalles:
 
     def crear_bomba(evento):
 
-        print evento.x
+        print(evento.x)
         # imprimirá 30
 
-        print evento.y
+        print(evento.y)
         # imprimirá 50
 
         [ etc...]

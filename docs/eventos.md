@@ -102,7 +102,7 @@ la función de arriba podíamos escribir:
 
 
     def mover_mono_a_la_posicion_del_mouse(evento):
-        print evento
+        print(evento)
 
 y en la ventana de nuestra computadora tendríamos que ver
 algo así:
@@ -193,7 +193,7 @@ recibir alertas y otros podrán ``emitir`` alertas:
 
 ```python
 def ha_ocurrido_un_evento(datos_evento):
-    print "Hola!!!", datos_evento
+    print("Hola!!!", datos_evento)
 
 evento.conectar(ha_ocurrido_un_evento)
 

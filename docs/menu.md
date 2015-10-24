@@ -17,10 +17,10 @@ pilas = pilasengine.iniciar()
 pilas.fondos.Selva()
 
 def iniciar_juego():
-    print "Tengo que iniciar el juego"
+    print("Tengo que iniciar el juego")
 
 def salir_del_juego():
-    print "Tengo que salir..."
+    print("Tengo que salir...")
 
 pilas.actores.Menu(
         [
@@ -57,7 +57,7 @@ ejemplo:
 
 ```python
 def iniciar_juego():
-    print "Tengo que iniciar el juego"
+    print("Tengo que iniciar el juego")
 ```
 
 

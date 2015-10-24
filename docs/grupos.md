@@ -37,11 +37,11 @@ Esta referencia (que llamamos `bombas`) es parecida a una lista de datos en `pyt
 Por ejemplo, para contar la cantidad de bombas que hemos creado y conocer sus coordenadas podemos ejecutar:
 
 ```python
->>> print "hay", len(bombas), "bombas"
+>>> print("hay", len(bombas), "bombas")
 hay 5 bombas
 
 >>> for una_bomba in bombas:
-...     print una_bomba.x, una_bomba.y
+...     print(una_bomba.x, una_bomba.y)
 ```
 
 Ahora bien, algo que hace un poquito diferente a los
