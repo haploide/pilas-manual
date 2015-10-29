@@ -93,7 +93,9 @@ la función ``iniciar_juego`` y la función ``salir_del_juego``:
 
 ```python
 def iniciar_juego():
-    pilas.ejemplos.Piezas()
+    pilas.escenas.Normal()
+    actor = pilas.actores.Aceituna()
+    actor.decir("Bienvenido al juego")
 
 def salir_del_juego():
     pilas.terminar()
