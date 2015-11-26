@@ -67,8 +67,8 @@ texto podría escribir algo así:
 
 ```python
 texto.magnitud = 50
-texto.color = (0, 0, 0)   # Color negro
-texto.color = (255, 0, 0, 128)   # Color rojo, semi transparente.
+texto.color = pilas.colores.Color(0, 0, 0)   # Color negro
+texto.color = pilas.colores.Color(255, 0, 0, 128)   # Color rojo, semi transparente.
 texto.texto = "Hola, este texto \n tiene 2 lineas separadas"
 ```
 
