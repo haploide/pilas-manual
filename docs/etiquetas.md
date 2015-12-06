@@ -31,6 +31,13 @@ y estas etiquetas, a su vez, se pueden añadir usando el método ``agregar``:
     >>> mono.etiquetas.agregar('protagonista')
     ['mono', 'protagonista'] 
 
+o incluso consultar si un actor tiene o no una determinada etiqueta:
+
+    >>> mono.tiene_etiqueta("enemigo")
+    False
+    >>> mono.tiene_etiqueta("mono")
+    True
+
 ## Usando grupos
 
 Los grupos también nos brindan la posibilidad de consultar o definir las
