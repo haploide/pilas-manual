@@ -46,7 +46,7 @@ superficie.circulo(32, 35, 5, color=pilas.colores.negro, relleno=True)
 superficie.circulo(67, 35, 10, color=pilas.colores.blanco, relleno=True)
 superficie.circulo(64, 35, 5, color=pilas.colores.negro, relleno=True)
 
-pilas.actores.Actor(superficie)
+pilas.actores.Actor(imagen=superficie)
 
 pilas.ejecutar() # Necesario al ejecutar en scripts.
 ```
