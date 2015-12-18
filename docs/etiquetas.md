@@ -8,8 +8,8 @@ Cada etiqueta es solamente una palabra, por ejemplo "enemigo",
 con cualquier actor o grupo, para señalar el rol de ese actor
 o grupo.
 
-La utilidad mas inmediata de las etiquetas es poder
-simplificar la creación de colisiones, que vimos en el
+Las etiquetas se utilizan principalmente para simplificar
+la creación de colisiones, que vimos en el
 capítulo anterior.
 
 ## Conociendo las Etiquetas
@@ -29,7 +29,7 @@ al actor, por ejemplo:
 y estas etiquetas, a su vez, se pueden añadir usando el método ``agregar``:
 
     >>> mono.etiquetas.agregar('protagonista')
-    ['mono', 'protagonista'] 
+    ['mono', 'protagonista']
 
 o incluso consultar si un actor tiene o no una determinada etiqueta:
 
@@ -44,20 +44,20 @@ Los grupos también nos brindan la posibilidad de consultar o definir las
 etiquetas de varios actores al mismo tiempo:
 
 ```
-naves = pilas.actores.Nave()
+naves = pilas.actores.Nave() * 10
 naves.etiquetas.agregar('enemigo')
 
-items = pilas.actores.Banana()
+items = pilas.actores.Banana() * 5
 items.etiquetas.agregar('comestible')
 
-otro_grupo = pilas.actores.Manzana()
+otro_grupo = pilas.actores.Manzana() * 2
 otro_grupo.etiquetas.agregar('comestible')
 ```
 
 ## Añadiendo colisiones mediante etiquetas
 
 Ahora que podemos añadir etiquetas a los actores, podemos describir las
-colisiones de forma mas sencilla. 
+colisiones de forma mas sencilla.
 
 Por ejemplo, si creamos un escenario con monedas y un mono que se pueda
 mover con el teclado así:
@@ -98,3 +98,26 @@ cajas.etiquetas.agregar('moneda')
 
 Claro, lo ideal en este caso es definir las colisiones usando etiquetas
 genéricas como: 'comestible', 'enemigo', 'vida' etc...
+
+## Las etiquetas también sirven con figuras
+
+Ten en cuenta que las figuras físicas también pueden contener etiquetas de la misma forma de los actores.
+
+Esto es super útil cuando queremos crear colisiones mas genéricas o invisibles.
+
+Por ejemplo, podríamos tener una circunferencia que al momento de tocar
+cualquier rectángulo desaparezca:
+
+
+```
+circulo = pilas.fisica.Circulo()
+circulo.etiquetas.agregar("colisionable")
+
+def destruir(circulo_que_colisiona, un_rectangulo):
+    circulo_que_colisiona.eliminar()
+
+pilas.colisiones.agregar("colisionable", "rectangulo", destruir)
+```
+
+Eso sí, tenemos que tener en cuenta que la función "destruir" va a recibir las dos figuras en contacto y no dos actores como vimos en los otros
+ejemplos de colisión entre actores.
