@@ -8,6 +8,8 @@ all:
 	@echo "  $(V)generar$(N)        Genera la versión estática."
 	@echo "  $(V)preview$(N)        Abre una versión preliminar."
 	@echo "  $(V)actualizar$(N)     Atajo para ajustes rápidos (commit + deploy)."
+	@echo "  $(V)epub$(N)           Genera la versión epub de la documentación."
+	@echo "  $(V)pdf$(N)            Genera la versión PDF de la documentación."
 	@echo ""
 
 
@@ -36,39 +38,32 @@ generar:
 	mkdocs build --clean
 
 preview:
-	mkdocs serve 
+	mkdocs serve
 
 _deploy:
 	@echo "$(V)deploy: obteniendo cambios remotos$(N)"
-	cd ../website__pilas-manual; git pull origin gh-pages 
+	cd ../website__pilas-manual; git pull origin gh-pages
 	@echo "$(V)deploy: copiando arhivos site$(N)"
 	rm -r -f ../website__pilas-manual/*
 	cp -r site/* ../website__pilas-manual/
 	cp CNAME ../website__pilas-manual/
 	@echo "$(V)deploy: actualizando$(N)"
 	cd ../website__pilas-manual; echo " " >> index.html; git add .; git commit -am "actualizacion y deploy."; git push origin gh-pages
- 
- 
+
+
 iniciar:
 	cd ../; git clone git@github.com:hugoruscitti/pilas-manual.git website__pilas-manual
 	cd ../; cd website__pilas-manual; git checkout gh-pages; git pull origin gh-pages
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+pandoc:
+	mkdocs2pandoc > mydocs.pd
+
+epub: pandoc
+	pandoc --toc -f markdown+grid_tables -t epub -o pilas-engine.epub mydocs.pd
+	@echo "$(V)creando el archivo pilas-engine.epub$(N)"
+
+
+pdf: pandoc
+	pandoc --toc -f markdown+grid_tables -t latex -o pilas-engine.pdf mydocs.pd
+	@echo "$(V)creando el archivo pilas-engine.pdf$(N)"

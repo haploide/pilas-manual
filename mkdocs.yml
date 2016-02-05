@@ -1,47 +1,40 @@
 site_name: pilas-engine
+
 pages:
-- [index.md, Principal]
-- [que_juegos.md, Tipos de juegos]
-- [instalacion.md, Instalación]
-- [about.md, Acerca de ...]
-- [empezando.md, Empezando y los primeros pasos con pilas]
-- [actores.md, Actores]
-- [actores_personalizados.md, Actores personalizados]
-- [grupos.md, Grupos]
-- [colisiones.md, Colisiones]
-- [etiquetas.md, Etiquetas]
-- [fisica.md, Fisica]
-
-- [controles.md, Controles]
-- [joystick.md, Joystick]
-- [imagen.md, Imagen]
-- [sonidos.md, Sonidos]
-
-- [dibujado_simple_en_pantalla.md, Dibujado simple en pantalla]
-- [dibujado_avanzado_con_superficies.md, Dibujado avanzado con Superficies]
-
-- [tareas.md, Manejo de tiempo con tareas]
-- [interpolacion.md, Interpolaciones]
-
-
-- [controlando_la_pantalla.md, Controlando la pantalla]
-- [comportamientos.md, Comportamientos]
-- [escenas.md, Escenas]
-
-- [interfaz.md, Interfaz de usuario]
-- [menu.md,Como crear menúes para tu juegos]
-- [mapas_y_plataformas.md, Mapas y plataformas]
-
-- [dialogos.md, Diálogos]
-- [camara.md, Manejo de Cámara]
-- [eventos.md, Eventos]
-- [texto.md, Textos]
-- [habilidades.md, Habilidades]
-- [depurando.md, Depurando]
-- [como_funciona_pilas_por_dentro.md, "¿Cómo funciona pilas por dentro?"]
-
-- [complementos.md, Complementos]
-- [desarrolladores.md, Guía para desarrolladores]
+- "Principal": "index.md"
+- "Tipos de juegos": "que_juegos.md"
+- "Instalación": "instalacion.md"
+- "Acerca de ...": "about.md"
+- "Empezando y los primeros pasos con pilas": "empezando.md"
+- "Actores": "actores.md"
+- "Actores personalizados": "actores_personalizados.md"
+- "Grupos": "grupos.md"
+- "Colisiones": "colisiones.md"
+- "Etiquetas": "etiquetas.md"
+- "Fisica": "fisica.md"
+- "Controles": "controles.md"
+- "Joystick": "joystick.md"
+- "Imagen": "imagen.md"
+- "Sonidos": "sonidos.md"
+- "Dibujado simple en pantalla": "dibujado_simple_en_pantalla.md"
+- "Dibujado avanzado con Superficies": "dibujado_avanzado_con_superficies.md"
+- "Manejo de tiempo con tareas": "tareas.md"
+- "Interpolaciones": "interpolacion.md"
+- "Controlando la pantalla": "controlando_la_pantalla.md"
+- "Comportamientos": "comportamientos.md"
+- "Escenas": "escenas.md"
+- "Interfaz de usuario": "interfaz.md"
+- "Cómo crear menúes para tu juegos": "menu.md"
+- "Mapas y plataformas": "mapas_y_plataformas.md"
+- "Diálogos": "dialogos.md"
+- "Manejo de Cámara": "camara.md"
+- "Eventos": "eventos.md"
+- "Textos": "texto.md"
+- "Habilidades": "habilidades.md"
+- "Depurando": "depurando.md"
+- "¿Cómo funciona pilas por dentro?": "como_funciona_pilas_por_dentro.md"
+- "Complementos": "complementos.md"
+- "Guía para desarrolladores": "desarrolladores.md"
 
 theme_dir: 'custom_theme'
 theme: 'readthedocs'
