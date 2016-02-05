@@ -60,10 +60,14 @@ pandoc:
 	mkdocs2pandoc > mydocs.pd
 
 epub: pandoc
+	cp -R docs/imagenes ./
 	pandoc --toc -f markdown+grid_tables -t epub -o pilas-engine.epub mydocs.pd
 	@echo "$(V)creando el archivo pilas-engine.epub$(N)"
+	rm -rf imagenes
 
 
 pdf: pandoc
+	cp -R docs/imagenes ./
 	pandoc --toc -f markdown+grid_tables -t latex -o pilas-engine.pdf mydocs.pd
 	@echo "$(V)creando el archivo pilas-engine.pdf$(N)"
+	rm -rf imagenes
