@@ -56,18 +56,31 @@ iniciar:
 	cd ../; cd website__pilas-manual; git checkout gh-pages; git pull origin gh-pages
 
 
-pandoc:
-	mkdocs2pandoc > mydocs.pd
+_backup_y_quitar_gif:
+	cp -r docs docs_original
+	mv docs/imagenes ./imagenes_backup
+	cd docs; sed -i '' 's/.gif/.png/g' ./* > /dev/null
+	mv imagenes_backup docs/imagenes
+
+_restaurar_backup:
+	rm -rf docs
+	mv docs_original docs
+
+pandoc: _backup_y_quitar_gif
+	mkdocs2pandoc > mydocs_tmp.pd
+	cat portada.md mydocs_tmp.pd > mydocs.pd
+	rm mydocs_tmp.pd
 
 epub: pandoc
 	cp -R docs/imagenes ./
 	pandoc --toc -f markdown+grid_tables -t epub -o pilas-engine.epub mydocs.pd
 	@echo "$(V)creando el archivo pilas-engine.epub$(N)"
 	rm -rf imagenes
-
+	make _restaurar_backup
 
 pdf: pandoc
 	cp -R docs/imagenes ./
 	pandoc --toc -f markdown+grid_tables -t latex -o pilas-engine.pdf mydocs.pd
 	@echo "$(V)creando el archivo pilas-engine.pdf$(N)"
 	rm -rf imagenes
+	make _restaurar_backup
