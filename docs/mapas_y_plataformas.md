@@ -174,6 +174,4 @@ con el teclado:
 
 ![](imagenes/mapas_y_plataformas/tiled8.png)
 
-O bien, el ejemplo ``plataformas``:
-
-![](imagenes/mapas_y_plataformas/plataformas.png)
+O bien, el ejemplo ``plataformas``.

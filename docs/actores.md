@@ -644,7 +644,6 @@ este actor como munición.
 
 ...
 
-![](imagenes/actores/pizarra.png)
 
 *Comportamientos:*
 
@@ -668,7 +667,6 @@ este actor como munición.
 
 ...
 
-![](imagenes/actores/puntaje.png)
 
 *Comportamientos:*
 
@@ -704,7 +702,6 @@ este actor como munición.
 
 ...
 
-![](imagenes/actores/texto.png)
 
 *Comportamientos:*
 
