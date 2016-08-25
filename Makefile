@@ -84,3 +84,4 @@ pdf: pandoc
 	@echo "$(V)creando el archivo pilas-engine.pdf$(N)"
 	rm -rf imagenes
 	make _restaurar_backup
+ 
