@@ -14,7 +14,6 @@ all:
 
 
 actualizar:
-	@echo " " >> Makefile
 	@echo "$(V)Obteniendo ultimos cambios$(N)"
 	git pull origin master
 	git add Makefile
