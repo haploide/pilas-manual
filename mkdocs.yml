@@ -15,7 +15,7 @@ pages:
 - "Controles": "controles.md"
 - "Joystick": "joystick.md"
 - "Imagen": "imagen.md"
-- "Sonidos": "sonidos.md"
+- "Audio: Sonidos y Música": "sonidos.md"
 - "Dibujado simple en pantalla": "dibujado_simple_en_pantalla.md"
 - "Dibujado avanzado con Superficies": "dibujado_avanzado_con_superficies.md"
 - "Manejo de tiempo con tareas": "tareas.md"
