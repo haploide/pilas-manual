@@ -140,8 +140,7 @@ El actor aceituna es super simple
 
 *Comportamientos:*
 
-- ``aceituna.saludar(mensaje)``
-- ``aceituna.saltar()``
+- ``aceituna.decir(mensaje)``
 
 
 ### Animacion
