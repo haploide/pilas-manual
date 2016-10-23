@@ -442,10 +442,10 @@ así:</p>
         self.rotacion = [360]
 
     def actualizar(self):
-        if pilas.control.izquierda:
+        if self.pilas.control.izquierda:
             self.x -= 5
             self.espejado = True
-        if pilas.control.derecha:
+        if self.pilas.control.derecha:
             self.x += 5
             self.espejado = False
 </code></pre>
