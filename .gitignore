@@ -2,3 +2,4 @@
 mydocs.*
 *.epub
 *.pdf
+.DS_Store
