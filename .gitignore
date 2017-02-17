@@ -3,3 +3,4 @@ mydocs.*
 *.epub
 *.pdf
 .DS_Store
+*.pyc

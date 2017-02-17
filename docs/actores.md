@@ -97,12 +97,12 @@ color rojo.
 
 Una forma de crear el actor con una imagen es:
 
-    protagonista = Actor("planeta_azul.png")
+    protagonista = pilas.actores.Actor(imagen="planeta_azul.png")
 
 incluso, es equivalente hacer lo siguiente:
 
     imagen = pilas.imagenes.cargar("planeta_azul.png")
-    protagonista = Actor(imagen)
+    protagonista = pilas.actores.Actor(imagen=imagen)
 
 El resultado será:
 
@@ -127,7 +127,7 @@ personaje de 1 a 5 en 7 segundos:
 Si quieres que el actor sea invisible, un truco es crearlo
 con la imagen ``invisible.png``:
 
-    invisible = pilas.actores.Actor('invisible.png')
+    invisible = pilas.actores.Actor(imagen='invisible.png')
 
 
 ### Aceituna
