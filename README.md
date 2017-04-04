@@ -1,5 +1,7 @@
 # pilas-engine Manual
 
+[![Build Status](http://104.236.23.14/api/badges/hugoruscitti/pilas-manual/status.svg)](http://104.236.23.14/hugoruscitti/pilas-manual)
+
 Este repositorio contiene la documentación online de
 pilas-engine actualizada a la versión 0.9.
 
