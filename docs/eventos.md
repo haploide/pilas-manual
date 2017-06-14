@@ -160,6 +160,7 @@ para desconectarla.
 | cuando_actualiza    |                 |
 | pulsa_boton         | numero          |
 | mueve_pad           | x, y, x1, y1    |
+| luego_de_actualizar |                 |
 
 
 ## Consultado señales conectadas

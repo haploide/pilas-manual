@@ -166,6 +166,10 @@ y ``derecha``:
 ![](imagenes/actores_personalizados/caminando.gif)
 
 
+También existe otro método llamado ``luego_de_actualizar``, que se llamará
+justo después de aplicarle física al actor. A grandes rasgos es muy similar
+al método ``actualizar``, ya que se llamará 60 veces por segundo y recibe los
+mismos argumentos.
 
 ## Leyendo el código de otros actores
 
