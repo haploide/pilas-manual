@@ -53,7 +53,7 @@ actualmente no es una prioridad.
 
 ## Bibliotecas que usa pilas
 
-Hay tres grandes bibliotecas que se utilizan dentro de pilas:
+Hay dos grandes bibliotecas que se utilizan dentro de pilas:
 
 - Box2D
 - Qt4
